@@ -1,0 +1,144 @@
+{
+  "ghosts": [
+    {
+      "id": 0,
+      "type": "Spirit",
+      "evidence": [
+        "Ghost Writing",
+        "Spirit Box",
+        "Fingerprints"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "Wraith",
+      "evidence": [
+        "Freezing Temperatures",
+        "Spirit Box",
+        "Fingerprints"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "Banshee",
+      "evidence": [
+        "EMF Level 5",
+        "Freezing Temperatures",
+        "Fingerprints"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "Demon",
+      "evidence": [
+        "Ghost Writing",
+        "Freezing Temperatures",
+        "Spirit Box"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "Jinn",
+      "evidence": [
+        "EMF Level 5",
+        "Ghost Orb",
+        "Spirit Box"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "Mare",
+      "evidence": [
+        "Freezing Temperatures",
+        "Ghost Orb",
+        "Spirit Box"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "Oni",
+      "evidence": [
+        "EMF Level 5",
+        "Ghost Writing",
+        "Spirit Box"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "Phantom",
+      "evidence": [
+        "EMF Level 5",
+        "Ghost Orb",
+        "Freezing Temperatures"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "Poltergeist",
+      "evidence": [
+        "Fingerprints",
+        "Ghost Orb",
+        "Spirit Box"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "Revenant",
+      "evidence": [
+        "EMF Level 5",
+        "Fingerprints",
+        "Ghost Writing"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "Shade",
+      "evidence": [
+        "EMF Level 5",
+        "Ghost Orb",
+        "Ghost Writing"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "Yurei",
+      "evidence": [
+        "Freezing Temperatures",
+        "Ghost Orb",
+        "Ghost Writing"
+      ]
+    }
+  ],
+  "evidences": [
+    {
+      "evidenceID": 0,
+      "evidenceName": "emf",
+      "evidenceLabel": "EMF Level 5"
+    },
+    {
+      "evidenceID": 1,
+      "evidenceName": "fingerprints",
+      "evidenceLabel": "Fingerprints"
+    },
+    {
+      "evidenceID": 2,
+      "evidenceName": "temps",
+      "evidenceLabel": "Freezing Temperatures"
+    },
+    {
+      "evidenceID": 3,
+      "evidenceName": "orb",
+      "evidenceLabel": "Ghost Orb"
+    },
+    {
+      "evidenceID": 4,
+      "evidenceName": "writing",
+      "evidenceLabel": "Ghost Writing"
+    },
+    {
+      "evidenceID": 5,
+      "evidenceName": "box",
+      "evidenceLabel": "Spirit Box"
+    }
+  ]
+}
