@@ -1,15 +1,28 @@
 import React from "react";
 
-export default function Switch(props) {
-
-    const checkClass = props.toggleType == "positive" ? "positive-interaction-toggle" : "negative-interaction-toggle";
-
-    return (
+function PositiveSwitch(props) {
+    return(
         <div className="switch-container">
-          <label className="switch">
-            <input type="checkbox" className={checkClass} value={props.evidenceID} onChange={props.handleToggle} />
-            <span className="slider"></span>
-          </label>
+            <label className="switch">
+                <input type="checkbox" className={props.toggleType} value={props.evidenceID} onChange={props.handlePositive} />
+                <span className="slider"></span>
+            </label>
         </div>
-      );
+    )
+}
+
+function NegativeSwitch(props){
+        return(
+        <div className="switch-container">
+            <label className="switch">
+                <input type="checkbox" className={props.toggleType} value={props.evidenceID} onChange={props.handleNegative} />
+                <span className="slider"></span>
+            </label>
+        </div>
+    )
+}
+
+export {
+    PositiveSwitch,
+    NegativeSwitch
 }

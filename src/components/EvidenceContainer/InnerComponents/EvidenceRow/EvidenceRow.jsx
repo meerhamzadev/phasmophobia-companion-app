@@ -1,24 +1,27 @@
 import React from 'react';
-import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
+import {PositiveSwitch, NegativeSwitch} from '../ToggleSwitch/ToggleSwitch';
 
 export default function EvidenceRow(props){
+    const positiveSwitchEnabled = "test";
+    const negativeSwitchEnabled = "test"
+
     return(
         <tr key={props.evidenceID}>
             <td>{props.evidenceLabel}</td>
             <td>
-                <ToggleSwitch
-                    toggleType={"positive"}
+                <PositiveSwitch
+                    toggleType={"positive-interaction-toggle"}
                     key={props.evidenceID}
                     evidenceID={props.evidenceID}
-                    handleToggle={props.handleToggle}
+                    handlePositive={props.handlePositive}
                 />
             </td>
             <td>
-                <ToggleSwitch
-                    toggleType={"negative"}
-                    id={props.evidenceID}
-                    value={props.evidenceID}
-                    onChange={props.handleNegative}
+                <NegativeSwitch
+                    toggleType={"negative-interaction-toggle"}
+                    key={props.evidenceID}
+                    evidenceID={props.evidenceID}
+                    handleNegative={props.handleNegative}
                 />
             </td>
         </tr>

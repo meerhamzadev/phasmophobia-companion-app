@@ -6,11 +6,12 @@ export default function EvidenceTable(props){
         if(props.allOptionsUsed){
             if(props.positiveEvidence.includes(evidence.evidenceID + "")){
                 return <EvidenceRow
-                    {...evidence}
-                    positiveEvidence={props.positiveEvidence}
-                    handleToggle={props.handleToggle}
-                    handleNegative={props.handleNegative}
-                  />
+                            {...evidence}
+                            positiveEvidence={props.positiveEvidence}
+                            negativeEvidence={props.negativeEvidence}
+                            handlePositive={props.handlePositive}
+                            handleNegative={props.handleNegative}
+                        />
             } else {
                 return null
             }
@@ -18,7 +19,8 @@ export default function EvidenceTable(props){
             return <EvidenceRow
                         {...evidence}
                         positiveEvidence={props.positiveEvidence}
-                        handleToggle={props.handleToggle}
+                        negativeEvidence={props.negativeEvidence}
+                        handlePositive={props.handlePositive}
                         handleNegative={props.handleNegative}
                     />
         }

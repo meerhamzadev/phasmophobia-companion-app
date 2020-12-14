@@ -9,7 +9,8 @@ export default function EvidenceContainer(props){
                 evidence={props.ghostData.evidences}
                 allOptionsUsed={props.allOptionsUsed}
                 positiveEvidence={props.positiveEvidence}
-                handleToggle={props.handleToggle}
+                negativeEvidence={props.negativeEvidence}
+                handlePositive={props.handlePositive}
                 handleNegative={props.handleNegative}
             />
         </div>
