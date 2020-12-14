@@ -4,13 +4,15 @@ import EvidenceRow from "../EvidenceRow/EvidenceRow";
 export default function EvidenceTable(props){
     const possibleEvidence = props.evidence.map((evidence) => {
         if(props.allOptionsUsed){
-            return props.activeToggles.includes(evidence.evidenceID)
-                ? <EvidenceRow
+            if(props.activeToggles.includes(evidence.evidenceID + "")){
+                return <EvidenceRow
                     {...evidence}
                     activeToggles={props.activeToggles}
                     handleToggle={props.handleToggle}
                   />
-                  : null
+            } else {
+                return null
+            }
         } else {
             return <EvidenceRow
                         {...evidence}

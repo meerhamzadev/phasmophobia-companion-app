@@ -12,15 +12,12 @@ function App() {
 
     const handleToggle = (event) => {
         if(activeToggles.includes(event.target.value)){
-            let targetIndex = 0
+            let targetIndex = activeToggles.indexOf(event.target.value)
+            let tempArray = [...activeToggles]
 
-            for(let i = 0; i < activeToggles.length; i++){
-                if(!targetIndex) {
-                    targetIndex = activeToggles[i] === event.target.value ? i : null
-            }
-        }
+            tempArray.splice(targetIndex, 1)
 
-        setActiveToggles(activeToggles.splice(targetIndex, 1))
+            setActiveToggles([...tempArray])
         } else {
             setActiveToggles([...activeToggles, event.target.value])
         }
