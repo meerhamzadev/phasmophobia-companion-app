@@ -8,7 +8,7 @@ export default function EvidenceContainer(props){
             <EvidenceTable
                 evidence={props.ghostData.evidences}
                 allOptionsUsed={props.allOptionsUsed}
-                activeToggles={props.activeToggles}
+                positiveEvidence={props.positiveEvidence}
                 handleToggle={props.handleToggle}
                 handleNegative={props.handleNegative}
             />

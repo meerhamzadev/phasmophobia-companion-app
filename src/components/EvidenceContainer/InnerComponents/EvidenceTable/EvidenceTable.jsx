@@ -4,10 +4,10 @@ import EvidenceRow from "../EvidenceRow/EvidenceRow";
 export default function EvidenceTable(props){
     const possibleEvidence = props.evidence.map((evidence) => {
         if(props.allOptionsUsed){
-            if(props.activeToggles.includes(evidence.evidenceID + "")){
+            if(props.positiveEvidence.includes(evidence.evidenceID + "")){
                 return <EvidenceRow
                     {...evidence}
-                    activeToggles={props.activeToggles}
+                    positiveEvidence={props.positiveEvidence}
                     handleToggle={props.handleToggle}
                     handleNegative={props.handleNegative}
                   />
@@ -17,7 +17,7 @@ export default function EvidenceTable(props){
         } else {
             return <EvidenceRow
                         {...evidence}
-                        activeToggles={props.activeToggles}
+                        positiveEvidence={props.positiveEvidence}
                         handleToggle={props.handleToggle}
                         handleNegative={props.handleNegative}
                     />
@@ -28,7 +28,8 @@ export default function EvidenceTable(props){
         <table>
             <tr>
                 <th>Evidence</th>
-                <th>Ghost interaction detected</th>
+                <th>Interaction Confirmed</th>
+                <th>Negative Interaction Confirmed</th>
             </tr>
             {possibleEvidence}
         </table>

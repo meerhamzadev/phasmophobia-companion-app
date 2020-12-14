@@ -13,7 +13,7 @@ function App() {
     })
 
     // Evidence handlers
-    const [activeToggles, setActiveToggles] = useState([])
+    const [positiveEvidence, setPositiveEvidence] = useState([])
     const [negativeEvidence, setNegativeEvidence] = useState([])
 
     // Possible outputs
@@ -22,27 +22,19 @@ function App() {
     const [negativeGhosts, setNegativeGhosts] = useState([]);
 
     useEffect(() => {
-        for(let i = 0; i < allGhostIDs; i++){
-            for(let j = 0; j < activeToggles; i++){
 
-            }
-
-            for(let k = 0; k < negativeEvidence; k++){
-                ghostData.ghosts[i].evidence.includes(negativeEvidence[k]) ? setNegativeGhosts([...negativeGhosts]) : null;
-            }
-        }
-    }, [activeToggles, negativeEvidence])
+    }, [positiveEvidence, negativeEvidence])
 
     const handleToggle = (event) => {
-        if(activeToggles.includes(event.target.value)){
-            let targetIndex = activeToggles.indexOf(event.target.value)
-            let tempArray = [...activeToggles]
+        if(positiveEvidence.includes(event.target.value)){
+            let targetIndex = positiveEvidence.indexOf(event.target.value)
+            let tempArray = [...positiveEvidence]
 
             tempArray.splice(targetIndex, 1)
 
-            setActiveToggles([...tempArray])
+            setPositiveEvidence([...tempArray])
         } else {
-            setActiveToggles([...activeToggles, event.target.value])
+            setPositiveEvidence([...positiveEvidence, event.target.value])
         }
     }
 
@@ -63,14 +55,15 @@ function App() {
   return (
     <div className="App">
 
-        <h2>Active evidence: {activeToggles}</h2>
+        <h2>Active evidence: {positiveEvidence}</h2>
 
         <EvidenceContainer
             ghostData={ghostData}
             handleToggle={handleToggle}
             handleNegative={handleNegative}
-            allOptionsUsed={ activeToggles.length === 3 ? true : false }
-            activeToggles={activeToggles}
+            allOptionsUsed={ positiveEvidence.length === 3 ? true : false }
+            positiveEvidence={positiveEvidence}
+            negativeEvidence={negativeEvidence}
         />
     </div>
   );

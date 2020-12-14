@@ -5,15 +5,21 @@ export default function EvidenceRow(props){
     return(
         <tr key={props.evidenceID}>
             <td>{props.evidenceLabel}</td>
-            <td><ToggleSwitch key={props.evidenceID} evidenceID={props.evidenceID} handleToggle={props.handleToggle} /></td>
-            <td><input
-                    type="checkbox"
-                    className={"ghost-no-interaction"}
+            <td>
+                <ToggleSwitch
+                    toggleType={"positive"}
+                    key={props.evidenceID}
+                    evidenceID={props.evidenceID}
+                    handleToggle={props.handleToggle}
+                />
+            </td>
+            <td>
+                <ToggleSwitch
+                    toggleType={"negative"}
                     id={props.evidenceID}
                     value={props.evidenceID}
                     onChange={props.handleNegative}
-            />
-                Negative interaction
+                />
             </td>
         </tr>
     )
