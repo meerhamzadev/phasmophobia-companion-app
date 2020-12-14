@@ -10,6 +10,7 @@ export default function EvidenceContainer(props){
                 allOptionsUsed={props.allOptionsUsed}
                 activeToggles={props.activeToggles}
                 handleToggle={props.handleToggle}
+                handleNegative={props.handleNegative}
             />
         </div>
     )

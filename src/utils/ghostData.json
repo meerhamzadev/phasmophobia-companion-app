@@ -4,108 +4,108 @@
       "id": 0,
       "type": "Spirit",
       "evidence": [
-        "Ghost Writing",
-        "Spirit Box",
-        "Fingerprints"
+        4,
+        5,
+        1
       ]
     },
     {
       "id": 1,
       "type": "Wraith",
       "evidence": [
-        "Freezing Temperatures",
-        "Spirit Box",
-        "Fingerprints"
+        2,
+        5,
+        1
       ]
     },
     {
       "id": 2,
       "type": "Banshee",
       "evidence": [
-        "EMF Level 5",
-        "Freezing Temperatures",
-        "Fingerprints"
+        0,
+        2,
+        1
       ]
     },
     {
       "id": 3,
       "type": "Demon",
       "evidence": [
-        "Ghost Writing",
-        "Freezing Temperatures",
-        "Spirit Box"
+        4,
+        2,
+        5
       ]
     },
     {
       "id": 4,
       "type": "Jinn",
       "evidence": [
-        "EMF Level 5",
-        "Ghost Orb",
-        "Spirit Box"
+        0,
+        3,
+        5
       ]
     },
     {
       "id": 5,
       "type": "Mare",
       "evidence": [
-        "Freezing Temperatures",
-        "Ghost Orb",
-        "Spirit Box"
+        2,
+        3,
+        5
       ]
     },
     {
       "id": 6,
       "type": "Oni",
       "evidence": [
-        "EMF Level 5",
-        "Ghost Writing",
-        "Spirit Box"
+        0,
+        4,
+        5
       ]
     },
     {
       "id": 7,
       "type": "Phantom",
       "evidence": [
-        "EMF Level 5",
-        "Ghost Orb",
-        "Freezing Temperatures"
+        0,
+        3,
+        2
       ]
     },
     {
       "id": 8,
       "type": "Poltergeist",
       "evidence": [
-        "Fingerprints",
-        "Ghost Orb",
-        "Spirit Box"
+        1,
+        3,
+        5
       ]
     },
     {
       "id": 9,
       "type": "Revenant",
       "evidence": [
-        "EMF Level 5",
-        "Fingerprints",
-        "Ghost Writing"
+        0,
+        1,
+        4
       ]
     },
     {
       "id": 10,
       "type": "Shade",
       "evidence": [
-        "EMF Level 5",
-        "Ghost Orb",
-        "Ghost Writing"
+        0,
+        3,
+        4
       ]
     },
     {
       "id": 11,
       "type": "Yurei",
       "evidence": [
-        "Freezing Temperatures",
-        "Ghost Orb",
-        "Ghost Writing"
+        2,
+        3,
+        4
       ]
     }
   ],

@@ -9,6 +9,7 @@ export default function EvidenceTable(props){
                     {...evidence}
                     activeToggles={props.activeToggles}
                     handleToggle={props.handleToggle}
+                    handleNegative={props.handleNegative}
                   />
             } else {
                 return null
@@ -18,6 +19,7 @@ export default function EvidenceTable(props){
                         {...evidence}
                         activeToggles={props.activeToggles}
                         handleToggle={props.handleToggle}
+                        handleNegative={props.handleNegative}
                     />
         }
     })
