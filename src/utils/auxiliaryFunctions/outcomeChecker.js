@@ -1,3 +1,5 @@
+const mainData = require('../data/ghostData.json');
+
 function fullOutput(positiveArray, negativeArray, mainData){
     let positiveIDValue, possibilities, negativeValue
     let uniqueIDs = mainData.ghosts.map((ghost) => {
@@ -6,12 +8,12 @@ function fullOutput(positiveArray, negativeArray, mainData){
 
     if(positiveArray.length === 3){
         possibilities = []
-        positiveIDValue = positiveID(positiveArray, mainData, uniqueIDs);
+        positiveIDValue = positiveId(positiveArray, mainData);
         negativeValue = mainData.ghosts.filter((ghost) => {
             return ghost.id !== positiveIDValue
         });
     } else {
-        negativeValue = negativeOutputs(negativeArray, mainData, uniqueIDs);
+        negativeValue = negativeOutputs(negativeArray, mainData);
         possibilities = uniqueIDs.filter(id => !negativeValue.includes(id))
     }
 
@@ -21,7 +23,12 @@ function fullOutput(positiveArray, negativeArray, mainData){
         'negativeValue': negativeValue
     }
 
-    return fullOutput
+    console.log(fullOutput)
+}
+
+function commonValue(mainArray, targetEvidence){
+    let intersection = mainArray.filter(evidence => targetEvidence.includes(evidence));
+    return intersection.length
 }
 
 function positiveId(positiveArray, mainData){
@@ -32,4 +39,12 @@ function negativeOutputs(negativeArray, mainData){
 
 }
 
-module.exports = fullOutput
+const posOne = [1, 2, 5];
+const negOne = [];
+
+const posTwo = [2];
+const negTwo = [5];
+
+fullOutput(posOne, negOne, mainData);
+fullOutput(posTwo, negTwo, mainData);
+//module.exports = fullOutput
