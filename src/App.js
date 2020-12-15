@@ -4,7 +4,7 @@ import EvidenceContainer from "./components/EvidenceContainer/EvidenceContainer"
 // Data
 import ghostData from './utils/data/ghostData.json';
 
-// Auxiliarty functions
+// Auxiliary functions
 import fullOutput from './utils/auxiliaryFunctions/outcomeChecker';
 
 // Styling
@@ -25,28 +25,34 @@ function App() {
     const [negativeGhosts, setNegativeGhosts] = useState([]);
 
     const handlePositive = (event) => {
-        if(positiveEvidence.includes(event.target.value)){
-            let targetIndex = positiveEvidence.indexOf(event.target.value)
+
+        const targetValue = parseInt(event.target.value);
+
+        if(positiveEvidence.includes(targetValue)){
+            let targetIndex = positiveEvidence.indexOf(targetValue)
             let tempArray = [...positiveEvidence]
 
             tempArray.splice(targetIndex, 1)
 
             setPositiveEvidence([...tempArray], outcomeChecker())
         } else {
-            setPositiveEvidence([...positiveEvidence, parseInt(event.target.value)], outcomeChecker())
+            setPositiveEvidence([...positiveEvidence, targetValue], outcomeChecker())
         }
     }
 
     const handleNegative = (event) => {
-        if(negativeEvidence.includes(event.target.value)){
-            let targetIndex = negativeEvidence.indexOf(event.target.value)
+
+        const targetValue = parseInt(event.target.value);
+
+        if(negativeEvidence.includes(targetValue)){
+            let targetIndex = negativeEvidence.indexOf(targetValue)
             let tempArray = [...negativeEvidence]
 
             tempArray.splice(targetIndex, 1)
 
             setNegativeEvidence([...tempArray], outcomeChecker())
         } else {
-            setNegativeEvidence([...negativeEvidence, parseInt(event.target.value)], outcomeChecker())
+            setNegativeEvidence([...negativeEvidence, targetValue], outcomeChecker())
         }
     }
 

@@ -4,54 +4,41 @@ function fullOutput(positiveArray, negativeArray, mainData){
         return ghost.id
     })
 
-    if(positiveArray.length === 3){
-        possibilities = []
-        positiveIDValue = positiveId(positiveArray, mainData);
-        negativeValue = uniqueIDs.filter((ghostID) => {
-            return ghostID !== positiveIDValue
-        });
-    } else {
-        negativeValue = [];
+    for(let i = 0; i < uniqueIDs; i++){
+        let positiveCheck = commonValue(positiveArray, mainData.evidence)
+        let negativeCheck = commonValue(negativearray, mainData.evidence)
+
         possibilities = [];
+        negativeValue = [];
 
-        for(let i = 0; i < uniqueIDs.length; i++){
-            let checkNegative = commonValue(negativeArray, mainData[i].evidence)
-            let checkPositive = commonValue(positiveArray, mainData[i].evidence)
-
-            if(checkNegative > 0){
-                negativeValue.push(mainData[i].id)
+        if(positiveCheck > 0 & negativeCheck === 0){
+            if(positiveCheck === 3){
+                positiveIDValue = mainData.id
+                possibilities = [];
+                negativeValue = uniqueIDs.filter(ghostID => ghostID !== positiveIDValue)
             }
 
-            if(checkPositive > 0){
-                possibilities.push(mainData[i].id)
-            }
+            possibilities.push(mainData.id)
+        } else {
+            negativeValue.push(mainData.id)
         }
     }
 
-    possibilities = possibilities.filter(ghostID => !negativeValue.includes(ghostID))
+    if(possibilities.length === 1){
+        positiveIDValue = possibilities[0];
+        possibilities = [];
+    }
 
-    const result = {
+    return {
         'positiveID': positiveIDValue,
         'possibilities': possibilities,
         'negativeValue': negativeValue
     }
-
-    return result
 }
 
 function commonValue(mainArray, targetEvidence){
     let intersection = mainArray.filter(evidence => targetEvidence.includes(evidence));
     return intersection.length
-}
-
-function positiveId(positiveArray, ghostData){
-    for(let i = 0; i < ghostData.length; i++){
-        let intersectionValue = commonValue(positiveArray, ghostData[i].evidence);
-
-        if(intersectionValue === 3){
-            return ghostData[i].id
-        }
-    }
 }
 
 module.exports = fullOutput
