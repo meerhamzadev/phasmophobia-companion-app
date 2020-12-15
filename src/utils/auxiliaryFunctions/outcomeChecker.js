@@ -4,24 +4,28 @@ function fullOutput(positiveArray, negativeArray, mainData){
         return ghost.id
     })
 
-    for(let i = 0; i < uniqueIDs; i++){
-        let positiveCheck = commonValue(positiveArray, mainData.evidence)
-        let negativeCheck = commonValue(negativearray, mainData.evidence)
+    possibilities = [];
+    negativeValue = [];
 
-        possibilities = [];
-        negativeValue = [];
+    for(let i = 0; i < uniqueIDs.length; i++){
+        let positiveCheck = commonValue(positiveArray, mainData[i].evidence)
+        let negativeCheck = commonValue(negativeArray, mainData[i].evidence)
 
-        if(positiveCheck > 0 & negativeCheck === 0){
+        if(positiveCheck > 0 || negativeCheck === 0){
             if(positiveCheck === 3){
-                positiveIDValue = mainData.id
+                positiveIDValue = mainData[i].id
                 possibilities = [];
                 negativeValue = uniqueIDs.filter(ghostID => ghostID !== positiveIDValue)
             }
 
-            possibilities.push(mainData.id)
+            possibilities.push(mainData[i].id)
         } else {
-            negativeValue.push(mainData.id)
+            negativeValue.push(mainData[i].id)
         }
+    }
+
+    if(positiveIDValue){
+        possibilities = [];
     }
 
     if(possibilities.length === 1){
