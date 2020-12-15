@@ -4,7 +4,7 @@ import EvidenceRow from "../EvidenceRow/EvidenceRow";
 export default function EvidenceTable(props){
     const possibleEvidence = props.evidence.map((evidence) => {
         if(props.allOptionsUsed){
-            if(props.positiveEvidence.includes(evidence.evidenceID + "")){
+            if(props.positiveEvidence.includes(evidence.evidenceID)){
                 return <EvidenceRow
                             {...evidence}
                             positiveEvidence={props.positiveEvidence}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import EvidenceContainer from "./components/EvidenceContainer/EvidenceContainer";
 
 // Data
@@ -24,6 +24,15 @@ function App() {
     const [possibleGhosts, setPossibleGhosts] = useState(allGhostIDs);
     const [negativeGhosts, setNegativeGhosts] = useState([]);
 
+    useEffect(() => {
+        const result = fullOutput(positiveEvidence, negativeEvidence, ghostData.ghosts)
+        console.log(result)
+
+        setDetectedGhost(result.positiveID);
+        setPossibleGhosts(result.possibilities);
+        setNegativeGhosts(result.negativeValue);
+    }, [positiveEvidence, negativeEvidence])
+
     const handlePositive = (event) => {
 
         const targetValue = parseInt(event.target.value);
@@ -34,9 +43,9 @@ function App() {
 
             tempArray.splice(targetIndex, 1)
 
-            setPositiveEvidence([...tempArray], outcomeChecker())
+            setPositiveEvidence([...tempArray])
         } else {
-            setPositiveEvidence([...positiveEvidence, targetValue], outcomeChecker())
+            setPositiveEvidence([...positiveEvidence, targetValue])
         }
     }
 
@@ -50,18 +59,10 @@ function App() {
 
             tempArray.splice(targetIndex, 1)
 
-            setNegativeEvidence([...tempArray], outcomeChecker())
+            setNegativeEvidence([...tempArray])
         } else {
-            setNegativeEvidence([...negativeEvidence, targetValue], outcomeChecker())
+            setNegativeEvidence([...negativeEvidence, targetValue])
         }
-    }
-
-    const outcomeChecker = () => {
-        const result = fullOutput(positiveEvidence, negativeEvidence, ghostData.ghosts)
-
-        setDetectedGhost(result.positiveID);
-        setPossibleGhosts(result.possibilities);
-        setNegativeGhosts(result.negativeValue);
     }
 
   return (
@@ -80,7 +81,7 @@ function App() {
             ghostData={ghostData}
             handlePositive={handlePositive}
             handleNegative={handleNegative}
-            allOptionsUsed={ positiveEvidence.length === 3 ? true : false }
+            allOptionsUsed={ positiveEvidence.length === 3 }
             positiveEvidence={positiveEvidence}
             negativeEvidence={negativeEvidence}
         />
