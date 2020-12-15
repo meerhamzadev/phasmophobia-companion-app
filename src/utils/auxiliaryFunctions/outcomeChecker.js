@@ -1,28 +1,34 @@
 function fullOutput(positiveArray, negativeArray, mainData){
     let positiveIDValue, possibilities, negativeValue
-    let uniqueIDs = mainData.ghosts.map((ghost) => {
+    let uniqueIDs = mainData.map((ghost) => {
         return ghost.id
     })
 
     if(positiveArray.length === 3){
         possibilities = []
-        positiveIDValue = positiveId(positiveArray, mainData.ghosts);
+        positiveIDValue = positiveId(positiveArray, mainData);
         negativeValue = uniqueIDs.filter((ghostID) => {
             return ghostID !== positiveIDValue
         });
     } else {
         negativeValue = [];
+        possibilities = [];
 
         for(let i = 0; i < uniqueIDs.length; i++){
-            let check = commonValue(negativeArray, mainData.ghosts[i].evidence)
+            let checkNegative = commonValue(negativeArray, mainData[i].evidence)
+            let checkPositive = commonValue(positiveArray, mainData[i].evidence)
 
-            if(check > 0){
-                negativeValue.push(mainData.ghosts[i].id)
+            if(checkNegative > 0){
+                negativeValue.push(mainData[i].id)
+            }
+
+            if(checkPositive > 0){
+                possibilities.push(mainData[i].id)
             }
         }
-
-        possibilities = uniqueIDs.filter(id => !negativeValue.includes(id))
     }
+
+    possibilities = possibilities.filter(ghostID => !negativeValue.includes(ghostID))
 
     const result = {
         'positiveID': positiveIDValue,

@@ -4,6 +4,9 @@ import EvidenceContainer from "./components/EvidenceContainer/EvidenceContainer"
 // Data
 import ghostData from './utils/data/ghostData.json';
 
+// Auxiliarty functions
+import fullOutput from './utils/auxiliaryFunctions/outcomeChecker';
+
 // Styling
 import './App.css';
 
@@ -48,35 +51,11 @@ function App() {
     }
 
     const outcomeChecker = () => {
-        let positiveID
+        const result = fullOutput(positiveEvidence, negativeEvidence, ghostData.ghosts)
 
-        let negativeArray = ghostData.ghosts.map((ghost) => {
-            let intersection = ghost.evidence.filter(evidence => negativeEvidence.includes(evidence));
-            let output = intersection.length > 0 ? ghost.id : null;
-
-            return output
-        })
-
-        let positiveArray = ghostData.ghosts.map((ghost) => {
-            let intersection = ghost.evidence.filter(evidence => positiveEvidence.includes(evidence));
-            console.log("Intersection", intersection)
-
-            if(intersection.length === 3){
-                positiveID = ghost.id
-                console.log(positiveID)
-                negativeArray = allGhostIDs.filter((id) => id !== ghost.id)
-                console.log("Negative array", negativeArray)
-            } else {
-                let output = intersection ? ghost.id : null;
-                return output
-            }
-        });
-
-        let positiveOutput = positiveID ? positiveID : null;
-
-        setDetectedGhost(positiveOutput);
-        setNegativeGhosts([...negativeArray]);
-        setPossibleGhosts([...positiveArray]);
+        setDetectedGhost(result.positiveID);
+        setPossibleGhosts(result.possibilities);
+        setNegativeGhosts(result.negativeValue);
     }
 
   return (
