@@ -1,3 +1,5 @@
+const ghostData = require('../data/ghostData.json')
+
 function fullOutput(positiveArray, negativeArray, mainData){
     let positiveIDValue, possibilities, negativeValue
     let uniqueIDs = mainData.map((ghost) => {
@@ -11,15 +13,16 @@ function fullOutput(positiveArray, negativeArray, mainData){
         let positiveCheck = commonValue(positiveArray, mainData[i].evidence)
         let negativeCheck = commonValue(negativeArray, mainData[i].evidence)
 
-        if(positiveCheck > 0 || negativeCheck === 0){
+        if(positiveCheck >= 0 & negativeCheck === 0){
             if(positiveCheck === 3){
                 positiveIDValue = mainData[i].id
                 possibilities = [];
                 negativeValue = uniqueIDs.filter(ghostID => ghostID !== positiveIDValue)
             }
-
             possibilities.push(mainData[i].id)
-        } else {
+        } else if(negativeCheck > 0){
+            negativeValue.push(mainData[i].id)
+        } else if(positiveArray.length > 0 & positiveCheck === 0){
             negativeValue.push(mainData[i].id)
         }
     }
@@ -33,11 +36,28 @@ function fullOutput(positiveArray, negativeArray, mainData){
         possibilities = [];
     }
 
-    return {
+    let message = ''
+    let negativeCheck = negativeValue.length === 12
+    let positiveCheck = positiveArray.length === 3 & !positiveIDValue
+
+    console.log(negativeCheck)
+    console.log(positiveCheck)
+
+    if(negativeCheck || positiveCheck){
+        message = "This combination does not lead to any ghosts. Make sure" +
+            " you double check your evidence."
+    }
+
+    if(positiveIDValue){
+        message = "You're dealing with a"
+    }
+
+    console.log({
         'positiveID': positiveIDValue,
         'possibilities': possibilities,
-        'negativeValue': negativeValue
-    }
+        'negativeValue': negativeValue,
+        'message': message
+    })
 }
 
 function commonValue(mainArray, targetEvidence){
@@ -46,3 +66,5 @@ function commonValue(mainArray, targetEvidence){
 }
 
 module.exports = fullOutput
+
+fullOutput([0,3], [2, 5, 1], ghostData.ghosts)
