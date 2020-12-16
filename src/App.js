@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import EvidenceContainer from "./components/EvidenceContainer/EvidenceContainer";
+import GhostContainer from "./components/GhostContainer/GhostContainer";
 
 // Data
 import ghostData from './utils/data/ghostData.json';
@@ -23,14 +24,18 @@ function App() {
     const [detectedGhost, setDetectedGhost] = useState('');
     const [possibleGhosts, setPossibleGhosts] = useState(allGhostIDs);
     const [negativeGhosts, setNegativeGhosts] = useState([]);
+    const [messageToUser, setMessageToUser] = useState('');
 
     useEffect(() => {
         const result = fullOutput(positiveEvidence, negativeEvidence, ghostData.ghosts)
-        console.log(result)
 
-        setDetectedGhost(result.positiveID);
+        if(result.positiveID){
+            setDetectedGhost(result.positiveID);
+        }
+
         setPossibleGhosts(result.possibilities);
         setNegativeGhosts(result.negativeValue);
+        setMessageToUser(result.message);
     }, [positiveEvidence, negativeEvidence])
 
     const handlePositive = (event) => {
@@ -67,7 +72,6 @@ function App() {
 
   return (
     <div className="App">
-
         <h2>Active evidence: {positiveEvidence}</h2>
         <h2>Negative evidence: {negativeEvidence}</h2>
 
@@ -78,12 +82,20 @@ function App() {
         <h3>Eliminated: {negativeGhosts}</h3>
 
         <EvidenceContainer
-            ghostData={ghostData}
+            evidence={ghostData.evidences}
             handlePositive={handlePositive}
             handleNegative={handleNegative}
             allOptionsUsed={ positiveEvidence.length === 3 }
             positiveEvidence={positiveEvidence}
             negativeEvidence={negativeEvidence}
+
+        />
+
+        <GhostContainer
+            ghosts={ghostData.ghosts}
+            positiveID={detectedGhost}
+            possibleGhosts={possibleGhosts}
+            negativeGhosts={negativeGhosts}
         />
     </div>
   );

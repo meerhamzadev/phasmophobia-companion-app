@@ -44,7 +44,7 @@ function fullOutput(positiveArray, negativeArray, mainData){
         possibilities = [];
     }
 
-    let message = ''
+    let message = 'You could be dealing with'
     let negativeCheck = negativeValue.length === 12
     let positiveCheck = positiveArray.length === 3 & !positiveIDValue
 
@@ -54,7 +54,8 @@ function fullOutput(positiveArray, negativeArray, mainData){
     }
 
     if(positiveIDValue){
-        message = "You're dealing with a"
+        let ghostFilter = mainData.filter((ghost) => ghost.id === positiveIDValue)
+        message = `You're dealing with: ${ghostFilter[0].type}`
     }
 
     return({

@@ -6,7 +6,7 @@ export default function EvidenceContainer(props){
         <div className={"evidence-container"}>
             <h2>With the evidence below...</h2>
             <EvidenceTable
-                evidence={props.ghostData.evidences}
+                evidence={props.evidence}
                 allOptionsUsed={props.allOptionsUsed}
                 positiveEvidence={props.positiveEvidence}
                 negativeEvidence={props.negativeEvidence}
