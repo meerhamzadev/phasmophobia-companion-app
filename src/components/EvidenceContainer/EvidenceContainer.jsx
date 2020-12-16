@@ -1,4 +1,6 @@
 import React from 'react';
+import './EvidenceContainer.css'
+
 import EvidenceTable from "./InnerComponents/EvidenceTable/EvidenceTable";
 
 export default function EvidenceContainer(props){

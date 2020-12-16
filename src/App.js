@@ -72,14 +72,8 @@ function App() {
 
   return (
     <div className="App">
-        <h2>Active evidence: {positiveEvidence}</h2>
-        <h2>Negative evidence: {negativeEvidence}</h2>
-
-        <hr />
-
-        <h3>Positive ID: {detectedGhost}</h3>
-        <h3>Potentials: {possibleGhosts}</h3>
-        <h3>Eliminated: {negativeGhosts}</h3>
+        <h1>Phasmophobia</h1>
+        <h2>Unofficial Companion App</h2>
 
         <EvidenceContainer
             evidence={ghostData.evidences}
@@ -88,7 +82,6 @@ function App() {
             allOptionsUsed={ positiveEvidence.length === 3 }
             positiveEvidence={positiveEvidence}
             negativeEvidence={negativeEvidence}
-
         />
 
         <GhostContainer

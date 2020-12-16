@@ -1,4 +1,6 @@
 import React from 'react';
+import './GhostContainer.css'
+
 import EliminatedGhostContainer from "./InnerComponents/EliminatedGhostsContainer/EliminatedGhostContainer";
 import PossibleGhostContainer from "./InnerComponents/PossibleGhostsContainer/PossibleGhostContainer";
 import FoundGhostContainer from "./InnerComponents/FoundGhostContainer/FoundGhostContainer";
@@ -20,6 +22,7 @@ export default function GhostContainer(props){
 
     return(
         <div className={"possibility-container"}>
+            <h2>{props.message}</h2>
             {props.positiveID ? <FoundGhostContainer foundGhost={positiveIdDetails} /> : <PossibleGhostContainer possibleGhosts={possibleDetails} />}
             <EliminatedGhostContainer negativeGhosts={eliminatedDetails} />
         </div>

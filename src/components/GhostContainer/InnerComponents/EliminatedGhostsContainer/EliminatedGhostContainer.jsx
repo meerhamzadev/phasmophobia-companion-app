@@ -9,7 +9,7 @@ export default function EliminatedGhostContainer(props){
 
     return(
         <div className={"eliminated-ghosts"}>
-            <h3>Eliminated Ghosts</h3>
+            <h2>Eliminated Ghosts</h2>
             {ghostToRender}
         </div>
     )

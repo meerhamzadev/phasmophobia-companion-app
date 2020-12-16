@@ -1,5 +1,6 @@
 import React from 'react';
 import EvidenceRow from "../EvidenceRow/EvidenceRow";
+import './EvidenceTable.css'
 
 export default function EvidenceTable(props){
     const possibleEvidence = props.evidence.map((evidence) => {
@@ -27,11 +28,11 @@ export default function EvidenceTable(props){
     })
 
     return(
-        <table>
+        <table className={"evidence-table"}>
             <tr>
                 <th>Evidence</th>
-                <th>Interaction Confirmed</th>
-                <th>Negative Interaction Confirmed</th>
+                <th>Interaction happened</th>
+                <th>No interaction</th>
             </tr>
             {possibleEvidence}
         </table>

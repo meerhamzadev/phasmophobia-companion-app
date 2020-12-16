@@ -8,7 +8,6 @@ export default function PossibleGhostContainer(props){
 
     return(
         <div className={'possible-ghosts-container'}>
-            <h3>Possible Ghosts</h3>
             {ghostToRender}
         </div>
     )
