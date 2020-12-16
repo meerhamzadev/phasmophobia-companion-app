@@ -1,10 +1,4 @@
-const ghostData = require('../data/ghostData.json')
-
 function fullOutput(positiveArray, negativeArray, mainData){
-
-    console.log("Positives:", positiveArray);
-    console.log("Negatives:", negativeArray);
-
     let positiveIDValue, possibilities, negativeValue
     let uniqueIDs = mainData.map((ghost) => {
         return ghost.id

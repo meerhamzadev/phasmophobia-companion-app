@@ -3,13 +3,14 @@ import GhostCard from "../GhostCard/GhostCard";
 
 export default function EliminatedGhostContainer(props){
 
-    const cardsToReturn = props.eliminatedGhosts.map((ghost) => {
-        return <GhostCard {...ghost} cardType={"eliminated"} />
-    })
+    const ghostToRender = props.negativeGhosts.map((ghost) => {
+        return <GhostCard cardType={'negative'} ghostType={ghost.type} />
+    });
 
     return(
         <div className={"eliminated-ghosts"}>
-            {cardsToReturn}
+            <h3>Eliminated Ghosts</h3>
+            {ghostToRender}
         </div>
     )
 }

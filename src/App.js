@@ -96,6 +96,7 @@ function App() {
             positiveID={detectedGhost}
             possibleGhosts={possibleGhosts}
             negativeGhosts={negativeGhosts}
+            message={messageToUser}
         />
     </div>
   );
