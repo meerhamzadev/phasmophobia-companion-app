@@ -1,72 +1,77 @@
-function fullOutput(positiveArray, negativeArray, mainData){
-    let positiveIDValue, possibilities, negativeValue
-    let uniqueIDs = mainData.map((ghost) => {
+function fullOutput(positiveEvidence, negativeEvidence, ghostData){
+    const uniqueGhostIDs = ghostData.map((ghost) => {
         return ghost.id
-    })
+    });
 
-    possibilities = [];
-    negativeValue = [];
+    let discoveredGhost = null;
+    let possibleGhosts = [];
+    let eliminatedGhosts = [];
 
-    for(let i = 0; i < uniqueIDs.length; i++){
-        let positiveCheck = commonValue(positiveArray, mainData[i].evidence)
-        let negativeCheck = commonValue(negativeArray, mainData[i].evidence)
+    for(let i = 0; i < uniqueGhostIDs.length; i++){
+        let currentGhostEvidence = ghostData[i].evidence;
+        let commonPositive = commonValueCounter(currentGhostEvidence, positiveEvidence);
+        let commonNegative = commonValueCounter(currentGhostEvidence, negativeEvidence);
 
-        if(positiveCheck >= 1 & negativeCheck === 0){
-            if(positiveCheck === 3){
-                positiveIDValue = mainData[i].id
-                possibilities = [];
-                negativeValue = uniqueIDs.filter(ghostID => ghostID !== positiveIDValue)
-            }
-            possibilities.push(mainData[i].id)
-        } else if(negativeCheck > 0){
-            negativeValue.push(mainData[i].id)
-        } else if(positiveArray.length > 0 & positiveCheck === 0){
-            negativeValue.push(mainData[i].id)
-        } else if(positiveArray.length === 0 & negativeArray.length === 0){
-            possibilities.push(mainData[i].id)
+        if(commonPositive === 3){
+            discoveredGhost = i;
+            possibleGhosts = [];
+            eliminatedGhosts = uniqueGhostIDs.filter((id) => id !== i);
+        }
+
+        if(commonNegative > 0){
+            eliminatedGhosts.push(i);
+        } else if(positiveEvidence.length === commonPositive){
+            possibleGhosts.push(i);
+        } else if(positiveEvidence.length > 0 & commonPositive < positiveEvidence.length){
+            eliminatedGhosts.push(i);
+        } else {
+            eliminatedGhosts.push(i);
         }
     }
 
-    if(positiveIDValue){
-        possibilities = [];
-    } else {
-        possibilities = uniqueIDs.filter(ghostID => !negativeValue.includes(ghostID))
+    if(possibleGhosts.length === 1){
+        let foundGhost = possibleGhosts[0];
+
+        discoveredGhost = foundGhost;
+        possibleGhosts = [];
+        eliminatedGhosts = uniqueGhostIDs.filter((id) => id !== foundGhost);
     }
 
-    if(possibilities.length === 1){
-        positiveIDValue = possibilities[0];
-        possibilities = [];
-    } else {
-        positiveIDValue = null;
-    }
+    const message = messageBuilder(eliminatedGhosts.length, discoveredGhost, ghostData);
 
-
-
-    let message = 'You could be dealing with'
-    let negativeCheck = negativeValue.length === 12
-    let positiveCheck = positiveArray.length === 3 & !positiveIDValue
-
-    if(negativeCheck || positiveCheck){
-        message = "This combination does not lead to any ghosts. Make sure" +
-            " you double check your evidence."
-    }
-
-    if(positiveIDValue){
-        let ghostFilter = mainData.filter((ghost) => ghost.id === positiveIDValue)
-        message = `You're dealing with: ${ghostFilter[0].type}`
-    }
-
-    return({
-        'positiveID': positiveIDValue,
-        'possibilities': possibilities,
-        'negativeValue': negativeValue,
+    const evidenceResult = {
+        'positiveID': discoveredGhost,
+        'possibleGhosts': possibleGhosts,
+        'eliminatedGhosts': eliminatedGhosts,
         'message': message
-    })
+    }
+
+    return(evidenceResult)
 }
 
-function commonValue(mainArray, targetEvidence){
-    let intersection = mainArray.filter(evidence => targetEvidence.includes(evidence));
-    return intersection.length
+function messageBuilder(eliminatedGhosts, discoveredGhost, ghosts){
+    let message = "You're may be dealing with"
+
+    if(eliminatedGhosts === 12){
+        message = "No ghosts fit this evidence combination"
+    }
+
+    if(discoveredGhost){
+        let ghostName = ghosts[discoveredGhost].type;
+
+        if(ghostName === "Oni" || ghostName === "Yurei"){
+            message = `You're dealing with an ${ghostName}`
+        } else {
+            message = `You're dealing with a ${ghostName}`
+        }
+    }
+
+    return message
+}
+
+function commonValueCounter(ghostEvidence, currentEvidence){
+    const commonValues = currentEvidence.filter(evidence => ghostEvidence.includes(evidence))
+    return commonValues.length
 }
 
 module.exports = fullOutput

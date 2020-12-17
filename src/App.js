@@ -28,19 +28,10 @@ function App() {
     const [messageToUser, setMessageToUser] = useState('');
 
     useEffect(() => {
-        const result = fullOutput(positiveEvidence, negativeEvidence, ghostData.ghosts)
-
-        if(result.positiveID){
-            setDetectedGhost(result.positiveID);
-        }
-
-        setPossibleGhosts(result.possibilities);
-        setNegativeGhosts(result.negativeValue);
-        setMessageToUser(result.message);
+        stateUpdater()
     }, [positiveEvidence, negativeEvidence])
 
     const handlePositive = (event) => {
-
         const targetValue = parseInt(event.target.value);
 
         if(positiveEvidence.includes(targetValue)){
@@ -49,14 +40,13 @@ function App() {
 
             tempArray.splice(targetIndex, 1)
 
-            setPositiveEvidence([...tempArray])
+            setPositiveEvidence([...tempArray], stateUpdater())
         } else {
-            setPositiveEvidence([...positiveEvidence, targetValue])
+            setPositiveEvidence([...positiveEvidence, targetValue], stateUpdater())
         }
     }
 
     const handleNegative = (event) => {
-
         const targetValue = parseInt(event.target.value);
 
         if(negativeEvidence.includes(targetValue)){
@@ -65,10 +55,22 @@ function App() {
 
             tempArray.splice(targetIndex, 1)
 
-            setNegativeEvidence([...tempArray])
+            setNegativeEvidence([...tempArray], stateUpdater())
         } else {
-            setNegativeEvidence([...negativeEvidence, targetValue])
+            setNegativeEvidence([...negativeEvidence, targetValue], stateUpdater())
         }
+    }
+
+    const stateUpdater = () => {
+        console.log("Positive Evidence: ")
+
+        const result = fullOutput(positiveEvidence, negativeEvidence, ghostData.ghosts)
+        console.log(result)
+
+        setDetectedGhost(result.positiveID);
+        setPossibleGhosts(result.possibleGhosts);
+        setNegativeGhosts(result.eliminatedGhosts);
+        setMessageToUser(result.message);
     }
 
   return (
