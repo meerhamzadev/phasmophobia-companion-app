@@ -36,7 +36,11 @@ function fullOutput(positiveArray, negativeArray, mainData){
     if(possibilities.length === 1){
         positiveIDValue = possibilities[0];
         possibilities = [];
+    } else {
+        positiveIDValue = null;
     }
+
+
 
     let message = 'You could be dealing with'
     let negativeCheck = negativeValue.length === 12

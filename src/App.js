@@ -9,6 +9,7 @@ import ghostData from './utils/data/ghostData.json';
 import fullOutput from './utils/auxiliaryFunctions/outcomeChecker';
 
 // Styling
+import logo from './images/logos/logo.png';
 import './App.css';
 
 function App() {
@@ -72,8 +73,8 @@ function App() {
 
   return (
     <div className="App">
-        <h1>Phasmophobia</h1>
-        <h2>Unofficial Companion App</h2>
+        <img src={logo} />
+        <h1>Unofficial Phasmophobia Companion App (Journal)</h1>
 
         <EvidenceContainer
             evidence={ghostData.evidences}
