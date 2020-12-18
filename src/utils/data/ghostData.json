@@ -1,142 +1,142 @@
 {
   "ghosts": [
     {
-      "id": 0,
+      "id": 1,
       "type": "Spirit",
       "evidence": [
-        4,
         5,
-        1
-      ]
-    },
-    {
-      "id": 1,
-      "type": "Wraith",
-      "evidence": [
-        2,
-        5,
-        1
+        6,
+        2
       ]
     },
     {
       "id": 2,
-      "type": "Banshee",
+      "type": "Wraith",
       "evidence": [
-        0,
-        2,
-        1
+        3,
+        6,
+        2
       ]
     },
     {
       "id": 3,
-      "type": "Demon",
+      "type": "Banshee",
       "evidence": [
-        4,
-        2,
-        5
-      ]
-    },
-    {
-      "id": 4,
-      "type": "Jinn",
-      "evidence": [
-        0,
-        3,
-        5
-      ]
-    },
-    {
-      "id": 5,
-      "type": "Mare",
-      "evidence": [
-        2,
-        3,
-        5
-      ]
-    },
-    {
-      "id": 6,
-      "type": "Oni",
-      "evidence": [
-        0,
-        4,
-        5
-      ]
-    },
-    {
-      "id": 7,
-      "type": "Phantom",
-      "evidence": [
-        0,
+        1,
         3,
         2
       ]
     },
     {
-      "id": 8,
-      "type": "Poltergeist",
+      "id": 4,
+      "type": "Demon",
+      "evidence": [
+        5,
+        3,
+        6
+      ]
+    },
+    {
+      "id": 5,
+      "type": "Jinn",
       "evidence": [
         1,
+        4,
+        6
+      ]
+    },
+    {
+      "id": 6,
+      "type": "Mare",
+      "evidence": [
         3,
-        5
+        4,
+        6
+      ]
+    },
+    {
+      "id": 7,
+      "type": "Oni",
+      "evidence": [
+        1,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "type": "Phantom",
+      "evidence": [
+        1,
+        4,
+        3
       ]
     },
     {
       "id": 9,
-      "type": "Revenant",
+      "type": "Poltergeist",
       "evidence": [
-        0,
-        1,
-        4
+        2,
+        4,
+        6
       ]
     },
     {
       "id": 10,
-      "type": "Shade",
+      "type": "Revenant",
       "evidence": [
-        0,
-        3,
-        4
+        1,
+        2,
+        5
       ]
     },
     {
       "id": 11,
+      "type": "Shade",
+      "evidence": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 12,
       "type": "Yurei",
       "evidence": [
-        2,
         3,
-        4
+        4,
+        5
       ]
     }
   ],
   "evidences": [
     {
-      "evidenceID": 0,
+      "evidenceID": 1,
       "evidenceName": "emf",
       "evidenceLabel": "EMF Level 5"
     },
     {
-      "evidenceID": 1,
+      "evidenceID": 2,
       "evidenceName": "fingerprints",
       "evidenceLabel": "Fingerprints"
     },
     {
-      "evidenceID": 2,
+      "evidenceID": 3,
       "evidenceName": "temps",
       "evidenceLabel": "Freezing Temperatures"
     },
     {
-      "evidenceID": 3,
+      "evidenceID": 4,
       "evidenceName": "orb",
       "evidenceLabel": "Ghost Orb"
     },
     {
-      "evidenceID": 4,
+      "evidenceID": 5,
       "evidenceName": "writing",
       "evidenceLabel": "Ghost Writing"
     },
     {
-      "evidenceID": 5,
+      "evidenceID": 6,
       "evidenceName": "box",
       "evidenceLabel": "Spirit Box"
     }

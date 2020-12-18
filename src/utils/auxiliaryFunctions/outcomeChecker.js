@@ -8,24 +8,25 @@ function fullOutput(positiveEvidence, negativeEvidence, ghostData){
     let eliminatedGhosts = [];
 
     for(let i = 0; i < uniqueGhostIDs.length; i++){
+        let ghostId = i + 1;
         let currentGhostEvidence = ghostData[i].evidence;
         let commonPositive = commonValueCounter(currentGhostEvidence, positiveEvidence);
         let commonNegative = commonValueCounter(currentGhostEvidence, negativeEvidence);
 
         if(commonPositive === 3){
-            discoveredGhost = i;
+            discoveredGhost = ghostId;
             possibleGhosts = [];
-            eliminatedGhosts = uniqueGhostIDs.filter((id) => id !== i);
+            eliminatedGhosts = uniqueGhostIDs.filter((id) => id !== ghostId);
         }
 
         if(commonNegative > 0){
-            eliminatedGhosts.push(i);
+            eliminatedGhosts.push(ghostId);
         } else if(positiveEvidence.length === commonPositive){
-            possibleGhosts.push(i);
+            possibleGhosts.push(ghostId);
         } else if(positiveEvidence.length > 0 & commonPositive < positiveEvidence.length){
-            eliminatedGhosts.push(i);
+            eliminatedGhosts.push(ghostId);
         } else {
-            eliminatedGhosts.push(i);
+            eliminatedGhosts.push(ghostId);
         }
     }
 

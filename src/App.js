@@ -62,8 +62,6 @@ function App() {
     }
 
     const stateUpdater = () => {
-        console.log("Positive Evidence: ")
-
         const result = fullOutput(positiveEvidence, negativeEvidence, ghostData.ghosts)
         console.log(result)
 
