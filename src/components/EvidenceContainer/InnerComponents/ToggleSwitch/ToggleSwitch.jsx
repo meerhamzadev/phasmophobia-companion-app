@@ -5,7 +5,11 @@ function PositiveSwitch(props) {
     return(
         <div className="switch-container">
             <label className="switch">
-                <input type="checkbox" className={props.toggleType} value={props.evidenceID} onChange={props.handlePositive} />
+                <input type="checkbox"
+                       className={props.toggleType}
+                       value={props.evidenceID}
+                       onChange={props.handlePositive}
+                />
                 <span className="slider"></span>
             </label>
         </div>
@@ -16,7 +20,11 @@ function NegativeSwitch(props){
         return(
         <div className="switch-container">
             <label className="switch">
-                <input type="checkbox" className={props.toggleType} value={props.evidenceID} onChange={props.handleNegative} />
+                <input type="checkbox"
+                       className={props.toggleType}
+                       value={props.evidenceID}
+                       onChange={props.handleNegative}
+                />
                 <span className="slider"></span>
             </label>
         </div>
