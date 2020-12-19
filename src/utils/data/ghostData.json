@@ -140,5 +140,104 @@
       "evidenceName": "box",
       "evidenceLabel": "Spirit Box"
     }
+  ],
+  "equipmentInformation": [
+    {
+      "id": 0,
+      "name": "emfReader",
+      "label": "EMF Reader",
+      "evidenceTips": [
+        "Level 1: No readings | Level 2: Ghost interacted with something near you | Level 3: Ghost threw something near you | Level 4: Ghost appearance | Level 5: Ghost evidence",
+        "EMF will signal interaction for 20 seconds at its location",
+        "EMF readings are not related to direction, but location",
+        "It will always display the highest activity in that room (if a level 4 and a level 2 interaction happen at the same time, only level 4 will be shown)",
+        "The EMF graph in the truck is the sum of all EMF in the house/facility",
+        "If a ghost enters the view of a came when the fuse box is off, it will turn the camera off and cause a level 2 EMF reading"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "photoCamera",
+      "label": "Photo Camera",
+      "evidenceTips": [
+        "You must be within 5m of the subject for the evidence to be logged",
+        "To be sure the evidence is logged in the journal, try having a clear line of sight",
+        "Try framing the entire ghost within the picture",
+        "Taking photos of Phantoms will make them disappear, and also prevent further sanity loss"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "salt",
+      "label": "Salt",
+      "evidenceTips": [
+        "Ghosts will only walk on salt spots once",
+        "Ghosts will not affect salt spots during hunt phase"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "soundSensors",
+      "label": "Sound Sensors",
+      "evidenceTips": [
+        "Returns the loudest sound reading in that room",
+        "Uses its current position to gather data, not its direction",
+        "Values are updated every 5 seconds"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "parabolicMicrophone",
+      "label": "Parabolic Microphone",
+      "evidenceTips": [
+        "Returns the sum of all sound sources in that room",
+        "It also uses its position, not its direction",
+        "Values are updated every 1-2 seconds"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "thermometer",
+      "label": "Thermometer",
+      "evidenceTips": [
+        "Detects temperatures up to 6m in front of it",
+        "Has a value randomizer to it of 2. It that means you may log freezing temperatures as evidence with 2C or 35.6F"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ouija",
+      "label": "Ouija Board",
+      "evidenceTips": [
+        "Take a picture of it when its on to earn an extra $5",
+        "Taking a picture of it after the ghost answers will log it as interaction, paying an extra $5 (yes, it means two pictures)",
+        "Be sure to place the board over a surface like a table. Taking a picture of it on the floor will often not generate evidence",
+        "Multiple people are allowed to be in the same room during its use",
+        "The player asking questions must be within 5m for it to work",
+        "Your sanity will drop anywhere between 5-10% upon receiving a successful answer",
+        "There's a 33% chance a recognized phrase will cause light flickering, or 40% sanity drop, or setup phase abruptly ending"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "spiritBox",
+      "label": "Spirit Box",
+      "evidenceTips": [
+        "You must be in the ghost room or within 3m of it to be able to trigger interactions",
+        "Lights in the room MUST be off. They will respond if flashlights are on",
+        "Some ghosts will require you to be alone in the room to trigger a response",
+        "You don't have to hold the Spirit Box in your hands as long as its on"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "book",
+      "label": "Ghost Writing Book",
+      "evidenceTips": [
+        "Take a photo of a ghost writing to log it as evidence and earn extra money",
+        "Writing can happen even if the book is only in the player's inventory, it doesn't need to be held or dropped (although advisable)",
+        "Whatever you do besides bringing the book to the ghost room won't make the ghost more or less likely to write"
+      ]
+    }
   ]
 }
