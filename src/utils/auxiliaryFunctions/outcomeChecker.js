@@ -50,13 +50,13 @@ function fullOutput(positiveEvidence, negativeEvidence, ghostData){
 }
 
 function messageBuilder(eliminatedGhosts, discoveredGhost, ghosts){
-    let message = "You're may be dealing with"
+    let message = "You may be dealing with"
 
     if(eliminatedGhosts === 12){
         message = "No ghosts fit this evidence combination"
     }
 
-    if(discoveredGhost){
+    if(discoveredGhost || discoveredGhost === 0){
         let ghostName = ghosts[discoveredGhost].type;
 
         if(ghostName === "Oni" || ghostName === "Yurei"){

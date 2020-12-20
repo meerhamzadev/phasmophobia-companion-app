@@ -3,8 +3,6 @@ import {PositiveSwitch, NegativeSwitch} from '../ToggleSwitch/ToggleSwitch';
 
 export default function EvidenceRow(props){
 
-    //uniqueGhostIDs.filter((id) => id !== foundGhost);
-
     const commonQuantityInNegative = props.negativeEvidence.filter((id) => id === props.evidenceID);
     const commonQuantityInPositive = props.positiveEvidence.filter((id) => id === props.evidenceID);
 
