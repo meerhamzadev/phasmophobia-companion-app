@@ -6,8 +6,6 @@ import PossibleGhostContainer from "./InnerComponents/PossibleGhostsContainer/Po
 import FoundGhostContainer from "./InnerComponents/FoundGhostContainer/FoundGhostContainer";
 
 export default function GhostContainer(props){
-    console.log(props)
-
     const possibleDetails = props.ghosts.filter((ghost) => {
         return props.possibleGhosts.includes(ghost.id);
     })
@@ -23,6 +21,7 @@ export default function GhostContainer(props){
     return(
         <div className={"possibility-container"}>
             <h2>{props.message}</h2>
+            <h3>(ghosts cannot be visually recognized)</h3>
             {props.positiveID ? <FoundGhostContainer foundGhost={positiveIdDetails} /> : <PossibleGhostContainer possibleGhosts={possibleDetails} />}
             <EliminatedGhostContainer negativeGhosts={eliminatedDetails} />
         </div>

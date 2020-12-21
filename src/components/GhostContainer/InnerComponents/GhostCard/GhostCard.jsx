@@ -16,7 +16,23 @@ import shade from '../../../../images/ghosts/10.png';
 import yurei from '../../../../images/ghosts/11.png';
 
 export default function GhostCard(props){
-    console.log(props)
+    const ghostPictures = [
+        {spirit},
+        {wraith},
+        {banshee},
+        {demon},
+        {jinn},
+        {mare},
+        {oni},
+        {phantom},
+        {poltergeist},
+        {revenant},
+        {shade},
+        {yurei}
+    ];
+
+    const targetPicture = ghostPictures[props.ghostId];
+    const targetSubstring = props.ghostType.toLowerCase();
 
     return(
         <div className={props.cardType}>
@@ -24,7 +40,7 @@ export default function GhostCard(props){
                 {props.ghostType}
             </div>
             <div className={"ghost-picture"}>
-                <img src={spirit} />
+                <img src={targetPicture[targetSubstring]} />
             </div>
         </div>
     )
