@@ -20,6 +20,7 @@ I'd gladly accept submissions on smooth transitions and effects, better styling 
 
 ## Development Roadmap - Near Future Additions
 - A differentiated card for the found ghost
+- Support for mobile
 - Better styling, transitions and effects
 - A section with information on equipment and how to use them
 - A section with information on evidence and how to gather them

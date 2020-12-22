@@ -1,4 +1,5 @@
 import React from 'react';
+import GhostCard from "../GhostCard/GhostCard";
 
 export default function FoundGhostContainer(props){
     return(
