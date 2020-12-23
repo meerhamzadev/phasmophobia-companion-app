@@ -19,8 +19,7 @@ Phasmophobia players' contributions are welcomed and encouraged. I do reinforce 
 I'd gladly accept submissions on smooth transitions and effects, better styling and increased functionalities that actually help move the project forward.
 
 ## Development Roadmap - Near Future Additions
-- A differentiated card for the found ghost
-- Support for mobile
+- Responsive design
 - Better styling, transitions and effects
 - A section with information on equipment and how to use them
 - A section with information on evidence and how to gather them
