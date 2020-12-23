@@ -28,13 +28,13 @@ export default function EvidenceTable(props){
     })
 
     return(
-        <table className={"evidence-table"}>
+        <div className={"evidence-table"}>
             <tr>
                 <th>Evidence</th>
                 <th>Interaction happened</th>
                 <th>No interaction</th>
             </tr>
             {possibleEvidence}
-        </table>
+        </div>
     )
 }
