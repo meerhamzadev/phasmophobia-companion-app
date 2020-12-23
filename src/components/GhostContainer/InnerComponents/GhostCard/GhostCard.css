@@ -1,6 +1,6 @@
 /** possible, negative */
 
-.possible, .negative {
+.possible, .negative, .found {
     display: inline-block;
     border: 1px solid black;
     margin: 10px 0 10px 12px;
@@ -27,6 +27,14 @@
     background: -webkit-linear-gradient(180deg, rgba(194,39,39,0.7) 0%, rgba(73,7,7,0.7049194677871149) 100%);
     background: linear-gradient(180deg, rgba(194,39,39,0.7) 0%, rgba(73,7,7,0.7049194677871149) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c22727",endColorstr="#490707",GradientType=1);
+}
+
+.found {
+    background: rgb(39,194,88);
+    background: -moz-linear-gradient(180deg, rgba(39,194,88,0.7) 0%, rgba(7,73,18,0.7049194677871149) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(39,194,88,0.7) 0%, rgba(7,73,18,0.7049194677871149) 100%);
+    background: linear-gradient(180deg, rgba(39,194,88,0.7) 0%, rgba(7,73,18,0.7049194677871149) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#27c258",endColorstr="#074912",GradientType=1);
 }
 
 .ghost-name {
