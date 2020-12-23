@@ -22,7 +22,7 @@ export default function GhostContainer(props){
         <div className={"possibility-container"}>
             <h2>{props.message}</h2>
             <h3>(ghosts cannot be visually recognized)</h3>
-            {props.positiveID
+            {props.positiveID || props.positiveID === 0
                 ? <FoundGhostContainer foundGhost={positiveIdDetails} />
                 : <PossibleGhostContainer possibleGhosts={possibleDetails} />}
             <EliminatedGhostContainer negativeGhosts={eliminatedDetails} />
