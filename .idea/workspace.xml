@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2fc4c6c6-d286-4c09-a916-c9475d430cc7" name="Default Changelist" comment="Add favicons">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/EvidenceTable/EvidenceTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/EvidenceTable/EvidenceTable.jsx" afterDir="false" />
+    <list default="true" id="2fc4c6c6-d286-4c09-a916-c9475d430cc7" name="Default Changelist" comment="Update README to reflect recent changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +114,7 @@
       <workItem from="1608741165464" duration="21000" />
       <workItem from="1608742439903" duration="6000" />
       <workItem from="1608754469914" duration="2446000" />
+      <workItem from="1608758052952" duration="1518000" />
     </task>
     <task id="LOCAL-00001" summary="Creating first structure">
       <created>1607815491323</created>
@@ -333,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608757050026</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Update README to reflect recent changes">
+      <created>1608758342868</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1608758342868</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +360,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactor ghostData and start distributing possibilities" />
     <MESSAGE value="Refactor positiveEvidence for readability" />
     <MESSAGE value="Add logic to main app to separate possibilities, pending tests" />
     <MESSAGE value="Refactor main App" />
@@ -378,6 +384,7 @@
     <MESSAGE value="Start refactor for found ghost card" />
     <MESSAGE value="Add better version of found ghost container" />
     <MESSAGE value="Add favicons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add favicons" />
+    <MESSAGE value="Update README to reflect recent changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README to reflect recent changes" />
   </component>
 </project>
