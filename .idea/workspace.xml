@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2fc4c6c6-d286-4c09-a916-c9475d430cc7" name="Default Changelist" comment="Update README to reflect recent changes">
+    <list default="true" id="2fc4c6c6-d286-4c09-a916-c9475d430cc7" name="Default Changelist" comment="Remove unused variables for unapplied features">
+      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/EvidenceRow/EvidenceRow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/EvidenceRow/EvidenceRow.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/EvidenceTable/EvidenceTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/EvidenceTable/EvidenceTable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/EvidenceTable/EvidenceTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/EvidenceTable/EvidenceTable.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,6 +15,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lZposdIVaSSaAY84BhUZj5g5Iz" />
@@ -115,6 +125,9 @@
       <workItem from="1608742439903" duration="6000" />
       <workItem from="1608754469914" duration="2446000" />
       <workItem from="1608758052952" duration="1518000" />
+      <workItem from="1608823745972" duration="98000" />
+      <workItem from="1608826845508" duration="267000" />
+      <workItem from="1608828301151" duration="1287000" />
     </task>
     <task id="LOCAL-00001" summary="Creating first structure">
       <created>1607815491323</created>
@@ -340,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608758342868</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Remove unused variables for unapplied features">
+      <created>1608823815296</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1608823815296</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +380,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactor positiveEvidence for readability" />
     <MESSAGE value="Add logic to main app to separate possibilities, pending tests" />
     <MESSAGE value="Refactor main App" />
     <MESSAGE value="Create initial structure for auxiliary functions" />
@@ -385,6 +404,7 @@
     <MESSAGE value="Add better version of found ghost container" />
     <MESSAGE value="Add favicons" />
     <MESSAGE value="Update README to reflect recent changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README to reflect recent changes" />
+    <MESSAGE value="Remove unused variables for unapplied features" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unused variables for unapplied features" />
   </component>
 </project>

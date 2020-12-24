@@ -3,19 +3,7 @@
     border-collapse: collapse;
 }
 
-tr {
+.evidence-row {
     border-bottom: 1px solid dimgrey;
 }
 
-tr :last-of-type {
-    border-bottom: none;
-}
-
-th {
-  padding: 10px 0;
-}
-
-td {
-    width: 200px;
-    padding: 10px 0;
-}
