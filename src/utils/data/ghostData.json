@@ -69,8 +69,8 @@
         5
       ],
       "description": "A Mare is the source of all nightmares, making it most powerful in the dark.",
-      "strength": "Strengths",
-      "weakness": "Weakness"
+      "strength": "Increased chance to attack in the dark. As such, it will do what it can to achieve this, such as turning off lights and tripping the fuse box.",
+      "weakness": "Turning the lights on will lower its chance to attack."
     },
     {
       "id": 6,
