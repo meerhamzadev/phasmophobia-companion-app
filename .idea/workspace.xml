@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2fc4c6c6-d286-4c09-a916-c9475d430cc7" name="Default Changelist" comment="Remove unused variables for unapplied features">
-      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+    <list default="true" id="2fc4c6c6-d286-4c09-a916-c9475d430cc7" name="Default Changelist" comment="Initiate restructure of evidence tables">
+      <change afterPath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/ResetButton/ResetButton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/ResetButton/ResetButton.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/EvidenceRow/EvidenceRow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/EvidenceRow/EvidenceRow.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/EvidenceTable/EvidenceTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/EvidenceTable/EvidenceTable.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/EvidenceTable/EvidenceTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/EvidenceTable/EvidenceTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EvidenceContainer/EvidenceContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EvidenceContainer/EvidenceContainer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +17,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="responsive-evidence" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,7 +37,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/EvidenceContainer/InnerComponents/ResetEvidenceButton" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,6 +49,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rodri\OneDrive\Desktop\Projetos Aleatorios\1. Full Stack Development\phasmophobia-companion\src\components\EvidenceContainer\InnerComponents\ResetEvidenceButton" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rodri\OneDrive\Desktop\Projetos Aleatorios\1. Full Stack Development\phasmophobia-companion\src\tests" />
       <recent name="C:\Users\rodri\OneDrive\Desktop\Projetos Aleatorios\1. Full Stack Development\phasmophobia-companion\src\utils" />
@@ -127,7 +130,10 @@
       <workItem from="1608758052952" duration="1518000" />
       <workItem from="1608823745972" duration="98000" />
       <workItem from="1608826845508" duration="267000" />
-      <workItem from="1608828301151" duration="1287000" />
+      <workItem from="1608828301151" duration="1338000" />
+      <workItem from="1608924040081" duration="768000" />
+      <workItem from="1608939443160" duration="127000" />
+      <workItem from="1608939584775" duration="823000" />
     </task>
     <task id="LOCAL-00001" summary="Creating first structure">
       <created>1607815491323</created>
@@ -360,7 +366,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608823815296</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Initiate restructure of evidence tables">
+      <created>1608835573046</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1608835573046</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Add missing information on the Mare">
+      <created>1608924196628</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1608924196628</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,8 +400,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add logic to main app to separate possibilities, pending tests" />
-    <MESSAGE value="Refactor main App" />
     <MESSAGE value="Create initial structure for auxiliary functions" />
     <MESSAGE value="Add function to find common values between arrays" />
     <MESSAGE value="Add working outcomeChecker" />
@@ -405,6 +423,8 @@
     <MESSAGE value="Add favicons" />
     <MESSAGE value="Update README to reflect recent changes" />
     <MESSAGE value="Remove unused variables for unapplied features" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused variables for unapplied features" />
+    <MESSAGE value="Initiate restructure of evidence tables" />
+    <MESSAGE value="Add missing information on the Mare" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add missing information on the Mare" />
   </component>
 </project>

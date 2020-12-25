@@ -61,6 +61,10 @@ function App() {
         }
     }
 
+    const resetApplication = () => {
+        window.location.reload(false);
+    }
+
     const stateUpdater = () => {
         const result = fullOutput(positiveEvidence, negativeEvidence, ghostData.ghosts)
 
@@ -79,6 +83,7 @@ function App() {
             evidence={ghostData.evidences}
             handlePositive={handlePositive}
             handleNegative={handleNegative}
+            resetApplication={resetApplication}
             allOptionsUsed={ positiveEvidence.length === 3 }
             positiveEvidence={positiveEvidence}
             negativeEvidence={negativeEvidence}
