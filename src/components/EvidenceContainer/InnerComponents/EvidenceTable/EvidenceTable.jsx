@@ -28,13 +28,11 @@ export default function EvidenceTable(props){
     })
 
     return(
-        <div className={"evidence-table"}>
-            <div className={"evidence-table-header-row"}>
-                <div className={"evidence-header"}>Evidence</div>
-                <div className={"positive-header"}>Positive</div>
-                <div className={"negative-header"}>Negative</div>
-            </div>
+        <table className={"evidence-table"}>
+            <th className={"evidence-header"}>Evidence</th>
+            <th className={"positive-header"}>Positive</th>
+            <th className={"negative-header"}>Negative</th>
             {possibleEvidence}
-        </div>
+        </table>
     )
 }
