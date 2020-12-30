@@ -1,5 +1,7 @@
 # Phasmophobia Companion App
 
+![](beta_demo.gif)
+
 This is a React project bootstrapped with Create React App. This is a purely front-end application.
 
 It aims to help the 2020 hit PC game Phasmophobia assess the possible ghosts they are dealing with by incorporating the capabilities of the in-game journal and expanding them to help the players' guesswork.
