@@ -6,6 +6,8 @@ It aims to help the 2020 hit PC game Phasmophobia assess the possible ghosts the
 
 It has a session in which the user inputs the evidence with which the ghost has interacted so far, the evidence the ghost **didn't** interact with and returns what the possibilities are, what the impossibilities are and whether it could only be one option.
 
+Temporarily hosted on http://www.rmcastilho.com/phasmophobia-companion/
+
 ## Running the project
 
 As described, this is not a complex project. You may clone this repository locally and run
