@@ -6,7 +6,6 @@ import ReactGA from 'react-ga';
 // Components
 import EvidenceContainer from "./components/EvidenceContainer/EvidenceContainer";
 import GhostContainer from "./components/GhostContainer/GhostContainer";
-import EvidenceTrigger from "./components/EvidenceTrigger/EvidenceTrigger";
 
 // Data
 import ghostData from './utils/data/ghostData.json';
@@ -25,7 +24,6 @@ function App() {
     })
 
     // Evidence handlers
-    const [evidenceLogger, setEvidenceLogger] = useState(false);
     const [positiveEvidence, setPositiveEvidence] = useState([]);
     const [negativeEvidence, setNegativeEvidence] = useState([]);
 
@@ -73,14 +71,6 @@ function App() {
         }
     }
 
-    const handleEvidenceLogger = () => {
-        setEvidenceLogger(!evidenceLogger);
-    }
-
-    const resetApplication = () => {
-        window.location.reload(false);
-    }
-
     const stateUpdater = () => {
         const result = fullOutput(positiveEvidence, negativeEvidence, ghostData.ghosts);
 
@@ -95,20 +85,14 @@ function App() {
         <img src={logo} />
         <h1>Unofficial Phasmophobia Companion App (Journal)</h1>
 
-        <EvidenceTrigger handleEvidenceLogger={handleEvidenceLogger} />
-
-        {!evidenceLogger
-            ? null
-            : <EvidenceContainer
-            handleEvidenceLogger={handleEvidenceLogger}
+        <EvidenceContainer
             evidence={ghostData.evidences}
             handlePositive={handlePositive}
             handleNegative={handleNegative}
-            resetApplication={resetApplication}
             allOptionsUsed={positiveEvidence.length === 3}
             positiveEvidence={positiveEvidence}
             negativeEvidence={negativeEvidence}
-        />}
+        />
 
         <GhostContainer
             ghosts={ghostData.ghosts}

@@ -15,3 +15,15 @@
 
     border-radius: 15px;
 }
+
+.evidence-label {
+    width: 200px;
+}
+
+.positive-switch-container, .negative-switch-container {
+    width: 120px;
+}
+
+.evidence-row {
+    height: 40px;
+}
