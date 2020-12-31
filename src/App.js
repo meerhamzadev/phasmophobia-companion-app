@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react';
+
+// Analytics
+import ReactGA from 'react-ga';
+
+// Components
 import EvidenceContainer from "./components/EvidenceContainer/EvidenceContainer";
 import GhostContainer from "./components/GhostContainer/GhostContainer";
+import EvidenceTrigger from "./components/EvidenceTrigger/EvidenceTrigger";
 
 // Data
 import ghostData from './utils/data/ghostData.json';
+import googleId from "./utils/google-analytics-sensitive/gaConfiguration";
 
 // Auxiliary functions
 import fullOutput from './utils/auxiliaryFunctions/outcomeChecker';
@@ -18,8 +25,9 @@ function App() {
     })
 
     // Evidence handlers
-    const [positiveEvidence, setPositiveEvidence] = useState([])
-    const [negativeEvidence, setNegativeEvidence] = useState([])
+    const [evidenceLogger, setEvidenceLogger] = useState(false);
+    const [positiveEvidence, setPositiveEvidence] = useState([]);
+    const [negativeEvidence, setNegativeEvidence] = useState([]);
 
     // Possible outputs
     const [detectedGhost, setDetectedGhost] = useState('');
@@ -28,21 +36,25 @@ function App() {
     const [messageToUser, setMessageToUser] = useState('');
 
     useEffect(() => {
+        ReactGA.initialize(googleId);
+        ReactGA.pageview('/');
+
         stateUpdater()
-    }, [positiveEvidence, negativeEvidence])
+
+    }, [positiveEvidence, negativeEvidence]);
 
     const handlePositive = (event) => {
         const targetValue = parseInt(event.target.value);
 
         if(positiveEvidence.includes(targetValue)){
-            let targetIndex = positiveEvidence.indexOf(targetValue)
-            let tempArray = [...positiveEvidence]
+            let targetIndex = positiveEvidence.indexOf(targetValue);
+            let tempArray = [...positiveEvidence];
 
-            tempArray.splice(targetIndex, 1)
+            tempArray.splice(targetIndex, 1);
 
-            setPositiveEvidence([...tempArray], stateUpdater())
+            setPositiveEvidence([...tempArray], stateUpdater());
         } else {
-            setPositiveEvidence([...positiveEvidence, targetValue], stateUpdater())
+            setPositiveEvidence([...positiveEvidence, targetValue], stateUpdater());
         }
     }
 
@@ -50,15 +62,19 @@ function App() {
         const targetValue = parseInt(event.target.value);
 
         if(negativeEvidence.includes(targetValue)){
-            let targetIndex = negativeEvidence.indexOf(targetValue)
-            let tempArray = [...negativeEvidence]
+            let targetIndex = negativeEvidence.indexOf(targetValue);
+            let tempArray = [...negativeEvidence];
 
-            tempArray.splice(targetIndex, 1)
+            tempArray.splice(targetIndex, 1);
 
-            setNegativeEvidence([...tempArray], stateUpdater())
+            setNegativeEvidence([...tempArray], stateUpdater());
         } else {
-            setNegativeEvidence([...negativeEvidence, targetValue], stateUpdater())
+            setNegativeEvidence([...negativeEvidence, targetValue], stateUpdater());
         }
+    }
+
+    const handleEvidenceLogger = () => {
+        setEvidenceLogger(!evidenceLogger);
     }
 
     const resetApplication = () => {
@@ -66,7 +82,7 @@ function App() {
     }
 
     const stateUpdater = () => {
-        const result = fullOutput(positiveEvidence, negativeEvidence, ghostData.ghosts)
+        const result = fullOutput(positiveEvidence, negativeEvidence, ghostData.ghosts);
 
         setDetectedGhost(result.positiveID);
         setPossibleGhosts(result.possibleGhosts);
@@ -79,15 +95,20 @@ function App() {
         <img src={logo} />
         <h1>Unofficial Phasmophobia Companion App (Journal)</h1>
 
-        <EvidenceContainer
+        <EvidenceTrigger handleEvidenceLogger={handleEvidenceLogger} />
+
+        {!evidenceLogger
+            ? null
+            : <EvidenceContainer
+            handleEvidenceLogger={handleEvidenceLogger}
             evidence={ghostData.evidences}
             handlePositive={handlePositive}
             handleNegative={handleNegative}
             resetApplication={resetApplication}
-            allOptionsUsed={ positiveEvidence.length === 3 }
+            allOptionsUsed={positiveEvidence.length === 3}
             positiveEvidence={positiveEvidence}
             negativeEvidence={negativeEvidence}
-        />
+        />}
 
         <GhostContainer
             ghosts={ghostData.ghosts}
