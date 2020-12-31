@@ -1,4 +1,5 @@
 # Phasmophobia Companion App
+http://phasmophobia-app.com/
 
 ![](beta_demo.gif)
 
@@ -7,8 +8,6 @@ This is a React project bootstrapped with Create React App. This is a purely fro
 It aims to help the 2020 hit PC game Phasmophobia assess the possible ghosts they are dealing with by incorporating the capabilities of the in-game journal and expanding them to help the players' guesswork.
 
 It has a session in which the user inputs the evidence with which the ghost has interacted so far, the evidence the ghost **didn't** interact with and returns what the possibilities are, what the impossibilities are and whether it could only be one option.
-
-Temporarily hosted on http://www.rmcastilho.com/phasmophobia-companion/
 
 ## Running the project
 
