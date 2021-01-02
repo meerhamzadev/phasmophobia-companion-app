@@ -6,6 +6,7 @@ import ReactGA from 'react-ga';
 // Components
 import EvidenceContainer from "./components/EvidenceContainer/EvidenceContainer";
 import GhostContainer from "./components/GhostContainer/GhostContainer";
+import DevelopmentInformation from "./components/DevelopmentInformation/DevelopmentInformation";
 
 // Data
 import ghostData from './utils/data/ghostData.json';
@@ -22,6 +23,9 @@ function App() {
     const allGhostIDs = ghostData.ghosts.map((ghost) => {
         return ghost.id
     })
+
+    // Component renderer
+    const [activeComponent, setActiveComponent] = useState('home');
 
     // Evidence handlers
     const [positiveEvidence, setPositiveEvidence] = useState([]);
