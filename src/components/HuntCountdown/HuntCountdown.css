@@ -6,15 +6,12 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aca771",endColorstr="#998e51",GradientType=1);
     border: 5px solid black;
 
-    position: sticky;
+    position: absolute;
     right: 0;
-    bottom: 0;
     display: inline-block;
     padding: 15px;
     border-radius: 15px;
-
     text-align: center;
-    float: right;
 }
 
 h2 {
@@ -23,7 +20,7 @@ h2 {
 
 .time {
     color: red;
-    font-size: 130%;
+    font-size: 200%;
     font-weight: bolder;
     display: block;
 }
