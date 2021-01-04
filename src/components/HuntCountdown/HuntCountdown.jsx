@@ -52,10 +52,11 @@ export default function HuntCountdown(){
 
             <p/>
 
-            <button className={"timer-type-switch"} onClick={handleTypeSwitch}>{timerTypeSwitch}</button>
             <button className={'countdown-trigger'} onClick={handleCountdown}>
                 {countdownButtonText}
             </button>
+
+            <button className={"timer-type-switch"} onClick={handleTypeSwitch}>{timerTypeSwitch}</button>
         </div>
     )
 }

@@ -4,6 +4,7 @@
     background: -webkit-linear-gradient(180deg, rgba(172,167,113,1) 0%, rgba(199,192,133,1) 50%, rgba(153,142,81,1) 100%);
     background: linear-gradient(180deg, rgba(172,167,113,1) 0%, rgba(199,192,133,1) 50%, rgba(153,142,81,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aca771",endColorstr="#998e51",GradientType=1);
+    border: 5px solid black;
 
     position: sticky;
     right: 0;
@@ -13,6 +14,7 @@
     border-radius: 15px;
 
     text-align: center;
+    float: right;
 }
 
 h2 {
@@ -29,4 +31,8 @@ h2 {
 .timer-type-switch, .countdown-trigger {
     display: block;
     margin: 0 auto;
+}
+
+.countdown-trigger {
+    margin-bottom: 10px;
 }
