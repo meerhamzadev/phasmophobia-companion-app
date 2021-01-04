@@ -28,6 +28,8 @@ h2 {
 .timer-type-switch, .countdown-trigger {
     display: block;
     margin: 0 auto;
+    width: 180px;
+    padding: 10px;
 }
 
 .countdown-trigger {
