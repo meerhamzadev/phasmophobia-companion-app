@@ -6,6 +6,7 @@ import ReactGA from 'react-ga';
 // Components
 import EvidenceContainer from "./components/EvidenceContainer/EvidenceContainer";
 import GhostContainer from "./components/GhostContainer/GhostContainer";
+import HuntCountdown from './components/HuntCountdown/HuntCountdown';
 
 // Data
 import ghostData from './utils/data/ghostData.json';
@@ -102,6 +103,8 @@ function App() {
             negativeGhosts={negativeGhosts}
             message={messageToUser}
         />
+
+        <HuntCountdown />
     </div>
   );
 }
