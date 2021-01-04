@@ -1,18 +1,25 @@
 .possibility-container {
-    background: rgb(172,167,113);
-    background: -moz-linear-gradient(180deg, rgba(172,167,113,1) 0%, rgba(199,192,133,1) 50%, rgba(153,142,81,1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(172,167,113,1) 0%, rgba(199,192,133,1) 50%, rgba(153,142,81,1) 100%);
-    background: linear-gradient(180deg, rgba(172,167,113,1) 0%, rgba(199,192,133,1) 50%, rgba(153,142,81,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aca771",endColorstr="#998e51",GradientType=1);
+    background: rgb(172, 167, 113);
+    background: -moz-linear-gradient(180deg, rgba(172, 167, 113, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(172, 167, 113, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
+    background: linear-gradient(180deg, rgba(172, 167, 113, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
+    filter    : progid:DXImageTransform.Microsoft.gradient(startColorstr="#aca771", endColorstr="#998e51", GradientType=1);
 
-    color: rgba(0,0,0,0.75);
+    color: rgba(0, 0, 0, 0.75);
 
-    margin: 0 auto;
-    position: relative;
-    display: inline-block;
-    width: 100%;
+    margin        : 0 auto;
+    position      : relative;
+    display       : inline-block;
+    width         : 100%;
     padding-bottom: 30px;
 
     border-radius: 15px;
-    margin-top: 20px;
+    margin-top   : 20px;
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+    .possibility-container {
+        width: 105%;
+    }
+
 }

@@ -1,6 +1,19 @@
 .App {
   text-align: center;
-  width: 60vw;
-  margin: 0 auto;
+  width     : 60vw;
+  margin    : 0 auto;
   margin-top: 40px;
+}
+
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .App {
+    display       : flex;
+    flex-direction: column;
+  }
+
+  .App h1 {
+    font-size    : 1.15rem;
+    margin-bottom: 1.5rem;
+  }
 }
