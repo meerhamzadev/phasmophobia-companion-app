@@ -24,6 +24,10 @@ I'd gladly accept submissions on smooth transitions and effects, better styling 
 ## Development Roadmap - Near Future Additions
 - Responsive design
 - Better styling, transitions and effects
-- A section with information on equipment and how to use them
-- A section with information on evidence and how to gather them
 - Clicking on ghost cards will provide further information on them
+- A sort of toggleable notebook will be available, containing:
+  - The evidence
+  - A board containing the objectives and ghost name
+  - The hunt countdown timer
+  - Information on equipment
+  - Information on evidence
