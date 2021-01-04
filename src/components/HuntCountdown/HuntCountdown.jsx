@@ -4,6 +4,8 @@ import './HuntCountdown.css';
 export default function HuntCountdown(){
     const [countdownTrigger, setCountdownTrigger] = useState(false);
     const [timerType, setTimerType] = useState('amateur');
+    const [expandedDiv, setExpandedDiv] = useState(true);
+
     const [totalTime, setTotalTime] = useState(300);
     const [minutes, setMinutes] = useState();
     const [seconds, setSeconds] = useState();
@@ -25,6 +27,10 @@ export default function HuntCountdown(){
         setTotalTime(timerReset);
     }
 
+    const handleView = () => {
+        setExpandedDiv(!expandedDiv)
+    }
+
     const handleTypeSwitch = () => {
         setCountdownTrigger(false)
 
@@ -40,11 +46,18 @@ export default function HuntCountdown(){
     const countdownButtonText = countdownTrigger ? "Stop and reset" : "Start";
     const timerTypeSwitch = timerType === 'amateur' ? "Switch to Intermediate" : "Switch to Amateur";
 
-    return(
-        <div className={'countdown-container'}>
+    const fullView = (
+        <div className={'countdown-container-expanded'}>
+            <button className={"minimize"} onClick={handleView}>_</button>
+
             <h2>
                 Setup Time
             </h2>
+            <span className={"countdown-description"}>
+                Alpha Stage
+            </span>
+
+            <p />
 
             <span className={"time"}>
                {minutes} : {seconds}
@@ -57,6 +70,20 @@ export default function HuntCountdown(){
             </button>
 
             <button className={"timer-type-switch"} onClick={handleTypeSwitch}>{timerTypeSwitch}</button>
+            <p />
+
+            <span className={"countdown-description"}>Timer may look glitched at times,</span>
+            <span className={"countdown-description"}>but starting over will correct it</span>
         </div>
-    )
+    );
+
+    const compactView = (
+        <div className={'countdown-container-compact'} onClick={setExpandedDiv}>
+            <span className={"time-spin"}>
+               {minutes} : {seconds}
+            </span>
+        </div>
+    );
+
+    return expandedDiv ? fullView : compactView
 }
