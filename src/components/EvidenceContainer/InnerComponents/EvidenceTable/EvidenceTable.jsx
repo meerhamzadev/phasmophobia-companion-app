@@ -26,10 +26,8 @@ export default function EvidenceTable(props){
     })
 
     return(
-        <table className={"evidence-table"}>
-            <th className={"evidence-header"}>Evidence</th>
-            <th className={"positive-header"}>Status</th>
+        <div className={"evidence-table"}>
             {possibleEvidence}
-        </table>
+        </div>
     )
 }

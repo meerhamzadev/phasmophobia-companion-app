@@ -2,6 +2,10 @@
     display: none;
 }
 
+.switch-container {
+    margin-top: 10px;
+}
+
 .left-edge-active,
 .center-active,
 .right-edge-active,
@@ -11,6 +15,7 @@
     border: 1px solid black;
     width: 140px;
     padding: 8px;
+    color: whitesmoke;
 }
 
 .left-edge-inactive, .left-edge-active {
@@ -22,7 +27,6 @@
 }
 
 .left-edge-active, .center-active, .right-edge-active {
-    color: whitesmoke;
     font-weight: bold;
 }
 
@@ -36,4 +40,8 @@
 
 .right-edge-active {
     background-color: #3e8e41;
+}
+
+.left-edge-inactive, .center-inactive, .right-edge-inactive {
+    background-color: dimgrey;
 }

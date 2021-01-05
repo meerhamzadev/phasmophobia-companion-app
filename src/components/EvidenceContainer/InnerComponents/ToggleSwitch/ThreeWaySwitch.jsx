@@ -24,7 +24,7 @@ export default function AlternateSwitch(props){
 
 
     return(
-        <div className={'alternate-switch'} role={"group"}>
+        <div className={'switch-container'} role={"group"}>
             <label className={toggleType[0]}>
                 <input className={"interaction-handle"} type="radio" name="options" id={props.evidenceID} value={0} onChange={props.handleEvidenceToggle} /> Zero Interaction </label>
             <label className={toggleType[1]}>
