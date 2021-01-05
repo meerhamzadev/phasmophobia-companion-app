@@ -43,10 +43,22 @@ function App() {
     }, [positiveEvidence, negativeEvidence]);
 
     const handleEvidenceToggle = (event) => {
-        console.log(event.target);
+        const evidenceId = parseInt(event.target.id);
+        const eventValue = parseInt(event.target.value);
+
+        if(eventValue === 0){
+            handleNegativeEvidence(evidenceId);
+        }
+        if(eventValue === 1){
+            handleNeutralEvidence(evidenceId);
+        }
+        if(eventValue === 2){
+            handlePositiveEvidence(evidenceId);
+        }
     }
 
     const handleNeutralEvidence = (evidenceId) => {
+        console.log("Neutral received for", evidenceId)
         if(positiveEvidence.includes(evidenceId)){
             let targetIndex = positiveEvidence.indexOf(evidenceId);
             let tempArray = [...positiveEvidence];
@@ -67,6 +79,7 @@ function App() {
     }
 
     const handlePositiveEvidence = (evidenceId) => {
+        console.log("Positive received for", evidenceId)
         if(positiveEvidence.includes(evidenceId)){
             let targetIndex = positiveEvidence.indexOf(evidenceId);
             let tempArray = [...positiveEvidence];
@@ -80,6 +93,7 @@ function App() {
     }
 
     const handleNegativeEvidence = (evidenceId) => {
+        console.log("Negative received for", evidenceId)
         if(negativeEvidence.includes(evidenceId)){
             let targetIndex = negativeEvidence.indexOf(evidenceId);
             let tempArray = [...negativeEvidence];
