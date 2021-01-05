@@ -40,7 +40,7 @@ export default function GhostCard(props){
                 {props.ghostType}
             </div>
             <div className={"ghost-picture"}>
-                <img src={targetPicture[targetSubstring]} />
+                <img className={"ghost-picture"} src={targetPicture[targetSubstring]} />
             </div>
         </div>
     )

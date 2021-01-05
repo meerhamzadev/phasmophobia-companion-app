@@ -50,21 +50,13 @@
     .possible,
     .negative,
     .found {
-        height: 300px;
-        width : 300px;
-    }
-
-    .ghost-picture {
-        height         : 200px;
-        width          : 100%;
-        display        : flex;
-        justify-content: center;
+        display: inline-block;
+        height: 100%;
+        padding-bottom: 20px;
     }
 
     .ghost-picture img {
-        height    : 100%;
-        width     : 250px;
-        object-fit: fill;
+        display: none;
     }
 }
 
@@ -73,21 +65,12 @@
     .possible,
     .negative,
     .found {
-        height: 300px;
-        width : 80vw;
-        margin: 10px 0px;
-    }
-
-    .ghost-picture {
-        height         : 200px;
-        width          : 100%;
-        display        : flex;
-        justify-content: center;
+        display: inline-block;
+        height: 100%;
+        padding-bottom: 20px;
     }
 
     .ghost-picture img {
-        height    : 100%;
-        width     : 250px;
-        object-fit: fill;
+        display: none;
     }
 }
