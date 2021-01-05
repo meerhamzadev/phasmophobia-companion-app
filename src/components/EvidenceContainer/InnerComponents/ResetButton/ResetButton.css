@@ -6,5 +6,9 @@
     border: 1px solid black;
     display: block;
     margin: 0 auto;
-    margin-top: 20px;
+}
+
+.evidence-controls {
+    margin: 0 auto;
+    margin: 40px;
 }

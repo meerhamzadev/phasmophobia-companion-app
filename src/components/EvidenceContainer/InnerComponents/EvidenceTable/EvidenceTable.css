@@ -1,4 +1,4 @@
-@media only screen and (max-width: 360px){
+@media only screen and (min-width: 360px){
     .evidence-row {
         border-bottom: none;
         margin-bottom: 15px;
@@ -12,15 +12,22 @@
 }
 
 .evidence-row {
-    display: block;
-    padding: 10px 0;
+    display: inline-block;
+    padding: 20px;
 }
 
 .evidence-label, .switch-container {
     vertical-align: center;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
 }
 
 .evidence-label {
     font-weight: bolder;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.switch-container {
+    margin-bottom: 200px;
 }
