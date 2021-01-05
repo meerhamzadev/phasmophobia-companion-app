@@ -81,6 +81,10 @@ function App() {
         setMessageToUser(result.message);
     }
 
+    const resetEvidence = () => {
+        window.location.reload();
+    }
+
   return (
     <div className="App">
         <img className={'phasmophobia-logo'} src={logo} />
@@ -93,6 +97,7 @@ function App() {
             allOptionsUsed={positiveEvidence.length === 3}
             positiveEvidence={positiveEvidence}
             negativeEvidence={negativeEvidence}
+            resetEvidence={resetEvidence}
         />
 
         <GhostContainer
