@@ -17,3 +17,16 @@
     margin-bottom: 1.5rem;
   }
 }
+
+@media (max-width: 599px) {
+  .App {
+    display       : flex;
+    flex-direction: column;
+    width         : 90vw;
+  }
+
+  .App h1 {
+    font-size    : .8rem;
+    margin-bottom: 1.2rem;
+  }
+}

@@ -40,16 +40,37 @@ h4 {
 @media (min-width: 600px) and (max-width: 1023px) {
 
     .found-ghost-card {
-        width: 0%;
+        width: 100%;
     }
 
     .found-ghost-description {
-        text-align: left;
-        color     : white;
+        text-align  : left;
+        color       : rgb(32, 32, 32);
+        padding-left: 0px;
+        width       : 100%;
     }
 
     h4 {
-        color     : rgb(255, 255, 255);
+        color     : rgb(19, 19, 19);
+        text-align: left;
+    }
+}
+
+@media (max-width: 599px) {
+
+    .found-ghost-card {
+        width: 100%;
+    }
+
+    .found-ghost-description {
+        text-align  : left;
+        color       : rgb(32, 32, 32);
+        padding-left: 0px;
+        width       : 100%;
+    }
+
+    h4 {
+        color     : rgb(19, 19, 19);
         text-align: left;
     }
 }

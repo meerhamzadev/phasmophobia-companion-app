@@ -104,3 +104,23 @@ h2 {
         font-size: 180%;
     }
 }
+
+
+@media (max-width: 599px) {
+
+    .countdown-container-compact,
+    .countdown-container-expanded {
+        margin-top: 1.2rem;
+        position  : relative;
+        border    : 3px solid black;
+    }
+
+    .countdown-container-compact {
+        height     : 70px;
+        padding-top: 35px;
+    }
+
+    .time-spin {
+        transform: rotate(0deg);
+    }
+}

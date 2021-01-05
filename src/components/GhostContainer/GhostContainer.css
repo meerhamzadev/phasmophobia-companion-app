@@ -23,3 +23,14 @@
     }
 
 }
+
+@media (max-width: 599px) {
+    .possibility-container {
+        order: 1;
+    }
+
+
+    .possibility-container h3 {
+        font-size: 1.05rem;
+    }
+}
