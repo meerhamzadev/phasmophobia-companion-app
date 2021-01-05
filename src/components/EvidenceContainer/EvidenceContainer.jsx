@@ -13,8 +13,7 @@ export default function EvidenceContainer(props){
                 allOptionsUsed={props.allOptionsUsed}
                 positiveEvidence={props.positiveEvidence}
                 negativeEvidence={props.negativeEvidence}
-                handlePositive={props.handlePositive}
-                handleNegative={props.handleNegative}
+                handleEvidenceToggle={props.handleEvidenceToggle}
             />
 
             <ResetButton resetEvidence={props.resetEvidence}/>

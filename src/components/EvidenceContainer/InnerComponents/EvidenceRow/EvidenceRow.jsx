@@ -1,26 +1,18 @@
 import React from 'react';
-import {PositiveSwitch, NegativeSwitch} from '../ToggleSwitch/ToggleSwitch';
+import ThreeWaySwitch from '../ToggleSwitch/ThreeWaySwitch.jsx';
 
 export default function EvidenceRow(props){
     return(
-        <tr className={"evidence-row"} key={props.evidenceID}>
-            <td className={"evidence-label"}>{props.evidenceLabel}</td>
-            <td className={"positive-switch-container"}>
-                <PositiveSwitch
-                    toggleType={"positive-interaction-toggle"}
-                    key={props.evidenceID}
-                    evidenceID={props.evidenceID}
-                    handlePositive={props.handlePositive}
-                />
-            </td>
-            <td className={"negative-switch-container"}>
-                <NegativeSwitch
-                    toggleType={"negative-interaction-toggle"}
-                    key={props.evidenceID}
-                    evidenceID={props.evidenceID}
-                    handleNegative={props.handleNegative}
-                />
-            </td>
-        </tr>
+        <div className={"evidence-row"} key={props.evidenceID}>
+            <div className={"evidence-label"}>{props.evidenceLabel}</div>
+            <ThreeWaySwitch
+                toggleType={"positive-interaction-toggle"}
+                key={props.evidenceID}
+                positiveEvidence={props.positiveEvidence}
+                negativeEvidence={props.negativeEvidence}
+                evidenceID={props.evidenceID}
+                handleEvidenceToggle={props.handleEvidenceToggle}
+            />
+        </div>
     )
 }

@@ -1,9 +1,16 @@
 .evidence-table {
     margin: 0 auto;
+    display: inline-block;
     border-collapse: collapse;
 }
 
 .evidence-row {
     border-bottom: 1px solid dimgrey;
+    display: block;
+    padding: 10px 0;
 }
 
+.evidence-label, .switch-container {
+    vertical-align: center;
+    display: inline-block;
+}

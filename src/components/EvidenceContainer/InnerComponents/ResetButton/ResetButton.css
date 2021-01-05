@@ -1,8 +1,10 @@
 .reset-button {
-    margin-top: 20px;
     padding: 20px;
     border-radius: 15px;
     font-weight: bold;
     background: darkkhaki;
     border: 1px solid black;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
 }
