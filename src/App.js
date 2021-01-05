@@ -42,33 +42,53 @@ function App() {
 
     }, [positiveEvidence, negativeEvidence]);
 
-    const handlePositive = (event) => {
-        const targetValue = parseInt(event.target.value);
+    const handleEvidenceToggle = (event) => {
+        console.log(event.target);
+    }
 
-        if(positiveEvidence.includes(targetValue)){
-            let targetIndex = positiveEvidence.indexOf(targetValue);
+    const handleNeutralEvidence = (evidenceId) => {
+        if(positiveEvidence.includes(evidenceId)){
+            let targetIndex = positiveEvidence.indexOf(evidenceId);
+            let tempArray = [...positiveEvidence];
+
+            tempArray.splice(targetIndex, 1);
+
+            setPositiveEvidence([...tempArray], stateUpdater());
+        }
+
+        if(negativeEvidence.includes(evidenceId)){
+            let targetIndex = negativeEvidence.indexOf(evidenceId);
+            let tempArray = [...negativeEvidence];
+
+            tempArray.splice(targetIndex, 1);
+
+            setNegativeEvidence([...tempArray], stateUpdater());
+        }
+    }
+
+    const handlePositiveEvidence = (evidenceId) => {
+        if(positiveEvidence.includes(evidenceId)){
+            let targetIndex = positiveEvidence.indexOf(evidenceId);
             let tempArray = [...positiveEvidence];
 
             tempArray.splice(targetIndex, 1);
 
             setPositiveEvidence([...tempArray], stateUpdater());
         } else {
-            setPositiveEvidence([...positiveEvidence, targetValue], stateUpdater());
+            setPositiveEvidence([...positiveEvidence, evidenceId], stateUpdater());
         }
     }
 
-    const handleNegative = (event) => {
-        const targetValue = parseInt(event.target.value);
-
-        if(negativeEvidence.includes(targetValue)){
-            let targetIndex = negativeEvidence.indexOf(targetValue);
+    const handleNegativeEvidence = (evidenceId) => {
+        if(negativeEvidence.includes(evidenceId)){
+            let targetIndex = negativeEvidence.indexOf(evidenceId);
             let tempArray = [...negativeEvidence];
 
             tempArray.splice(targetIndex, 1);
 
             setNegativeEvidence([...tempArray], stateUpdater());
         } else {
-            setNegativeEvidence([...negativeEvidence, targetValue], stateUpdater());
+            setNegativeEvidence([...negativeEvidence, evidenceId], stateUpdater());
         }
     }
 
@@ -87,13 +107,12 @@ function App() {
 
   return (
     <div className="App">
-        <img className={'phasmophobia-logo'} src={logo} />
+        <img alt={"Phasmophobia logo"} className={'phasmophobia-logo'} src={logo} />
         <h1>Unofficial Phasmophobia Companion App (Journal)</h1>
 
         <EvidenceContainer
             evidence={ghostData.evidences}
-            handlePositive={handlePositive}
-            handleNegative={handleNegative}
+            handleEvidenceToggle={handleEvidenceToggle}
             allOptionsUsed={positiveEvidence.length === 3}
             positiveEvidence={positiveEvidence}
             negativeEvidence={negativeEvidence}

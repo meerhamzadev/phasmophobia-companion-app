@@ -10,8 +10,7 @@ export default function EvidenceTable(props){
                             {...evidence}
                             positiveEvidence={props.positiveEvidence}
                             negativeEvidence={props.negativeEvidence}
-                            handlePositive={props.handlePositive}
-                            handleNegative={props.handleNegative}
+                            handleEvidenceToggle={props.handleEvidenceToggle}
                         />
             } else {
                 return null
@@ -21,8 +20,7 @@ export default function EvidenceTable(props){
                         {...evidence}
                         positiveEvidence={props.positiveEvidence}
                         negativeEvidence={props.negativeEvidence}
-                        handlePositive={props.handlePositive}
-                        handleNegative={props.handleNegative}
+                        handleEvidenceToggle={props.handleEvidenceToggle}
                     />
         }
     })
@@ -30,8 +28,7 @@ export default function EvidenceTable(props){
     return(
         <table className={"evidence-table"}>
             <th className={"evidence-header"}>Evidence</th>
-            <th className={"positive-header"}>Positive</th>
-            <th className={"negative-header"}>Negative</th>
+            <th className={"positive-header"}>Status</th>
             {possibleEvidence}
         </table>
     )

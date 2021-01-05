@@ -1,0 +1,39 @@
+.interaction-handle {
+    display: none;
+}
+
+.left-edge-active,
+.center-active,
+.right-edge-active,
+.left-edge-inactive,
+.center-inactive,
+.right-edge-inactive {
+    border: 1px solid black;
+    width: 140px;
+    padding: 8px;
+}
+
+.left-edge-inactive, .left-edge-active {
+    border-radius: 10px 0 0 10px;
+}
+
+.right-edge-inactive, .right-edge-active {
+    border-radius: 0 10px 10px 0;
+}
+
+.left-edge-active, .center-active, .right-edge-active {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.left-edge-active {
+    background-color: darkred;
+}
+
+.center-active {
+    background-color: darkblue;
+}
+
+.right-edge-active {
+    background-color: #3e8e41;
+}
