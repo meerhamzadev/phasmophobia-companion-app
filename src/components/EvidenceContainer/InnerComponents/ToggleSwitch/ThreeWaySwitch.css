@@ -1,3 +1,32 @@
+@media only screen and (max-width: 360px){
+    .left-edge-active,
+    .center-active,
+    .right-edge-active,
+    .left-edge-inactive,
+    .center-inactive,
+    .right-edge-inactive {
+        font-size: 80%;
+        border: 1px solid black;
+        width: 100px;
+        padding: 8px;
+        color: whitesmoke;
+    }
+}
+
+@media only screen and (min-width: 361px){
+    .left-edge-active,
+    .center-active,
+    .right-edge-active,
+    .left-edge-inactive,
+    .center-inactive,
+    .right-edge-inactive {
+        border: 1px solid black;
+        width: 140px;
+        padding: 8px;
+        color: whitesmoke;
+    }
+}
+
 .interaction-handle {
     display: none;
 }

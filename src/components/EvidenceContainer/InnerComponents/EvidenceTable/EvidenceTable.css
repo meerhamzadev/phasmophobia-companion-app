@@ -1,3 +1,16 @@
+@media only screen and (max-width: 360px){
+    .evidence-row {
+        border-bottom: none;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (min-width: 361px){
+    .evidence-row {
+        border-bottom: 1px solid dimgrey;
+    }
+}
+
 .evidence-table {
     margin: 0 auto;
     display: inline-block;
@@ -5,7 +18,6 @@
 }
 
 .evidence-row {
-    border-bottom: 1px solid dimgrey;
     display: block;
     padding: 10px 0;
 }
@@ -13,4 +25,8 @@
 .evidence-label, .switch-container {
     vertical-align: center;
     display: inline-block;
+}
+
+.evidence-label {
+    font-weight: bolder;
 }
