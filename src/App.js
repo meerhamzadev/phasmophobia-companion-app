@@ -83,7 +83,7 @@ function App() {
 
   return (
     <div className="App">
-        <img src={logo} />
+        <img className={'phasmophobia-logo'} src={logo} />
         <h1>Unofficial Phasmophobia Companion App (Journal)</h1>
 
         <EvidenceContainer

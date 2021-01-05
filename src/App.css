@@ -29,4 +29,10 @@
     font-size    : .8rem;
     margin-bottom: 1.2rem;
   }
+
+  .phasmophobia-logo {
+    height: 120px;
+    width: 280px;
+    margin: 0 auto;
+  }
 }
