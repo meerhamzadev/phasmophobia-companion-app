@@ -1,25 +1,27 @@
-.countdown-container-expanded, .countdown-container-compact {
-    background: rgb(172,167,113);
-    background: -moz-linear-gradient(180deg, rgba(172,167,113,1) 0%, rgba(199,192,133,1) 50%, rgba(153,142,81,1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(172,167,113,1) 0%, rgba(199,192,133,1) 50%, rgba(153,142,81,1) 100%);
-    background: linear-gradient(180deg, rgba(172,167,113,1) 0%, rgba(199,192,133,1) 50%, rgba(153,142,81,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aca771",endColorstr="#998e51",GradientType=1);
-    border: 5px solid black;
+.countdown-container-expanded,
+.countdown-container-compact {
+    background: rgb(172, 167, 113);
+    background: -moz-linear-gradient(180deg, rgba(172, 167, 113, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(172, 167, 113, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
+    background: linear-gradient(180deg, rgba(172, 167, 113, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
+    filter    : progid:DXImageTransform.Microsoft.gradient(startColorstr="#aca771", endColorstr="#998e51", GradientType=1);
+    border    : 5px solid black;
 
     position: absolute;
-    right: 0;
-    display: inline-block;
+    right   : 0;
+    display : inline-block;
 
     border-radius: 15px;
-    text-align: center;
+    text-align   : center;
 }
+
 
 .countdown-container-expanded {
     padding: 15px;
 }
 
 .countdown-container-compact {
-    height: 110px;
+    height     : 110px;
     padding-top: 70px;
 }
 
@@ -27,21 +29,23 @@ h2 {
     color: black;
 }
 
-.time, .time-spin {
-    color: red;
-    font-size: 200%;
+.time,
+.time-spin {
+    color      : red;
+    font-size  : 200%;
     font-weight: bolder;
-    display: block;
+    display    : block;
 }
 
 .time-spin {
     transform: rotate(-90deg)
 }
 
-.timer-type-switch, .countdown-trigger {
+.timer-type-switch,
+.countdown-trigger {
     display: block;
-    margin: 0 auto;
-    width: 180px;
+    margin : 0 auto;
+    width  : 180px;
     padding: 10px;
 }
 
@@ -51,16 +55,72 @@ h2 {
 
 .countdown-description {
     display: block;
-    color: black;
+    color  : black;
 }
 
 .minimize {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 200%;
-    font-weight: bolder;
+    position        : absolute;
+    right           : 0;
+    top             : 0;
+    font-size       : 200%;
+    font-weight     : bolder;
     background-color: transparent;
-    padding: 0 20px 0 0;
-    border: 0;
+    padding         : 0 20px 0 0;
+    border          : 0;
+}
+
+
+@media (min-width: 600px) and (max-width: 1023px) {
+
+    .countdown-container-expanded,
+    .countdown-container-compact {
+        position: fixed;
+        right   : 0;
+        border  : 3px solid black;
+    }
+
+    .countdown-container-expanded {
+        opacity: .95;
+        padding: 5px 5px 7px 5px;
+    }
+
+    .countdown-container-compact {
+        height: 110px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .time,
+    .time-spin {
+        color      : red;
+        font-size  : 160%;
+        font-weight: bolder;
+        display    : block;
+    }
+
+    .minimize {
+        font-size: 180%;
+    }
+}
+
+
+@media (max-width: 599px) {
+
+    .countdown-container-compact,
+    .countdown-container-expanded {
+        margin-top: 1.2rem;
+        position  : relative;
+        border    : 3px solid black;
+    }
+
+    .countdown-container-compact {
+        height     : 70px;
+        padding-top: 35px;
+    }
+
+    .time-spin {
+        transform: rotate(0deg);
+    }
 }

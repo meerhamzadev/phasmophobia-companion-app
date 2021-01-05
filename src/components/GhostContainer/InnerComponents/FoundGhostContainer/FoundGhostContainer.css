@@ -1,14 +1,15 @@
 .found-ghost-container {
-    margin: 0 auto;
-    padding: 30px 10px;
-    width: 95%;
+    margin       : 0 auto;
+    padding      : 30px 10px;
+    width        : 95%;
     border-radius: 15px;
 
     background: rgba(0, 0, 0, 0.2)
 }
 
-.found-ghost-card, .found-ghost-description {
-    display: inline-block;
+.found-ghost-card,
+.found-ghost-description {
+    display       : inline-block;
     vertical-align: top;
 }
 
@@ -17,15 +18,15 @@
 }
 
 .found-ghost-description {
-    position: relative;
-    text-align: justify;
+    position    : relative;
+    text-align  : justify;
     padding-left: 20px;
-    width: 70%;
+    width       : 70%;
 }
 
 .found-ghost-inner-text {
     margin: 0 auto;
-    width: 80%;
+    width : 80%;
 }
 
 ul {
@@ -34,4 +35,42 @@ ul {
 
 h4 {
     text-align: center;
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+
+    .found-ghost-card {
+        width: 100%;
+    }
+
+    .found-ghost-description {
+        text-align  : left;
+        color       : rgb(32, 32, 32);
+        padding-left: 0px;
+        width       : 100%;
+    }
+
+    h4 {
+        color     : rgb(19, 19, 19);
+        text-align: left;
+    }
+}
+
+@media (max-width: 599px) {
+
+    .found-ghost-card {
+        width: 100%;
+    }
+
+    .found-ghost-description {
+        text-align  : left;
+        color       : rgb(32, 32, 32);
+        padding-left: 0px;
+        width       : 100%;
+    }
+
+    h4 {
+        color     : rgb(19, 19, 19);
+        text-align: left;
+    }
 }
