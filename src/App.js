@@ -57,9 +57,8 @@ function App() {
         }
     }
 
-    const handleNeutralEvidence = (evidenceId) => {
-        console.log("Neutral received for", evidenceId)
-        if(positiveEvidence.includes(evidenceId)){
+    const removeEvidence = (evidenceId, target) => {
+        if(target === 'positive' && positiveEvidence.includes(evidenceId)){
             let targetIndex = positiveEvidence.indexOf(evidenceId);
             let tempArray = [...positiveEvidence];
 
@@ -68,42 +67,38 @@ function App() {
             setPositiveEvidence([...tempArray], stateUpdater());
         }
 
-        if(negativeEvidence.includes(evidenceId)){
+        if(target === 'negative' && negativeEvidence.includes(evidenceId)){
             let targetIndex = negativeEvidence.indexOf(evidenceId);
             let tempArray = [...negativeEvidence];
 
             tempArray.splice(targetIndex, 1);
 
             setNegativeEvidence([...tempArray], stateUpdater());
+        }
+    }
+
+    const addEvidence = (evidenceId, target) => {
+        if(target === 'positive' && !positiveEvidence.includes(evidenceId)){
+            setPositiveEvidence([...positiveEvidence, evidenceId], stateUpdater())
+        }
+        if(target === 'negative' && !negativeEvidence.includes(evidenceId)){
+            setNegativeEvidence([...negativeEvidence, evidenceId], stateUpdater())
         }
     }
 
     const handlePositiveEvidence = (evidenceId) => {
-        console.log("Positive received for", evidenceId)
-        if(positiveEvidence.includes(evidenceId)){
-            let targetIndex = positiveEvidence.indexOf(evidenceId);
-            let tempArray = [...positiveEvidence];
-
-            tempArray.splice(targetIndex, 1);
-
-            setPositiveEvidence([...tempArray], stateUpdater());
-        } else {
-            setPositiveEvidence([...positiveEvidence, evidenceId], stateUpdater());
-        }
+        removeEvidence(evidenceId, 'negative');
+        addEvidence(evidenceId, 'positive');
     }
 
     const handleNegativeEvidence = (evidenceId) => {
-        console.log("Negative received for", evidenceId)
-        if(negativeEvidence.includes(evidenceId)){
-            let targetIndex = negativeEvidence.indexOf(evidenceId);
-            let tempArray = [...negativeEvidence];
+        removeEvidence(evidenceId, 'positive');
+        addEvidence(evidenceId,'negative');
+    }
 
-            tempArray.splice(targetIndex, 1);
-
-            setNegativeEvidence([...tempArray], stateUpdater());
-        } else {
-            setNegativeEvidence([...negativeEvidence, evidenceId], stateUpdater());
-        }
+    const handleNeutralEvidence = (evidenceId) => {
+        removeEvidence(evidenceId, 'positive');
+        removeEvidence(evidenceId, 'negative');
     }
 
     const stateUpdater = () => {
@@ -116,7 +111,8 @@ function App() {
     }
 
     const resetEvidence = () => {
-        window.location.reload();
+        setPositiveEvidence([]);
+        setNegativeEvidence([])
     }
 
   return (
