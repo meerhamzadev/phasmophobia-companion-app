@@ -5,12 +5,6 @@
     }
 }
 
-@media only screen and (min-width: 361px){
-    .evidence-row {
-        border-bottom: 1px solid dimgrey;
-    }
-}
-
 .evidence-table {
     margin: 0 auto;
     display: inline-block;
