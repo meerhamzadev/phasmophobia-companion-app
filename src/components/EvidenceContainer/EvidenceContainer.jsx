@@ -16,6 +16,8 @@ export default function EvidenceContainer(props){
                 handlePositive={props.handlePositive}
                 handleNegative={props.handleNegative}
             />
+
+            <ResetButton resetEvidence={props.resetEvidence}/>
         </div>
     )
 }
