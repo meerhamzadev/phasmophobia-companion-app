@@ -11,20 +11,22 @@ export default function HuntCountdown(){
     const [seconds, setSeconds] = useState();
 
     useEffect(() => {
-        countdownTrigger && totalTime > 0 && setTimeout(() => setTotalTime(totalTime - 1), 1000);
+        if(countdownTrigger && totalTime > 0){
+            timer(totalTime);
+        }
 
-        let minutesResult = (Math.floor(totalTime / 60)).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
-        let secondsResult = ((totalTime % 60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}))
-
-        setMinutes(minutesResult);
-        setSeconds(secondsResult);
-    }, [totalTime, countdownTrigger]);
+        handleTime(totalTime);
+    }, [totalTime, countdownTrigger, minutes, seconds]);
 
     const handleCountdown = () => {
         setCountdownTrigger(!countdownTrigger);
 
-        let timerReset = timerType === 'amateur' ? 300 : 150;
-        setTotalTime(timerReset);
+        let time = timerType === 'amateur' ? 300 : 150;
+        handleTime(time);
+    }
+
+    const timer = (time) => {
+        setTimeout(() => setTotalTime(time - 1), 1000)
     }
 
     const handleView = () => {
@@ -36,11 +38,28 @@ export default function HuntCountdown(){
 
         if(timerType === "amateur"){
             setTimerType('intermediate');
-            setTotalTime(150);
+            handleTime(150);
         } else {
             setTimerType('amateur');
-            setTotalTime(300);
+            handleTime(300);
         }
+    }
+
+    const handleTime = (time) => {
+
+        const standardMinutes = timerType === 'amateur' ? 5 : 2;
+        const standardSeconds = timerType === 'amateur' ? 0 : 30;
+
+        const minutesResult = countdownTrigger
+            ? (Math.floor(time / 60))
+            : standardMinutes
+        const secondsResult = countdownTrigger
+            ? time % 60
+            : standardSeconds
+
+        setTotalTime(time);
+        setMinutes(minutesResult.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}));
+        setSeconds(secondsResult.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}));
     }
 
     const countdownButtonText = countdownTrigger ? "Stop and reset" : "Start";
@@ -53,9 +72,6 @@ export default function HuntCountdown(){
             <h2>
                 Setup Time
             </h2>
-            <span className={"countdown-description"}>
-                Alpha Stage
-            </span>
 
             <p />
 
@@ -71,9 +87,6 @@ export default function HuntCountdown(){
 
             <button className={"timer-type-switch"} onClick={handleTypeSwitch}>{timerTypeSwitch}</button>
             <p />
-
-            <span className={"countdown-description"}>Timer may look glitched at times,</span>
-            <span className={"countdown-description"}>but starting over will correct it</span>
         </div>
     );
 
