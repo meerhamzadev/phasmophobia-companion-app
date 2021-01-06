@@ -1,0 +1,14 @@
+.evidence-row {
+    display: inline-block;
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+.evidence-row:first-child{
+    margin-left: 0;
+}
+
+.evidence-icon {
+    display: inline-block;
+    margin-left: 5px;
+}
