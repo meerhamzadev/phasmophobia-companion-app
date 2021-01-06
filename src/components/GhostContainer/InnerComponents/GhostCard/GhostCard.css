@@ -6,7 +6,7 @@
     display      : inline-block;
     border       : 1px solid black;
     margin       : 10px 0 10px 12px;
-    height       : 280px;
+    height       : 100%;
     width        : 210px;
     border-radius: 8px;
 

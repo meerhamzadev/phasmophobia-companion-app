@@ -9,7 +9,12 @@ export default function FoundGhostContainer(props){
     return(
         <div className={"found-ghost-container"}>
             <div className={"found-ghost-card"}>
-                <GhostCard cardType={'found'} ghostType={foundGhost.type} ghostId={foundGhost.id} />
+                <GhostCard
+                    cardType={'found'}
+                    ghostType={foundGhost.type}
+                    ghostId={foundGhost.id}
+                    evidence={foundGhost.evidence}
+                />
             </div>
             <div className={"found-ghost-description"}>
                 <div className={"found-ghost-inner-text"}>

@@ -4,7 +4,7 @@ import './PossibleGhostContainer.css';
 
 export default function PossibleGhostContainer(props) {
     const ghostToRender = props.possibleGhosts.map((ghost) => {
-        return <GhostCard cardType={'possible'} ghostType={ghost.type} ghostId={ghost.id} />
+        return <GhostCard cardType={'possible'} ghostType={ghost.type} ghostId={ghost.id} evidence={ghost.evidence} />
     });
 
     return (
