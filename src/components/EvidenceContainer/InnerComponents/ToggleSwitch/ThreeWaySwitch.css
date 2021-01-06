@@ -45,6 +45,7 @@
     width: 140px;
     padding: 8px;
     color: whitesmoke;
+    cursor: pointer;
 }
 
 .left-edge-inactive, .left-edge-active {
