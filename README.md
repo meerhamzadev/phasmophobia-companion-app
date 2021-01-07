@@ -22,7 +22,6 @@ Phasmophobia players' contributions are welcomed and encouraged. I do reinforce 
 I'd gladly accept submissions on smooth transitions and effects, better styling and increased functionalities that actually help move the project forward.
 
 ## Development Roadmap - Near Future Additions
-- Responsive design
 - Better styling, transitions and effects
 - Clicking on ghost cards will provide further information on them
 - A sort of toggleable notebook will be available, containing:
