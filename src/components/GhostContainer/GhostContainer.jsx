@@ -18,8 +18,6 @@ export default function GhostContainer(props){
         return props.positiveID === ghost.id
     });
 
-    console.log(positiveIdDetails)
-
     // Card Generators
     const possibleCards = possibleDetails.map((ghost) => {
         return <GhostCard
