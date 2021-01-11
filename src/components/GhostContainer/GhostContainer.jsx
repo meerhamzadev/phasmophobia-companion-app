@@ -1,11 +1,11 @@
 import React from 'react';
 import './GhostContainer.css'
 
-import EliminatedGhostContainer from "./InnerComponents/EliminatedGhostsContainer/EliminatedGhostContainer";
-import PossibleGhostContainer from "./InnerComponents/PossibleGhostsContainer/PossibleGhostContainer";
-import FoundGhostContainer from "./InnerComponents/FoundGhostContainer/FoundGhostContainer";
+import GhostCard from "./InnerComponents/GhostCard/GhostCard";
 
 export default function GhostContainer(props){
+
+    // Ghost Filters
     const possibleDetails = props.ghosts.filter((ghost) => {
         return props.possibleGhosts.includes(ghost.id);
     });
@@ -18,14 +18,61 @@ export default function GhostContainer(props){
         return props.positiveID === ghost.id
     });
 
+    console.log(positiveIdDetails)
+
+    // Card Generators
+    const possibleCards = possibleDetails.map((ghost) => {
+        return <GhostCard
+                    cardType={'possible'}
+                    ghostType={ghost.type}
+                    ghostId={ghost.id}
+                    evidence={ghost.evidence}
+
+                />
+    });
+
+    const eliminatedCards = eliminatedDetails.map((ghost) => {
+        return <GhostCard
+                    cardType={'negative'}
+                    ghostType={ghost.type}
+                    ghostId={ghost.id}
+                    evidence={ghost.evidence}
+                />
+    });
+
+    const foundCard = props.positiveID
+        ? (
+        <div className={"found-ghost-container"}>
+            <div className={"found-ghost-card"}>
+                <GhostCard
+                    cardType={'found'}
+                    ghostType={positiveIdDetails[0].type}
+                    ghostId={positiveIdDetails[0].id}
+                    evidence={positiveIdDetails[0].evidence}
+                />
+            </div>
+            <div className={"found-ghost-description"}>
+                <div className={"found-ghost-inner-text"}>
+                    <h4>{positiveIdDetails[0].description}</h4>
+                    <ul>
+                        <li><b>Strength:</b> {positiveIdDetails[0].strength}</li>
+                        <p/>
+                        <li><b>Weakness:</b> {positiveIdDetails[0].weakness}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        )
+        : null;
+
     return(
         <div className={"possibility-container"}>
             <h2>{props.message}</h2>
-            <h3>(ghosts cannot be visually recognized)</h3>
+            <h3 className={"visual-disclaimer"}>(ghosts cannot be visually recognized)</h3>
             {props.positiveID || props.positiveID === 0
-                ? <FoundGhostContainer foundGhost={positiveIdDetails} />
-                : <PossibleGhostContainer possibleGhosts={possibleDetails} />}
-            <EliminatedGhostContainer negativeGhosts={eliminatedDetails} />
+                ? foundCard
+                : possibleCards}
+            {eliminatedCards}
         </div>
     )
 }
