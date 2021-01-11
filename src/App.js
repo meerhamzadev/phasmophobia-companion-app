@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
 
 // Components
-import EvidenceContainer from "./components/EvidenceContainer/EvidenceContainer";
+import EvidenceContainer from "./components/UtilitiesContainer/InnerComponents/EvidenceContainer/EvidenceContainer";
 import GhostContainer from "./components/GhostContainer/GhostContainer";
-import HuntCountdown from './components/HuntCountdown/HuntCountdown';
+import HuntCountdown from './components/UtilitiesContainer/InnerComponents/HuntCountdown/HuntCountdown';
 
 // Data
 import ghostData from './utils/data/ghostData.json';
