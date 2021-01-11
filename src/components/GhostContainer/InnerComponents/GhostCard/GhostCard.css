@@ -37,6 +37,10 @@
     background: -webkit-linear-gradient(180deg, rgba(39, 194, 88, 0.7) 0%, rgba(7, 73, 18, 0.7049194677871149) 100%);
     background: linear-gradient(180deg, rgba(39, 194, 88, 0.7) 0%, rgba(7, 73, 18, 0.7049194677871149) 100%);
     filter    : progid:DXImageTransform.Microsoft.gradient(startColorstr="#27c258", endColorstr="#074912", GradientType=1);
+
+    box-shadow: 2px 4px 21px 30px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 2px 4px 21px 30px rgba(0,0,0,0.2);
+    -moz-box-shadow: 2px 4px 21px 30px rgba(0,0,0,0.2);
 }
 
 .ghost-name {

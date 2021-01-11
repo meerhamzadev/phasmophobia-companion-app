@@ -9,7 +9,6 @@ import writing from '../../../../../images/evidence-icons/PNGs/ghost-writing.png
 import box from '../../../../../images/evidence-icons/PNGs/spirit-box.png';
 
 export default function EvidenceRow(props){
-
     const evidenceIcons = [
         {emf},
         {fingerprints},

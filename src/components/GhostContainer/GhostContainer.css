@@ -22,6 +22,10 @@
         width: 105%;
     }
 
+    .visual-disclaimer {
+        display: none;
+    }
+
 }
 
 @media (max-width: 599px) {
@@ -29,8 +33,29 @@
         order: 1;
     }
 
+    .visual-disclaimer {
+        display: none;
+    }
 
     .possibility-container h3 {
         font-size: 1.05rem;
     }
+}
+
+.found-ghost-container {
+    padding: 10px 0;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.found-ghost-card, .found-ghost-description {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.found-ghost-description {
+    width: 35%;
+    margin-left: 80px;
+    text-align: justify;
 }
