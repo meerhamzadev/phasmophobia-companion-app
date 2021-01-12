@@ -5,16 +5,34 @@ import HuntCountdown from "./HuntCountdown/HuntCountdown";
 import Whiteboard from "./Whiteboard/Whiteboard";
 
 export default function Utilities(props){
+    const propChecker = () => {
+        if(props.currentUtility === "evidence"){
+            console.log("evidence reached");
+            return <EvidenceContainer
+                    evidence={props.evidence}
+                    handleEvidenceToggle={props.handleEvidenceToggle}
+                    allOptionsUsed={props.allOptionsUsed}
+                    positiveEvidence={props.positiveEvidence}
+                    negativeEvidence={props.negativeEvidence}
+                    resetEvidence={props.resetEvidence}
+                    currentUtility={props.currentUtility}
+            />
+        }
 
-    const collapsedBoard = (
-        <div className={"collapsed-utils"}>
-            Select an item above to display the functionality
-        </div>
-    );
+        if(props.currentUtility === "timer"){
+            return <HuntCountdown />
+        }
 
-    return(
-        <div className={"bla"}>
+        if(props.currentUtility === "board"){
+            return <Whiteboard />
+        }
 
-        </div>
-    )
+        if(props.currentUtility === "none"){
+            return null
+        }
+    }
+
+    const componentToRender = propChecker();
+
+    return componentToRender
 }

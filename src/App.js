@@ -4,9 +4,8 @@ import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
 
 // Components
-import EvidenceContainer from "./components/UtilitiesContainer/InnerComponents/EvidenceContainer/EvidenceContainer";
 import GhostContainer from "./components/GhostContainer/GhostContainer";
-import HuntCountdown from './components/UtilitiesContainer/InnerComponents/HuntCountdown/HuntCountdown';
+import UtilitiesContainer from './components/UtilitiesContainer/UtilitiesContainer';
 
 // Data
 import ghostData from './utils/data/ghostData.json';
@@ -34,6 +33,9 @@ function App() {
     const [negativeGhosts, setNegativeGhosts] = useState([]);
     const [messageToUser, setMessageToUser] = useState('');
 
+    // Current utility
+    const [currentUtility, setCurrentUtility] = useState("evidence")
+
     useEffect(() => {
         ReactGA.initialize(googleId);
         ReactGA.pageview('/');
@@ -41,6 +43,12 @@ function App() {
         stateUpdater()
 
     }, [positiveEvidence, negativeEvidence]);
+
+    const handleUtility = (event) => {
+        currentUtility === event.target.value
+            ? setCurrentUtility("none")
+            : setCurrentUtility(event.target.value);
+    }
 
     const handleEvidenceToggle = (event) => {
         const evidenceId = parseInt(event.target.id);
@@ -120,9 +128,11 @@ function App() {
         <img alt={"Phasmophobia logo"} className={'phasmophobia-logo'} src={logo} />
         <h1>Unofficial Phasmophobia Companion App (Journal)</h1>
 
-        <EvidenceContainer
+        <UtilitiesContainer
             evidence={ghostData.evidences}
             handleEvidenceToggle={handleEvidenceToggle}
+            handleUtility={handleUtility}
+            currentUtility={currentUtility}
             allOptionsUsed={positiveEvidence.length === 3}
             positiveEvidence={positiveEvidence}
             negativeEvidence={negativeEvidence}
@@ -137,8 +147,6 @@ function App() {
             negativeGhosts={negativeGhosts}
             message={messageToUser}
         />
-
-        <HuntCountdown />
     </div>
   );
 }
