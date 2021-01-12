@@ -36,6 +36,14 @@ function App() {
     // Current utility
     const [currentUtility, setCurrentUtility] = useState("evidence")
 
+    // Whiteboard Data
+    const [ghostName, setGhostName] = useState('');
+    const [objectiveTwo, setObjectiveTwo] = useState('');
+    const [objectiveThree, setObjectiveThree] = useState('');
+    const [objectiveFour, setObjectiveFour] = useState('');
+    const [ghostBehavior, setGhostBehavior] = useState('');
+    const [whiteboardData, setWhiteboardData] = useState({});
+
     useEffect(() => {
         ReactGA.initialize(googleId);
         ReactGA.pageview('/');
@@ -48,6 +56,38 @@ function App() {
         currentUtility === event.target.value
             ? setCurrentUtility("none")
             : setCurrentUtility(event.target.value);
+    }
+
+    const handleWhiteboard = (event) => {
+        event.preventDefault();
+
+        if(event.target.id === "ghost-name"){
+            setGhostName(event.target.value);
+        }
+
+        if(event.target.id === "objective-two"){
+            setObjectiveTwo(event.target.value);
+        }
+
+        if(event.target.id === "objective-three"){
+            setObjectiveThree(event.target.value);
+        }
+
+        if(event.target.id === "objective-four"){
+            setObjectiveFour(event.target.value);
+        }
+
+        if(event.target.id === "individuals" || event.target.id === "groups"){
+            setGhostBehavior(event.target.value);
+        }
+
+        setWhiteboardData({
+            'ghostName': ghostName,
+            'objectiveTwo': objectiveTwo,
+            'objectiveThree': objectiveThree,
+            'objectiveFour': objectiveFour,
+            'ghostBehavior': ghostBehavior
+        })
     }
 
     const handleEvidenceToggle = (event) => {
@@ -137,6 +177,8 @@ function App() {
             positiveEvidence={positiveEvidence}
             negativeEvidence={negativeEvidence}
             resetEvidence={resetEvidence}
+            whiteboardData={whiteboardData}
+            handleWhiteboard={handleWhiteboard}
         />
 
         <GhostContainer

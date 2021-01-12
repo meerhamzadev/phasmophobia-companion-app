@@ -24,7 +24,7 @@ export default function Utilities(props){
         }
 
         if(props.currentUtility === "board"){
-            return <Whiteboard />
+            return <Whiteboard handleWhiteboard={props.handleWhiteboard} whiteboardData={props.whiteboardData} />
         }
 
         if(props.currentUtility === "none"){

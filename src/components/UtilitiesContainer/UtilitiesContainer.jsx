@@ -17,6 +17,8 @@ export default function UtilitiesContainer(props){
                 negativeEvidence={props.negativeEvidence}
                 resetEvidence={props.resetEvidence}
                 currentUtility={props.currentUtility}
+                whiteboardData={props.whiteboardData}
+                handleWhiteboard={props.handleWhiteboard}
             />
         </div>
     )
