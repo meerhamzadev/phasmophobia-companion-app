@@ -59,8 +59,7 @@ function App() {
     }
 
     const handleWhiteboard = (event) => {
-        event.preventDefault();
-
+        event.stopPropagation()
         if(event.target.id === "ghost-name"){
             setGhostName(event.target.value);
         }

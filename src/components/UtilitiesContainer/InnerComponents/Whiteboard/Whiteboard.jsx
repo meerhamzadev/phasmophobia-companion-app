@@ -8,7 +8,7 @@ export default function Whiteboard(props){
             <span className={"ghost-name-label"}>Ghost name:</span>
                 <input
                     className={"ghost-name"}
-                    onChange={props.handleWhiteboard}
+                    onKeyDown={props.handleWhiteboard}
                     id={"ghost-name"}
                     value={props.whiteboardData.ghostName}
                 />
