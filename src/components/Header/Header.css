@@ -1,0 +1,27 @@
+@media only screen and (max-width: 599px) {
+  .phasmophobia-logo {
+    height: 80px;
+    width: 260px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 600px)  {
+    .phasmophobia-logo {
+        height: 80px;
+        width: 260px;
+        margin: 0 auto;
+    }
+}
+
+.logo, .description {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.description {
+    margin-left: 20px;
+    font-size: 120%;
+    font-weight: bolder;
+    text-align: left;
+}

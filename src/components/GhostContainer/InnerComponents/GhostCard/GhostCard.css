@@ -6,7 +6,6 @@
     display      : inline-block;
     border       : 1px solid black;
     margin       : 10px 0 10px 12px;
-    height       : 100%;
     width        : 210px;
     border-radius: 8px;
 
@@ -46,7 +45,7 @@
 .ghost-name {
     font-weight: bolder;
     font-size  : 140%;
-    margin     : 25px 0 10px 0;
+    margin     : 10px 0 0 0;
 }
 
 @media (min-width: 600px) and (max-width: 1023px) {
@@ -55,7 +54,6 @@
     .negative,
     .found {
         display: inline-block;
-        height: 100%;
         padding-bottom: 20px;
     }
 
@@ -70,7 +68,6 @@
     .negative,
     .found {
         display: inline-block;
-        height: 100%;
         padding-bottom: 20px;
     }
 

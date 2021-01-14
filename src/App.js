@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
 
 // Components
+import Header from "./components/Header/Header";
 import GhostContainer from "./components/GhostContainer/GhostContainer";
 import UtilitiesContainer from './components/UtilitiesContainer/UtilitiesContainer';
 
@@ -164,9 +165,7 @@ function App() {
 
   return (
     <div className="App">
-        <img alt={"Phasmophobia logo"} className={'phasmophobia-logo'} src={logo} />
-        <h1>Unofficial Phasmophobia Companion App (Journal)</h1>
-
+        <Header />
         <UtilitiesContainer
             evidence={ghostData.evidences}
             handleEvidenceToggle={handleEvidenceToggle}
@@ -179,7 +178,6 @@ function App() {
             whiteboardData={whiteboardData}
             handleWhiteboard={handleWhiteboard}
         />
-
         <GhostContainer
             ghosts={ghostData.ghosts}
             evidence={ghostData.evidences}

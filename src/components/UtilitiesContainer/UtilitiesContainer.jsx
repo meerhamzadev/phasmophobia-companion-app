@@ -7,9 +7,7 @@ import Utilities from "./InnerComponents/Utilities";
 export default function UtilitiesContainer(props){
     return(
         <div className={"utilities-container"}>
-            <UtilitiesTabs
-                handleUtility={props.handleUtility}
-            />
+
             {props.currentUtility !== 'none'
             ? <Utilities
                 evidence={props.evidence}
@@ -23,6 +21,10 @@ export default function UtilitiesContainer(props){
                 handleWhiteboard={props.handleWhiteboard}
             />
             : null}
+            <UtilitiesTabs
+                handleUtility={props.handleUtility}
+            />
+
         </div>
     )
 }

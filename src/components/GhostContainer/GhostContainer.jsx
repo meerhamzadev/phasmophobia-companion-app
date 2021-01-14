@@ -66,7 +66,6 @@ export default function GhostContainer(props){
     return(
         <div className={"possibility-container"}>
             <h2>{props.message}</h2>
-            <h3 className={"visual-disclaimer"}>(ghosts cannot be visually recognized)</h3>
             {props.positiveID || props.positiveID === 0
                 ? foundCard
                 : possibleCards}
