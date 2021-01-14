@@ -7,7 +7,6 @@ import Whiteboard from "./Whiteboard/Whiteboard";
 export default function Utilities(props){
     const propChecker = () => {
         if(props.currentUtility === "evidence"){
-            console.log("evidence reached");
             return <EvidenceContainer
                     evidence={props.evidence}
                     handleEvidenceToggle={props.handleEvidenceToggle}
@@ -23,9 +22,11 @@ export default function Utilities(props){
             return <HuntCountdown />
         }
 
+        /**
         if(props.currentUtility === "board"){
             return <Whiteboard handleWhiteboard={props.handleWhiteboard} whiteboardData={props.whiteboardData} />
         }
+         */
 
         if(props.currentUtility === "none"){
             return null

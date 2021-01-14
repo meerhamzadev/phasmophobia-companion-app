@@ -1,4 +1,5 @@
 import React from 'react';
+import './UtilitiesContainer.css';
 
 import UtilitiesTabs from "./InnerComponents/UtilitiesTabs";
 import Utilities from "./InnerComponents/Utilities";
@@ -9,7 +10,8 @@ export default function UtilitiesContainer(props){
             <UtilitiesTabs
                 handleUtility={props.handleUtility}
             />
-            <Utilities
+            {props.currentUtility !== 'none'
+            ? <Utilities
                 evidence={props.evidence}
                 handleEvidenceToggle={props.handleEvidenceToggle}
                 allOptionsUsed={props.allOptionsUsed}
@@ -20,6 +22,7 @@ export default function UtilitiesContainer(props){
                 whiteboardData={props.whiteboardData}
                 handleWhiteboard={props.handleWhiteboard}
             />
+            : null}
         </div>
     )
 }

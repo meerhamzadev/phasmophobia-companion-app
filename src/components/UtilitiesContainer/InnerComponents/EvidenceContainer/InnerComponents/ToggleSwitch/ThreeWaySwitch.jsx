@@ -26,11 +26,11 @@ export default function AlternateSwitch(props){
     return(
         <div className={'switch-container'} role={"group"}>
             <label className={toggleType[0]}>
-                <input className={"interaction-handle"} type="radio" name="options" id={props.evidenceID} value={0} onChange={props.handleEvidenceToggle} /> Zero Interaction </label>
+                <input className={"interaction-handle"} type="radio" name="options" id={props.evidenceID} value={0} onChange={props.handleEvidenceToggle} /> No </label>
             <label className={toggleType[1]}>
-                <input className={"interaction-handle"} type="radio" name="options" id={props.evidenceID} value={1} onChange={props.handleEvidenceToggle} /> Unknown </label>
+                <input className={"interaction-handle"} type="radio" name="options" id={props.evidenceID} value={1} onChange={props.handleEvidenceToggle} /> ? </label>
             <label className={toggleType[2]}>
-                <input className={"interaction-handle"} type="radio" name="options" id={props.evidenceID} value={2} onChange={props.handleEvidenceToggle} /> Interaction </label>
+                <input className={"interaction-handle"} type="radio" name="options" id={props.evidenceID} value={2} onChange={props.handleEvidenceToggle} /> Yes </label>
         </div>
     )
 }
