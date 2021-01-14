@@ -2,8 +2,7 @@
     transform: rotate(90deg);
     z-index: 1;
     display: inline-block;
-    width: 100px;
-    vertical-align: top;
+    width: 320px;
 }
 
 .utility-tab, .active-utility-tab {
@@ -11,7 +10,8 @@
     height: 70px;
     font-weight: bold;
     border-radius: 10px 10px 0 0;
-    display: block;
+    display: inline-block;
+    border: 1px solid black;
 }
 
 .utility-tab {
@@ -33,6 +33,6 @@
     left: 0;
     z-index: 1;
     height: 100vh;
-    max-width: 20vw;
-    min-width: 340px;
+    border: 1px solid red;
+    align-content: flex-start;
 }

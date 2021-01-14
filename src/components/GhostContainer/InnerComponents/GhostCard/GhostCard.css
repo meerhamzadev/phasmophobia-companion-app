@@ -56,22 +56,13 @@
         display: inline-block;
         padding-bottom: 20px;
     }
-
-    .ghost-picture img {
-        display: none;
-    }
 }
 
 @media (max-width: 599px) {
-
     .possible,
     .negative,
     .found {
         display: inline-block;
         padding-bottom: 20px;
-    }
-
-    .ghost-picture img {
-        display: none;
     }
 }
