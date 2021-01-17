@@ -1,0 +1,48 @@
+.tabs-container {
+    transform: rotate(90deg);
+    z-index: 1;
+    display: inline-block;
+    border: 1px solid red;
+}
+
+.toolbox-access:first-of-type {
+    border-left: 0;
+}
+
+.toolbox-access, .active-toolbox-access {
+    width: 120px;
+    height: 40px;
+    font-weight: bold;
+    display: inline-block;
+    border: 0;
+    border-left: 1px solid black;
+    margin-top: 10px;
+}
+
+.toolbox-access {
+    background-color: transparent;
+}
+
+.active-toolbox-access {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.active-utility-tab {
+    color: whitesmoke;
+    background: black;
+}
+
+.utilities-container {
+    position: fixed;
+    display: inline-block;
+    width: 360px;
+    left: 0;
+    z-index: 1;
+    border-radius: 0 15px 15px 0;
+    background: rgb(223, 215, 122);
+    background: -moz-linear-gradient(180deg, rgba(223, 215, 122, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(223, 215, 122, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
+    background: linear-gradient(180deg, rgba(223, 215, 122, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
+    filter    : progid:DXImageTransform.Microsoft.gradient(startColorstr="#dfd77a", endColorstr="#998e51", GradientType=1);
+}

@@ -1,0 +1,24 @@
+.evidence-container {
+    color: rgba(0, 0, 0, 0.75);
+
+    display: inline-block;
+    width: 240px;
+
+    border-radius: 0 15px 15px 0;
+    margin: 0;
+}
+
+.evidence-label {
+    width: 200px;
+}
+
+.positive-switch-container,
+.negative-switch-container {
+    width: 120px;
+}
+
+.evidence-row {
+    height: 40px;
+    width: 100%;
+    display: block;
+}

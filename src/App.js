@@ -4,9 +4,10 @@ import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
 
 // Components
-import EvidenceContainer from "./components/EvidenceContainer/EvidenceContainer";
+import Header from "./components/Header/Header";
 import GhostContainer from "./components/GhostContainer/GhostContainer";
-import HuntCountdown from './components/HuntCountdown/HuntCountdown';
+import UtilitiesContainer from './components/UtilitiesContainer/UtilitiesContainer';
+import ToolboxToggle from "./components/UtilitiesContainer/ToolboxToggle";
 
 // Data
 import ghostData from './utils/data/ghostData.json';
@@ -16,7 +17,6 @@ import googleId from "./utils/google-analytics-sensitive/gaConfiguration";
 import fullOutput from './utils/auxiliaryFunctions/outcomeChecker';
 
 // Styling
-import logo from './images/logos/logo.png';
 import './App.css';
 
 function App() {
@@ -34,6 +34,18 @@ function App() {
     const [negativeGhosts, setNegativeGhosts] = useState([]);
     const [messageToUser, setMessageToUser] = useState('');
 
+    // Current utility
+    const [currentUtility, setCurrentUtility] = useState("evidence");
+    const [toolbox, setToolbox] = useState(false);
+
+    // Whiteboard Data
+    const [ghostName, setGhostName] = useState('');
+    const [objectiveTwo, setObjectiveTwo] = useState('');
+    const [objectiveThree, setObjectiveThree] = useState('');
+    const [objectiveFour, setObjectiveFour] = useState('');
+    const [ghostBehavior, setGhostBehavior] = useState('');
+    const [whiteboardData, setWhiteboardData] = useState({});
+
     useEffect(() => {
         ReactGA.initialize(googleId);
         ReactGA.pageview('/');
@@ -41,6 +53,45 @@ function App() {
         stateUpdater()
 
     }, [positiveEvidence, negativeEvidence]);
+
+    const handleUtility = (event) => {
+        setCurrentUtility(event.target.value);
+    }
+
+    const handleToolbox = () => {
+        setToolbox(!toolbox);
+    }
+
+    const handleWhiteboard = (event) => {
+        event.stopPropagation()
+        if(event.target.id === "ghost-name"){
+            setGhostName(event.target.value);
+        }
+
+        if(event.target.id === "objective-two"){
+            setObjectiveTwo(event.target.value);
+        }
+
+        if(event.target.id === "objective-three"){
+            setObjectiveThree(event.target.value);
+        }
+
+        if(event.target.id === "objective-four"){
+            setObjectiveFour(event.target.value);
+        }
+
+        if(event.target.id === "individuals" || event.target.id === "groups"){
+            setGhostBehavior(event.target.value);
+        }
+
+        setWhiteboardData({
+            'ghostName': ghostName,
+            'objectiveTwo': objectiveTwo,
+            'objectiveThree': objectiveThree,
+            'objectiveFour': objectiveFour,
+            'ghostBehavior': ghostBehavior
+        })
+    }
 
     const handleEvidenceToggle = (event) => {
         const evidenceId = parseInt(event.target.id);
@@ -117,18 +168,23 @@ function App() {
 
   return (
     <div className="App">
-        <img alt={"Phasmophobia logo"} className={'phasmophobia-logo'} src={logo} />
-        <h1>Unofficial Phasmophobia Companion App (Journal)</h1>
-
-        <EvidenceContainer
-            evidence={ghostData.evidences}
-            handleEvidenceToggle={handleEvidenceToggle}
-            allOptionsUsed={positiveEvidence.length === 3}
-            positiveEvidence={positiveEvidence}
-            negativeEvidence={negativeEvidence}
-            resetEvidence={resetEvidence}
-        />
-
+        <Header />
+        {   toolbox
+            ? <UtilitiesContainer
+                evidence={ghostData.evidences}
+                currentUtility={currentUtility}
+                allOptionsUsed={positiveEvidence.length === 3}
+                positiveEvidence={positiveEvidence}
+                negativeEvidence={negativeEvidence}
+                resetEvidence={resetEvidence}
+                whiteboardData={whiteboardData}
+                handleEvidenceToggle={handleEvidenceToggle}
+                handleUtility={handleUtility}
+                handleWhiteboard={handleWhiteboard}
+                handleToolbox={handleToolbox}
+            />
+            : <ToolboxToggle handleToolbox={handleToolbox} />
+        }
         <GhostContainer
             ghosts={ghostData.ghosts}
             evidence={ghostData.evidences}
@@ -137,8 +193,6 @@ function App() {
             negativeGhosts={negativeGhosts}
             message={messageToUser}
         />
-
-        <HuntCountdown />
     </div>
   );
 }

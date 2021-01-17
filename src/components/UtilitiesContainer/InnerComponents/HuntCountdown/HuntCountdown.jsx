@@ -4,7 +4,6 @@ import './HuntCountdown.css';
 export default function HuntCountdown(){
     const [countdownTrigger, setCountdownTrigger] = useState(false);
     const [timerType, setTimerType] = useState('amateur');
-    const [expandedDiv, setExpandedDiv] = useState(true);
 
     const [totalTime, setTotalTime] = useState(300);
     const [minutes, setMinutes] = useState();
@@ -21,7 +20,7 @@ export default function HuntCountdown(){
     const handleCountdown = () => {
         setCountdownTrigger(!countdownTrigger);
 
-        let time = timerType === 'amateur' ? 300 : 150;
+        let time = timerType === 'amateur' ? 300 : 120;
         handleTime(time);
     }
 
@@ -29,16 +28,12 @@ export default function HuntCountdown(){
         setTimeout(() => setTotalTime(time - 1), 1000)
     }
 
-    const handleView = () => {
-        setExpandedDiv(!expandedDiv)
-    }
-
     const handleTypeSwitch = () => {
         setCountdownTrigger(false)
 
         if(timerType === "amateur"){
             setTimerType('intermediate');
-            handleTime(150);
+            handleTime(120);
         } else {
             setTimerType('amateur');
             handleTime(300);
@@ -48,7 +43,7 @@ export default function HuntCountdown(){
     const handleTime = (time) => {
 
         const standardMinutes = timerType === 'amateur' ? 5 : 2;
-        const standardSeconds = timerType === 'amateur' ? 0 : 30;
+        const standardSeconds = 0;
 
         const minutesResult = countdownTrigger
             ? (Math.floor(time / 60))
@@ -65,10 +60,8 @@ export default function HuntCountdown(){
     const countdownButtonText = countdownTrigger ? "Stop and reset" : "Start";
     const timerTypeSwitch = timerType === 'amateur' ? "Switch to Intermediate" : "Switch to Amateur";
 
-    const fullView = (
-        <div className={'countdown-container-expanded'}>
-            <button className={"minimize"} onClick={handleView}>_</button>
-
+    return (
+        <div className={'countdown-container'}>
             <h2>
                 Setup Time
             </h2>
@@ -89,14 +82,4 @@ export default function HuntCountdown(){
             <p />
         </div>
     );
-
-    const compactView = (
-        <div className={'countdown-container-compact'} onClick={setExpandedDiv}>
-            <span className={"time-spin"}>
-               {minutes} : {seconds}
-            </span>
-        </div>
-    );
-
-    return expandedDiv ? fullView : compactView
 }
