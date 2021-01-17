@@ -2,7 +2,7 @@
     transform: rotate(90deg);
     z-index: 1;
     display: inline-block;
-    width: 320px;
+    border: 1px solid red;
 }
 
 .utility-tab, .active-utility-tab {
@@ -32,7 +32,5 @@
     display: inline-block;
     left: 0;
     z-index: 1;
-    height: 100vh;
     border: 1px solid red;
-    align-content: flex-start;
 }

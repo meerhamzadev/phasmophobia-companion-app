@@ -41,22 +41,27 @@ export default function GhostContainer(props){
     const foundCard = props.positiveID
         ? (
         <div className={"found-ghost-container"}>
-            <div className={"found-ghost-card"}>
-                <GhostCard
-                    cardType={'found'}
-                    ghostType={positiveIdDetails[0].type}
-                    ghostId={positiveIdDetails[0].id}
-                    evidence={positiveIdDetails[0].evidence}
-                />
-            </div>
-            <div className={"found-ghost-description"}>
-                <div className={"found-ghost-inner-text"}>
+            <div className={"upper-found-row"}>
+                <div className={"found-ghost-card"}>
+                    <GhostCard
+                        cardType={'found'}
+                        ghostType={positiveIdDetails[0].type}
+                        ghostId={positiveIdDetails[0].id}
+                        evidence={positiveIdDetails[0].evidence}
+                    />
+                </div>
+                <div className={"found-ghost-description"}>
                     <h4>{positiveIdDetails[0].description}</h4>
-                    <ul>
-                        <li><b>Strength:</b> {positiveIdDetails[0].strength}</li>
-                        <p/>
-                        <li><b>Weakness:</b> {positiveIdDetails[0].weakness}</li>
-                    </ul>
+                </div>
+            </div>
+            <div className={"lower-found-row"}>
+                <div className={"strength"}>
+                    <h4>Strength</h4>
+                    {positiveIdDetails[0].strength}
+                </div>
+                <div className={"weakness"}>
+                    <h4>Weakness</h4>
+                    {positiveIdDetails[0].weakness}
                 </div>
             </div>
         </div>

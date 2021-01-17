@@ -42,11 +42,26 @@
     }
 }
 
+@media only screen and (max-width: 930px){
+    .found-ghost-card, .found-ghost-description {
+        display: block;
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 931px){
+    .found-ghost-description {
+        width: 35%;
+        margin-left: 40px;
+    }
+}
+
 .found-ghost-container {
     padding: 10px 0;
     width: 80%;
     margin: 0 auto;
     border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .found-ghost-card, .found-ghost-description {
@@ -55,7 +70,19 @@
 }
 
 .found-ghost-description {
-    width: 35%;
-    margin-left: 80px;
-    text-align: justify;
+    text-align: center;
+}
+
+.upper-found-row, .lower-found-row {
+    display: block;
+}
+
+.strength, .weakness {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+
+.weakness {
+    margin-left: 15px;
 }
