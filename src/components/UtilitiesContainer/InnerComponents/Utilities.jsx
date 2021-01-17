@@ -33,7 +33,11 @@ export default function Utilities(props){
 
     return (
         <>
-            <ToolboxHeader handleToolbox={props.handleToolbox} handleUtility={props.handleUtility}  />
+            <ToolboxHeader
+                handleToolbox={props.handleToolbox}
+                handleUtility={props.handleUtility}
+                currentUtility={props.currentUtility}
+            />
             {propChecker()}
         </>
     );

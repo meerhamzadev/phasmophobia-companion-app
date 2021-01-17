@@ -3,6 +3,6 @@ import './ToolboxToggle.css'
 
 export default function ToolboxToggle(props){
     return(
-        <button className={'toolbox'} onClick={props.handleToolbox}>TOOLBOX</button>
+        <button className={'toolbox'} onClick={props.handleToolbox}>EVIDENCE</button>
     )
 }

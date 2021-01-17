@@ -17,7 +17,6 @@ import googleId from "./utils/google-analytics-sensitive/gaConfiguration";
 import fullOutput from './utils/auxiliaryFunctions/outcomeChecker';
 
 // Styling
-import logo from './images/logos/logo.png';
 import './App.css';
 
 function App() {
