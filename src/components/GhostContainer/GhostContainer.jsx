@@ -38,7 +38,7 @@ export default function GhostContainer(props){
                 />
     });
 
-    const foundCard = props.positiveID
+    const foundCard = props.positiveID || props.positiveID === 0
         ? (
         <div className={"found-ghost-container"}>
             <div className={"upper-found-row"}>
