@@ -1,31 +1,3 @@
-.countdown-container-expanded,
-.countdown-container-compact {
-    background: rgb(172, 167, 113);
-    background: -moz-linear-gradient(180deg, rgba(172, 167, 113, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(172, 167, 113, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
-    background: linear-gradient(180deg, rgba(172, 167, 113, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
-    filter    : progid:DXImageTransform.Microsoft.gradient(startColorstr="#aca771", endColorstr="#998e51", GradientType=1);
-    border    : 5px solid black;
-
-    position: absolute;
-    right   : 0;
-    display : inline-block;
-
-    border-radius: 15px;
-    text-align   : center;
-}
-
-
-.countdown-container-expanded {
-    padding: 15px;
-}
-
-.countdown-container-compact {
-    height     : 110px;
-    padding-top: 70px;
-    cursor: pointer;
-}
-
 h2 {
     color: black;
 }

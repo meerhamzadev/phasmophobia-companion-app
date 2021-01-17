@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ToolboxHeader from "./ToolboxHeader/ToolboxHeader";
+
 import EvidenceContainer from "./EvidenceContainer/EvidenceContainer";
 import HuntCountdown from "./HuntCountdown/HuntCountdown";
 import Whiteboard from "./Whiteboard/Whiteboard";
@@ -27,13 +29,12 @@ export default function Utilities(props){
             return <Whiteboard handleWhiteboard={props.handleWhiteboard} whiteboardData={props.whiteboardData} />
         }
          */
-
-        if(props.currentUtility === "none"){
-            return null
-        }
     }
 
-    const componentToRender = propChecker();
-
-    return componentToRender
+    return (
+        <>
+            <ToolboxHeader handleToolbox={props.handleToolbox} handleUtility={props.handleUtility}  />
+            {propChecker()}
+        </>
+    );
 }

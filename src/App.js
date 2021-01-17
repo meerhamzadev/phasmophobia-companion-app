@@ -7,6 +7,7 @@ import ReactGA from 'react-ga';
 import Header from "./components/Header/Header";
 import GhostContainer from "./components/GhostContainer/GhostContainer";
 import UtilitiesContainer from './components/UtilitiesContainer/UtilitiesContainer';
+import ToolboxToggle from "./components/UtilitiesContainer/ToolboxToggle";
 
 // Data
 import ghostData from './utils/data/ghostData.json';
@@ -35,7 +36,8 @@ function App() {
     const [messageToUser, setMessageToUser] = useState('');
 
     // Current utility
-    const [currentUtility, setCurrentUtility] = useState("evidence")
+    const [currentUtility, setCurrentUtility] = useState("evidence");
+    const [toolbox, setToolbox] = useState(false);
 
     // Whiteboard Data
     const [ghostName, setGhostName] = useState('');
@@ -54,9 +56,11 @@ function App() {
     }, [positiveEvidence, negativeEvidence]);
 
     const handleUtility = (event) => {
-        currentUtility === event.target.value
-            ? setCurrentUtility("none")
-            : setCurrentUtility(event.target.value);
+        setCurrentUtility(event.target.value);
+    }
+
+    const handleToolbox = () => {
+        setToolbox(!toolbox);
     }
 
     const handleWhiteboard = (event) => {
@@ -166,18 +170,22 @@ function App() {
   return (
     <div className="App">
         <Header />
-        <UtilitiesContainer
-            evidence={ghostData.evidences}
-            handleEvidenceToggle={handleEvidenceToggle}
-            handleUtility={handleUtility}
-            currentUtility={currentUtility}
-            allOptionsUsed={positiveEvidence.length === 3}
-            positiveEvidence={positiveEvidence}
-            negativeEvidence={negativeEvidence}
-            resetEvidence={resetEvidence}
-            whiteboardData={whiteboardData}
-            handleWhiteboard={handleWhiteboard}
-        />
+        {   toolbox
+            ? <UtilitiesContainer
+                evidence={ghostData.evidences}
+                currentUtility={currentUtility}
+                allOptionsUsed={positiveEvidence.length === 3}
+                positiveEvidence={positiveEvidence}
+                negativeEvidence={negativeEvidence}
+                resetEvidence={resetEvidence}
+                whiteboardData={whiteboardData}
+                handleEvidenceToggle={handleEvidenceToggle}
+                handleUtility={handleUtility}
+                handleWhiteboard={handleWhiteboard}
+                handleToolbox={handleToolbox}
+            />
+            : <ToolboxToggle handleToolbox={handleToolbox} />
+        }
         <GhostContainer
             ghosts={ghostData.ghosts}
             evidence={ghostData.evidences}

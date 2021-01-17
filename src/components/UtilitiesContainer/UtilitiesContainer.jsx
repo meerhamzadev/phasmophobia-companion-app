@@ -1,15 +1,12 @@
 import React from 'react';
 import './UtilitiesContainer.css';
 
-import UtilitiesTabs from "./InnerComponents/UtilitiesTabs";
 import Utilities from "./InnerComponents/Utilities";
 
 export default function UtilitiesContainer(props){
     return(
         <div className={"utilities-container"}>
-
-            {props.currentUtility !== 'none'
-            ? <Utilities
+            <Utilities
                 evidence={props.evidence}
                 handleEvidenceToggle={props.handleEvidenceToggle}
                 allOptionsUsed={props.allOptionsUsed}
@@ -19,12 +16,9 @@ export default function UtilitiesContainer(props){
                 currentUtility={props.currentUtility}
                 whiteboardData={props.whiteboardData}
                 handleWhiteboard={props.handleWhiteboard}
-            />
-            : null}
-            <UtilitiesTabs
+                handleToolbox={props.handleToolbox}
                 handleUtility={props.handleUtility}
             />
-
         </div>
     )
 }
