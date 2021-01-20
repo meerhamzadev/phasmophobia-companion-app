@@ -13,6 +13,13 @@ export default function ToolboxHeader(props){
             >
                     Evidence
             </button>
+            <button
+                className={props.currentUtility === 'info' ? 'active-toolbox-access' : 'toolbox-access'}
+                value={"info"}
+                onClick={props.handleUtility}
+            >
+                    App Info
+            </button>
             <button className={"toolbox-access"} onClick={props.handleToolbox}>Collapse</button>
         </div>
     )
