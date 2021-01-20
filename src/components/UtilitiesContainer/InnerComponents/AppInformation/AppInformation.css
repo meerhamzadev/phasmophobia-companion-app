@@ -1,0 +1,44 @@
+.app-information {
+    overflow-y: scroll;
+    height: 500px;
+    padding-bottom: 20px;
+}
+
+.textual-information, .icon-container {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+.textual-information {
+    color: black
+}
+
+.icon-container {
+    margin-top: 20px;
+    font-weight: bold;
+    color: midnightblue;
+}
+
+.icon {
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    background: rgba(11,212,201, 0.3);
+    align-content: center;
+    border-radius: 15px;
+    padding-bottom: 10px;
+}
+
+.icon-image {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.icon-description {
+    display: block;
+}
+
+.icon-description {
+    margin: 20px 0 20px 0;
+}

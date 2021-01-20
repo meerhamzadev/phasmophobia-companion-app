@@ -4,6 +4,7 @@ import ToolboxHeader from "./ToolboxHeader/ToolboxHeader";
 
 import EvidenceContainer from "./EvidenceContainer/EvidenceContainer";
 import HuntCountdown from "./HuntCountdown/HuntCountdown";
+import AppInformation from "./AppInformation/AppInformation";
 import Whiteboard from "./Whiteboard/Whiteboard";
 
 export default function Utilities(props){
@@ -22,6 +23,10 @@ export default function Utilities(props){
 
         if(props.currentUtility === "timer"){
             return <HuntCountdown />
+        }
+
+        if(props.currentUtility === "info"){
+            return <AppInformation />
         }
 
         /**
