@@ -1,0 +1,23 @@
+.toolbox-header {
+    padding: 15px 0;
+}
+
+.header-option {
+    width: 60%;
+    font-weight: bold;
+    color: midnightblue;
+    font-size: 120%;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.hide-toolbox {
+    font-weight: bold;
+    color: midnightblue;
+    font-size: 120%;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 15px;
+    margin-left: 10px;
+}

@@ -29,11 +29,13 @@ export default function Utilities(props){
             return <AppInformation />
         }
 
-        /**
         if(props.currentUtility === "board"){
-            return <Whiteboard handleWhiteboard={props.handleWhiteboard} whiteboardData={props.whiteboardData} />
+            return <Whiteboard
+                    handleWhiteboard={props.handleWhiteboard}
+                    whiteboardData={props.whiteboardData}
+                    clearWhiteboard={props.clearWhiteboard}
+            />
         }
-         */
     }
 
     return (

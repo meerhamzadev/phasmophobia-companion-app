@@ -1,6 +1,6 @@
 import React from 'react';
 import './EvidenceContainer.css'
-import ResetButton from "./InnerComponents/ResetButton/ResetButton";
+import ResetButton from "../ResetButton/ResetButton";
 
 import EvidenceTable from "./InnerComponents/EvidenceTable/EvidenceTable";
 
@@ -15,7 +15,7 @@ export default function EvidenceContainer(props){
                 handleEvidenceToggle={props.handleEvidenceToggle}
             />
 
-            <ResetButton resetEvidence={props.resetEvidence}/>
+            <ResetButton text={"Reset evidence"} action={props.resetEvidence}/>
         </div>
     )
 }

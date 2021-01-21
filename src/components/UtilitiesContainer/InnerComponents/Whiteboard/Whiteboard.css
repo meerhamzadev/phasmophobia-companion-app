@@ -1,0 +1,47 @@
+.whiteboard {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ghost-name-label {
+    font-weight: bold;
+    font-size: 140%;
+    color: black;
+}
+
+.objective, .first-objective, input {
+    display: block;
+}
+
+.first-objective {
+    color: darkblue;
+    font-weight: bold;
+}
+
+.objective {
+    margin-top: 20px;
+    color: black;
+}
+
+.session-objectives {
+    margin: 0 auto;
+    width: 85%;
+}
+
+.objective-selector, .ghost-name {
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.ghost-name {
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.objective-selector {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+}
