@@ -43,7 +43,6 @@ function App() {
     const [objectiveTwo, setObjectiveTwo] = useState('');
     const [objectiveThree, setObjectiveThree] = useState('');
     const [objectiveFour, setObjectiveFour] = useState('');
-    const [ghostBehavior, setGhostBehavior] = useState('');
     const [whiteboardData, setWhiteboardData] = useState({});
 
     useEffect(() => {
@@ -63,7 +62,6 @@ function App() {
     }
 
     const handleWhiteboard = (event) => {
-        event.stopPropagation()
         if(event.target.id === "ghost-name"){
             setGhostName(event.target.value);
         }
@@ -80,17 +78,14 @@ function App() {
             setObjectiveFour(event.target.value);
         }
 
-        if(event.target.id === "individuals" || event.target.id === "groups"){
-            setGhostBehavior(event.target.value);
-        }
-
         setWhiteboardData({
             'ghostName': ghostName,
             'objectiveTwo': objectiveTwo,
             'objectiveThree': objectiveThree,
             'objectiveFour': objectiveFour,
-            'ghostBehavior': ghostBehavior
-        })
+        });
+
+        event.preventDefault();
     }
 
     const handleEvidenceToggle = (event) => {

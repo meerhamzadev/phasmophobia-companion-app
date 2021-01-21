@@ -1,14 +1,12 @@
 import React from 'react';
 
 export default function Whiteboard(props){
-    console.log(props.whiteboardData)
-
     return(
         <div className={'white-board'}>
             <span className={"ghost-name-label"}>Ghost name:</span>
                 <input
                     className={"ghost-name"}
-                    onKeyDown={props.handleWhiteboard}
+                    onChange={() => props.handleWhiteboard}
                     id={"ghost-name"}
                     value={props.whiteboardData.ghostName}
                 />
@@ -23,6 +21,7 @@ export default function Whiteboard(props){
                     id="objective-two"
                     list={"objective-data"}
                     onChange={props.handleWhiteboard}
+                    value={props.whiteboardData.objectiveTwo}
                 />
             <span className={"objective"}>Objective 3:</span>
                 <input
@@ -30,6 +29,7 @@ export default function Whiteboard(props){
                     id="objective-three"
                     list={"objective-data"}
                     onChange={props.handleWhiteboard}
+                    value={props.whiteboardData.objectiveThree}
                 />
             <span className={"objective"}>Objective 4:</span>
                 <input
@@ -37,6 +37,7 @@ export default function Whiteboard(props){
                     id="objective-four"
                     list={"objective-data"}
                     onChange={props.handleWhiteboard}
+                    value={props.whiteboardData.objectiveFour}
                 />
 
             <datalist id={"objective-data"}>
@@ -50,16 +51,6 @@ export default function Whiteboard(props){
                 <option value={"Prevent the Ghost from hunting with a Crucifix"} />
                 <option value={"Get a Ghost to walk through Salt"} />
             </datalist>
-
-            <div className={"ghost-behavior-container"}>
-                <span className={"ghost-behavior-label"}>Ghost responds to</span>
-
-                <input type={"radio"} className={"ghost-behavior-radio"} id="individuals" name={"behavior"} value={"individuals"} onChange={props.handleWhiteboard} />
-                <label>Individuals</label>
-
-                <input type={"radio"} className={"ghost-behavior-radio"} id="groups" name={"behavior"} value={"groups"} onChange={props.handleWhiteboard} />
-                <label>Groups</label>
-            </div>
         </div>
     )
 }
