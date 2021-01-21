@@ -36,14 +36,15 @@ function App() {
 
     // Current utility
     const [currentUtility, setCurrentUtility] = useState("evidence");
-    const [toolbox, setToolbox] = useState(false);
+    const [toolbox, setToolbox] = useState(true);
 
     // Whiteboard Data
-    const [ghostName, setGhostName] = useState('');
-    const [objectiveTwo, setObjectiveTwo] = useState('');
-    const [objectiveThree, setObjectiveThree] = useState('');
-    const [objectiveFour, setObjectiveFour] = useState('');
-    const [whiteboardData, setWhiteboardData] = useState({});
+    const [whiteboardData, setWhiteboardData] = useState({
+        'ghostName': '',
+        'objectiveTwo': '',
+        'objectiveThree': '',
+        'objectiveFour': ''
+    });
 
     useEffect(() => {
         ReactGA.initialize(googleId);
@@ -63,29 +64,43 @@ function App() {
 
     const handleWhiteboard = (event) => {
         if(event.target.id === "ghost-name"){
-            setGhostName(event.target.value);
+            setWhiteboardData({
+                ...whiteboardData,
+                'ghostName': event.target.value
+            });
         }
 
         if(event.target.id === "objective-two"){
-            setObjectiveTwo(event.target.value);
+            setWhiteboardData({
+                ...whiteboardData,
+                'objectiveTwo': event.target.value
+            });
         }
 
         if(event.target.id === "objective-three"){
-            setObjectiveThree(event.target.value);
+            setWhiteboardData({
+                ...whiteboardData,
+                'objectiveThree': event.target.value
+            });
         }
 
         if(event.target.id === "objective-four"){
-            setObjectiveFour(event.target.value);
+            setWhiteboardData({
+                ...whiteboardData,
+                'objectiveFour': event.target.value
+            });
         }
 
-        setWhiteboardData({
-            'ghostName': ghostName,
-            'objectiveTwo': objectiveTwo,
-            'objectiveThree': objectiveThree,
-            'objectiveFour': objectiveFour,
-        });
-
         event.preventDefault();
+    }
+
+    const clearWhiteboard = () => {
+        setWhiteboardData({
+            'ghostName': '',
+            'objectiveTwo': '',
+            'objectiveThree': '',
+            'objectiveFour': ''
+        });
     }
 
     const handleEvidenceToggle = (event) => {
@@ -173,6 +188,7 @@ function App() {
                 negativeEvidence={negativeEvidence}
                 resetEvidence={resetEvidence}
                 whiteboardData={whiteboardData}
+                clearWhiteboard={clearWhiteboard}
                 handleEvidenceToggle={handleEvidenceToggle}
                 handleUtility={handleUtility}
                 handleWhiteboard={handleWhiteboard}
