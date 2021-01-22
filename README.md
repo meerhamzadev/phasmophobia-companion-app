@@ -1,7 +1,7 @@
 # Phasmophobia Companion App
 http://phasmophobia-app.com/
 
-![](beta_demo.gif)
+![](app_demo.gif)
 
 This is a React project bootstrapped with Create React App. This is a purely front-end application.
 
