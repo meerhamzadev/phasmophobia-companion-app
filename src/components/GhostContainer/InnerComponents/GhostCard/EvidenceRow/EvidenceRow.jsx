@@ -66,7 +66,7 @@ export default function EvidenceRow(props){
             icon = positiveIcons[evidence];
         } else {
             name = evidenceNames[evidence];
-            icon = evidenceIcons[evidence]   ;
+            icon = evidenceIcons[evidence];
         }
 
         return <img className={"evidence-icon"} height={50} width={50} src={icon[name]} alt={"evidence"}/>
