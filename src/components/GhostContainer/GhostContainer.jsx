@@ -25,7 +25,8 @@ export default function GhostContainer(props){
                     ghostType={ghost.type}
                     ghostId={ghost.id}
                     evidence={ghost.evidence}
-
+                    positiveEvidence={props.positiveEvidence}
+                    negativeEvidence={props.negativeEvidence}
                 />
     });
 
@@ -35,6 +36,8 @@ export default function GhostContainer(props){
                     ghostType={ghost.type}
                     ghostId={ghost.id}
                     evidence={ghost.evidence}
+                    positiveEvidence={props.positiveEvidence}
+                    negativeEvidence={props.negativeEvidence}
                 />
     });
 
@@ -48,6 +51,8 @@ export default function GhostContainer(props){
                         ghostType={positiveIdDetails[0].type}
                         ghostId={positiveIdDetails[0].id}
                         evidence={positiveIdDetails[0].evidence}
+                        positiveEvidence={props.positiveEvidence}
+                        negativeEvidence={props.negativeEvidence}
                     />
                 </div>
                 <div className={"found-ghost-description"}>
