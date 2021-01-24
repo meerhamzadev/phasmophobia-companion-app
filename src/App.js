@@ -199,6 +199,8 @@ function App() {
         <GhostContainer
             ghosts={ghostData.ghosts}
             evidence={ghostData.evidences}
+            positiveEvidence={positiveEvidence}
+            negativeEvidence={negativeEvidence}
             positiveID={detectedGhost}
             possibleGhosts={possibleGhosts}
             negativeGhosts={negativeGhosts}

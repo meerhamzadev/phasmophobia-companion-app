@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './UtilitiesContainer.css';
 
 import Utilities from "./InnerComponents/Utilities";
 
 export default function UtilitiesContainer(props){
+    useEffect(() => {
+      document.addEventListener("mousedown", handleClick);
+
+      return () => {
+        document.removeEventListener("mousedown", handleClick);
+      };
+    }, []);
+
+    const node = useRef();
+
+    const handleClick = (event) => {
+        if(!node.current.contains(event.target)) {
+            return props.handleToolbox;
+        }
+    }
+
     return(
-        <div className={"utilities-container"}>
+        <div className={"utilities-container"} ref={node}>
             <Utilities
                 evidence={props.evidence}
                 handleEvidenceToggle={props.handleEvidenceToggle}

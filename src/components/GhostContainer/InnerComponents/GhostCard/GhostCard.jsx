@@ -9,7 +9,11 @@ export default function GhostCard(props){
             <div className={"ghost-name"}>
                 {props.ghostType}
             </div>
-            <EvidenceRow evidence={props.evidence} />
+            <EvidenceRow
+                evidence={props.evidence}
+                positiveEvidence={props.positiveEvidence}
+                negativeEvidence={props.negativeEvidence}
+            />
         </div>
     )
 }
