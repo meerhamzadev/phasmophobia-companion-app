@@ -2,6 +2,8 @@
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
+    max-height: 70vh;
+    overflow-y: scroll;
 }
 
 .ghost-name-label {
@@ -14,9 +16,21 @@
     display: block;
 }
 
-.first-objective {
+.first-objective, .behavior {
     color: darkblue;
     font-weight: bold;
+}
+
+.behavior {
+    display: block;
+    margin: 10px 0 5px 0;
+}
+
+.behavior-select {
+    min-width: 200px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .objective {

@@ -44,6 +44,19 @@ export default function Whiteboard(props){
                         onChange={props.handleWhiteboard}
                         value={props.whiteboardData.objectiveFour}
                     />
+
+                    <div className={"ghost-behavior-controls"}>
+                        <span className={"behavior"}>Ghost responds when</span>
+                        <select
+                            className={"behavior-select"}
+                            onChange={props.handleWhiteboard}
+                            value={props.whiteboardData.ghostBehavior}
+                        >
+                            <option value={"Alone"}>Alone</option>
+                            <option value={"In group"}>In group</option>
+                            <option value={"Unknown"}>Unknown</option>
+                        </select>
+                    </div>
             </div>
             <ResetButton text={"Reset Objectives"} action={props.clearWhiteboard}/>
 
