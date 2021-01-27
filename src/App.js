@@ -43,7 +43,8 @@ function App() {
         'ghostName': '',
         'objectiveTwo': '',
         'objectiveThree': '',
-        'objectiveFour': ''
+        'objectiveFour': '',
+        'ghostBehavior': 'Unknown'
     });
 
     useEffect(() => {
@@ -63,6 +64,8 @@ function App() {
     }
 
     const handleWhiteboard = (event) => {
+        console.log(event.target.id);
+
         if(event.target.id === "ghost-name"){
             setWhiteboardData({
                 ...whiteboardData,
@@ -91,6 +94,13 @@ function App() {
             });
         }
 
+        if(event.target.value === "In group" || event.target.value === "Alone" || event.target.value === "Unknown"){
+            setWhiteboardData({
+                ...whiteboardData,
+                'ghostBehavior': event.target.value
+            })
+        }
+
         event.preventDefault();
     }
 
@@ -99,7 +109,8 @@ function App() {
             'ghostName': '',
             'objectiveTwo': '',
             'objectiveThree': '',
-            'objectiveFour': ''
+            'objectiveFour': '',
+            'ghostBehavior': ''
         });
     }
 
