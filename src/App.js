@@ -64,8 +64,6 @@ function App() {
     }
 
     const handleWhiteboard = (event) => {
-        console.log(event.target.id);
-
         if(event.target.id === "ghost-name"){
             setWhiteboardData({
                 ...whiteboardData,
