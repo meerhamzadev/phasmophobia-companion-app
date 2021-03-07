@@ -63,9 +63,7 @@ export default function Whiteboard(props){
             <datalist id={"objective-data"}>
                 <option value={"Have a member of your team witness a Ghost Event"} />
                 <option value={"Capture a photo of the Ghost"} />
-                <option value={"Capture a photo of Dirty Water in a sink"} />
                 <option value={"Find evidence of the paranormal with an EMF Reader"} />
-                <option value={"Detect a room below 10 Celsius/50 Fahrenheit with a Thermometer"} />
                 <option value={"Detect a Ghosts presence with a Motion Sensor"} />
                 <option value={"Cleanse the area near the Ghost using Smudge Sticks"} />
                 <option value={"Prevent the Ghost from hunting with a Crucifix"} />
