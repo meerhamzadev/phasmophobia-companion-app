@@ -4,7 +4,7 @@ import './ToolboxToggle.css'
 export default function ToolboxToggle(props){
     return(
         <button className={'toolbox'} onClick={props.handleToolbox}>
-            Toolbox
+            Whiteboard
         </button>
     )
 }

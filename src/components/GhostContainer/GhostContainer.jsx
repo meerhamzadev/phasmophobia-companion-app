@@ -2,6 +2,8 @@ import React from 'react';
 import './GhostContainer.css'
 
 import GhostCard from "./InnerComponents/GhostCard/GhostCard";
+import EvidenceContainer from "../UtilitiesContainer/InnerComponents/EvidenceContainer/EvidenceContainer";
+import EvidenceTable from "../UtilitiesContainer/InnerComponents/EvidenceContainer/InnerComponents/EvidenceTable/EvidenceTable";
 
 export default function GhostContainer(props){
 
@@ -75,6 +77,14 @@ export default function GhostContainer(props){
 
     return(
         <div className={"possibility-container"}>
+            <EvidenceContainer
+                evidence={props.evidence}
+                allOptionsUsed={props.allOptionsUsed}
+                positiveEvidence={props.positiveEvidence}
+                negativeEvidence={props.negativeEvidence}
+                handleEvidenceToggle={props.handleEvidenceToggle}
+                resetEvidence={props.resetEvidence}
+            />
             <h2>{props.message}</h2>
             {props.positiveID || props.positiveID === 0
                 ? foundCard

@@ -21,8 +21,8 @@
         1
       ],
       "description": "A Wraith is one of the most dangerous Ghosts you will find. It is also the only known ghost that has the ability of flight and has sometimes been known to travel through walls.",
-      "strength": "Wraiths almost never touch the ground. Footprint sounds from a wraith will be rare to non-existent, and they can travel directly through walls doors without having to open them.",
-      "weakness": "Wraiths have a toxic reaction to Salt. If a Wraith comes into contact with a pile of salt, it will immediately cease attacking."
+      "strength": "Wraiths almost never touch the ground, meaning it can't be tracked by footsteps",
+      "weakness": "Wraiths have a toxic reaction to Salt."
     },
     {
       "id": 2,
@@ -33,8 +33,8 @@
         1
       ],
       "description": "A Banshee is a natural hunter and will attack anything. It has been known to stalk its prey one at a time until making its kill.",
-      "strength": "A Banshee will focus on one player at a time until it kills them.",
-      "weakness": "Banshees fear the Crucifix, which boosts the Hunt-stopping range of one from 3 meters to 5 meters against it."
+      "strength": "A Banshee will focus on one player at a time.",
+      "weakness": "Banshees fear the Crucifix and will be less aggressive near one."
     },
     {
       "id": 3,
@@ -45,7 +45,7 @@
         5
       ],
       "description": "A Demon is one of the worst Ghosts you can encounter. It has been known to attack without a reason.",
-      "strength": "Demons are the most aggressive and enter hunt mode more.",
+      "strength": "Demons will attack more often than any other Ghost.",
       "weakness": "Asking a Demon successful questions on the Ouija Board won't lower the user's sanity."
     },
     {
@@ -69,8 +69,8 @@
         5
       ],
       "description": "A Mare is the source of all nightmares, making it most powerful in the dark.",
-      "strength": "Increased chance to attack in the dark. As such, it will do what it can to achieve this, such as turning off lights and tripping the fuse box.",
-      "weakness": "Turning the lights on will lower its chance to attack."
+      "strength": "A Mare will have an increased chance to attack in the dark.",
+      "weakness": "Turning the lights on around the Mare will lower its chance to attack."
     },
     {
       "id": 6,
@@ -81,7 +81,7 @@
         5
       ],
       "description": "Onis are a cousin to the Demon and possess extreme strength. There have been rumors that they become more active around their prey.",
-      "strength": "Oni are more active when people are nearby and have been seen moving objects at great speed",
+      "strength": "Onis are more active when people are nearby and have been seen moving objects at great speed",
       "weakness": "Being more active will make the Oni easier to find and identify"
     },
     {
@@ -93,8 +93,8 @@
         2
       ],
       "description": "A Phantom is a Ghost that can possess the living, most commonly summoned by a Ouija Board. It also induces fear into those around it.",
-      "strength": "Looking at a Phantom will considerably drop your Sanity. This refers to any visible manifestations of the Phantom, including during a Hunt.",
-      "weakness": "Taking a photo of the Phantom will make it temporarily disappear. This, however, will not stop a Hunt."
+      "strength": "Looking at a Phantom will considerably drop your Sanity.",
+      "weakness": "Taking a photo of the Phantom will make it temporarily disappear."
     },
     {
       "id": 8,
@@ -104,8 +104,8 @@
         3,
         5
       ],
-      "description": "One of the most famous Ghosts, a Poltergeist, also known as a noisy ghost can manipulate objects around it to spread fear into it's victims.",
-      "strength": "A Poltergeist is capable of influencing more objects at once than any other Ghosts, and is capable of shutting multiple doors at once.",
+      "description": "One of the most famous Ghosts, a Poltergeist, also known as a noisy ghost can manipulate objects around it to spread fear into its victims.",
+      "strength": "A Poltergeist can throw huge amounts of objects at once.",
       "weakness": "A Poltergeist is almost ineffective in an empty room."
     },
     {
@@ -117,7 +117,7 @@
         4
       ],
       "description": "A Revenant is a slow but violent Ghost that will attack indiscriminately. It has been rumored to travel at a significantly high speed when hunting.",
-      "strength": "A Revenant will travel at a significantly faster speed when hunting a victim. Additionally, the Revenant can freely switch whoever it is targeting during a Hunt.",
+      "strength": "A Revenant will travel at a significantly faster speed when hunting a victim.",
       "weakness": "Hiding from the Revenant will cause it to move very slowly."
     },
     {
@@ -129,8 +129,8 @@
         4
       ],
       "description": "A Shade is known to be a Shy Ghost. There is evidence that a Shade will stop all paranormal activity if there are multiple people nearby.",
-      "strength": "As a shy ghost, a Shade will rarely perform actions in the presence of two or more people, making it harder to detect.",
-      "weakness": "Conversely, a Shade will rarely start a Hunt when players are grouped together."
+      "strength": "Being shy means the Ghost will be harder to find.",
+      "weakness": "The Ghost will not enter hunting mode if there is multiple people nearby."
     },
     {
       "id": 11,
@@ -142,7 +142,7 @@
       ],
       "description": "A Yurei is a Ghost that has returned to the physical world, usually for the purpose of revenge or hatred.",
       "strength": "Yurei have been known to have a stronger effect on people's Sanity.",
-      "weakness": "Using Smudge Sticks on the Yurei's Ghost Room will cause it to not wander around the location for ~90 seconds."
+      "weakness": "Smudging the Yurei's room will cause it to not wander around the location for a long time."
     }
   ],
   "evidences": [

@@ -35,7 +35,7 @@ function App() {
     const [messageToUser, setMessageToUser] = useState('');
 
     // Current utility
-    const [currentUtility, setCurrentUtility] = useState("evidence");
+    const [currentUtility, setCurrentUtility] = useState("board");
     const [toolbox, setToolbox] = useState(true);
 
     // Whiteboard Data
@@ -190,15 +190,9 @@ function App() {
         <Header />
         {   toolbox
             ? <UtilitiesContainer
-                evidence={ghostData.evidences}
                 currentUtility={currentUtility}
-                allOptionsUsed={positiveEvidence.length === 3}
-                positiveEvidence={positiveEvidence}
-                negativeEvidence={negativeEvidence}
-                resetEvidence={resetEvidence}
                 whiteboardData={whiteboardData}
                 clearWhiteboard={clearWhiteboard}
-                handleEvidenceToggle={handleEvidenceToggle}
                 handleUtility={handleUtility}
                 handleWhiteboard={handleWhiteboard}
                 handleToolbox={handleToolbox}
@@ -210,6 +204,8 @@ function App() {
             evidence={ghostData.evidences}
             positiveEvidence={positiveEvidence}
             negativeEvidence={negativeEvidence}
+            resetEvidence={resetEvidence}
+            handleEvidenceToggle={handleEvidenceToggle}
             positiveID={detectedGhost}
             possibleGhosts={possibleGhosts}
             negativeGhosts={negativeGhosts}
