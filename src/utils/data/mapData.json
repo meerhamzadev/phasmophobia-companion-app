@@ -1,6 +1,7 @@
 {
   "maps": [
     {
+      "id": "tanglewood",
       "type": "Small",
       "name": "Tanglewood Street House",
       "recommendedTeamSize": "1",
@@ -8,6 +9,7 @@
       "description": "A small, three bedroom, single floor house with a basement."
     },
     {
+      "id:": "edgefield",
       "type": "Small",
       "name": "Edgefield Street House",
       "recommendedTeamSize": "2",
@@ -15,6 +17,7 @@
       "description": "A two story, six bedroom house with a basement."
     },
     {
+      "id:": "ridgeview",
       "type": "Small",
       "name": "Ridgeview Road House",
       "recommendedTeamSize": "2",
@@ -22,6 +25,7 @@
       "description": "A two story, four bedroom house with a basement."
     },
     {
+      "id:": "grafton",
       "type": "Small",
       "name": "Grafton Farmhouse",
       "recommendedTeamSize": "2",
@@ -29,6 +33,7 @@
       "description": "A two story, 4 bedroom farmhouse."
     },
     {
+      "id:": "bleasdale",
       "type": "Small",
       "name": "Bleasdale Farmhouse",
       "recommendedTeamSize": "2",
@@ -36,6 +41,7 @@
       "description": "A two story, 3 bedroom farmhouse with an Attic."
     },
     {
+      "id:": "highschool",
       "type": "Medium",
       "name": "Brownstone High School",
       "recommendedTeamSize": "3",
@@ -43,6 +49,7 @@
       "description": "Shut down due to unnatural deaths, this isolated School has been abandoned for decades."
     },
     {
+      "id:": "prison",
       "type": "Medium",
       "name": "Prison",
       "recommendedTeamSize": "3",
@@ -50,6 +57,7 @@
       "description": "The Prison was recently closed due to some unexplained deaths."
     },
     {
+      "id:": "asylum",
       "type": "Large",
       "name": "Asylum",
       "recommendedTeamSize": "4",
