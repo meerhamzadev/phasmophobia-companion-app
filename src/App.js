@@ -38,6 +38,9 @@ function App() {
     const [currentUtility, setCurrentUtility] = useState("board");
     const [toolbox, setToolbox] = useState(true);
 
+    // Map reference
+    const [mapReference, setMapReference] = useState(false);
+
     // Whiteboard Data
     const [whiteboardData, setWhiteboardData] = useState({
         'ghostName': '',
@@ -54,6 +57,10 @@ function App() {
         stateUpdater()
 
     }, [positiveEvidence, negativeEvidence]);
+
+    const handleMapReference = () => {
+        setMapReference(!mapReference);
+    }
 
     const handleUtility = (event) => {
         setCurrentUtility(event.target.value);
