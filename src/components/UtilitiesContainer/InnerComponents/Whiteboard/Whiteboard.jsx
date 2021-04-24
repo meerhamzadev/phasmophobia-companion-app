@@ -71,7 +71,7 @@ export default function Whiteboard(props){
                 <option value={"Get a Ghost to blow out a Candle"} />
                 <option value={"Detect Ghost footsteps with a parabolic mic during a hunt"} />
                 <option value={"Have a member of your team escape the Ghost during a hunt"} />
-                <option value={"Use a smudge stick while the ghost is hunting a player"} />
+                <option value={"Repel the Ghost with a Smudge Stick while it's chasing someone"} />
                 <option value={"Get an average sanity below 25%"} />
             </datalist>
         </div>
