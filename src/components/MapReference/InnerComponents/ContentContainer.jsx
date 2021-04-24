@@ -5,7 +5,6 @@ import MapInformation from "./InnerComponents/MapContent/MapInformation";
 import MapList from "./InnerComponents/MapList/MapList";
 
 export default function ContentContainer(props){
-
     const [currentMap, setCurrentMap] = useState('none');
 
     const handleCurrentMap = (event) => {
