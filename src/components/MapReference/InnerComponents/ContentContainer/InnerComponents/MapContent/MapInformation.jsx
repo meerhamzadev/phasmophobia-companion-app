@@ -14,7 +14,7 @@ export default function MapInformation(props){
             teamSize={props.mapInfo.recommendedTeamSize}
             items={props.mapInfo.recommendedItems}
         />
-        <PhotoGallery mapId={props.mapInfo.id} />
+        <PhotoGallery activeMap={props.mapInfo.id} />
         </>
 
     return(

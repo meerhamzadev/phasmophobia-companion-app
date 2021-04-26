@@ -18,8 +18,9 @@ import fullOutput from './utils/auxiliaryFunctions/outcomeChecker';
 
 // Styling
 import './App.css';
+import MapReference from "./components/MapReference/MapReference";
 
-function App() {
+export default function App() {
     const allGhostIDs = ghostData.ghosts.map((ghost) => {
         return ghost.id
     })
@@ -193,9 +194,14 @@ function App() {
     }
 
   return (
-    <div className="App">
-        <Header />
-        {   toolbox
+      <>
+      { mapReference ? <MapReference /> : null }
+      <div className="App">
+          <Header />
+
+          <a className={"map-reference-link"} onClick={handleMapReference}>Click here to see the map reference</a>
+
+          {   toolbox
             ? <UtilitiesContainer
                 currentUtility={currentUtility}
                 whiteboardData={whiteboardData}
@@ -205,7 +211,8 @@ function App() {
                 handleToolbox={handleToolbox}
             />
             : <ToolboxToggle handleToolbox={handleToolbox} />
-        }
+          }
+
         <GhostContainer
             ghosts={ghostData.ghosts}
             evidence={ghostData.evidences}
@@ -218,8 +225,8 @@ function App() {
             negativeGhosts={negativeGhosts}
             message={messageToUser}
         />
-    </div>
+        </div>
+      </>
+
   );
 }
-
-export default App;
