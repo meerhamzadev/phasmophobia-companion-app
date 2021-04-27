@@ -2,7 +2,6 @@
     position: absolute;
     left: 0;
     margin: 0;
-    z-index: 1;
     border-radius: 0 15px 15px 0;
     background: rgb(223, 215, 122);
     background: -moz-linear-gradient(180deg, rgba(223, 215, 122, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);

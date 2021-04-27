@@ -18,8 +18,9 @@ import fullOutput from './utils/auxiliaryFunctions/outcomeChecker';
 
 // Styling
 import './App.css';
+import MapReference from "./components/MapReference/MapReference";
 
-function App() {
+export default function App() {
     const allGhostIDs = ghostData.ghosts.map((ghost) => {
         return ghost.id
     })
@@ -38,6 +39,9 @@ function App() {
     const [currentUtility, setCurrentUtility] = useState("board");
     const [toolbox, setToolbox] = useState(true);
 
+    // Map reference
+    const [mapReference, setMapReference] = useState(false);
+
     // Whiteboard Data
     const [whiteboardData, setWhiteboardData] = useState({
         'ghostName': '',
@@ -54,6 +58,10 @@ function App() {
         stateUpdater()
 
     }, [positiveEvidence, negativeEvidence]);
+
+    const handleMapReference = () => {
+        setMapReference(!mapReference);
+    }
 
     const handleUtility = (event) => {
         setCurrentUtility(event.target.value);
@@ -186,9 +194,14 @@ function App() {
     }
 
   return (
-    <div className="App">
-        <Header />
-        {   toolbox
+      <>
+      { mapReference ? <MapReference toggleAction={handleMapReference} /> : null }
+      <div className="App">
+          <Header />
+
+          <a className={"map-reference-link"} onClick={handleMapReference}>Click here to see the map reference</a>
+
+          {   toolbox
             ? <UtilitiesContainer
                 currentUtility={currentUtility}
                 whiteboardData={whiteboardData}
@@ -198,7 +211,8 @@ function App() {
                 handleToolbox={handleToolbox}
             />
             : <ToolboxToggle handleToolbox={handleToolbox} />
-        }
+          }
+
         <GhostContainer
             ghosts={ghostData.ghosts}
             evidence={ghostData.evidences}
@@ -211,8 +225,8 @@ function App() {
             negativeGhosts={negativeGhosts}
             message={messageToUser}
         />
-    </div>
+        </div>
+      </>
+
   );
 }
-
-export default App;

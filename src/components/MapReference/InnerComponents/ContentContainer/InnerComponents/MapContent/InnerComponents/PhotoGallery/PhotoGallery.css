@@ -1,0 +1,7 @@
+.map-photo {
+    max-width: 80%;
+    display: block;
+    overflow-y: scroll;
+    margin: 0 auto;
+    margin-top: 15px;
+}

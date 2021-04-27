@@ -17,6 +17,7 @@
 }
 
 .evidence-row {
+    padding-top: 15px;
     height: 40px;
     display: inline-block;
 }

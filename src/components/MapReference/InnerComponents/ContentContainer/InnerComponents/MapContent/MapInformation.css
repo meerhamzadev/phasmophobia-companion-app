@@ -1,0 +1,24 @@
+.map-information, .map-information-null {
+    color: black;
+    min-width: 75%;
+    min-height: 90%;
+    max-width: 75%;
+    max-height: 90%;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.map-information {
+    overflow-y: scroll;
+}
+
+.map-information-null {
+    display: inline-block;
+    min-width: 75%;
+}
+
+.no-info-text {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 500px;
+}

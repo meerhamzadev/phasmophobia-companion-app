@@ -1,0 +1,20 @@
+.map-content-container {
+    background: rgb(172, 167, 113);
+    background: -moz-linear-gradient(180deg, rgba(172, 167, 113, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(172, 167, 113, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
+    background: linear-gradient(180deg, rgba(172, 167, 113, 1) 0%, rgba(199, 192, 133, 1) 50%, rgba(153, 142, 81, 1) 100%);
+    filter    : progid:DXImageTransform.Microsoft.gradient(startColorstr="#aca771", endColorstr="#998e51", GradientType=1);
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+    z-index: 5;
+    position: absolute;
+    border-radius: 15px;
+    left: 10%;
+    top: 5%;
+}
+
+.map-list, .map-information {
+    display: inline-block;
+    vertical-align: top;
+}
