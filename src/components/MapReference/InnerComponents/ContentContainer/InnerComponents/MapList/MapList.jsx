@@ -1,5 +1,6 @@
 import React from 'react';
 import MapListItem from "./MapListItem";
+import './MapList.css';
 
 export default function MapList(props){
 
@@ -13,6 +14,7 @@ export default function MapList(props){
 
     return (
         <ul className={"map-list"}>
+            <h3>Available maps</h3>
             {listItems}
         </ul>
     )

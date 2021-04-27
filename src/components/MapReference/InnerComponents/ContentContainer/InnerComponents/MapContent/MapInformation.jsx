@@ -1,4 +1,5 @@
 import React from 'react';
+import './MapInformation.css'
 
 // Components
 import PhotoGallery from "./InnerComponents/PhotoGallery/PhotoGallery";
@@ -6,20 +7,21 @@ import DescriptionContainer from "./InnerComponents/DescriptionContainer/Descrip
 
 export default function MapInformation(props){
     const noMapSelected = "Select a map on the left hand side to get information for it";
+    const relevantMap = props.mapInfo[0];
 
     const mapInformation = <>
         <DescriptionContainer
-            mapName={props.mapInfo.name}
-            mapDescription={props.mapInfo.description}
-            teamSize={props.mapInfo.recommendedTeamSize}
-            items={props.mapInfo.recommendedItems}
+            mapName={relevantMap.name}
+            mapDescription={relevantMap.description}
+            teamSize={relevantMap.recommendedTeamSize}
+            items={relevantMap.recommendedItems}
         />
-        <PhotoGallery activeMap={props.mapInfo.id} />
+        <PhotoGallery activeMap={relevantMap.id} />
         </>
 
     return(
         <div className={"map-information"}>
-            { props.mapInfo === "none" ? noMapSelected : mapInformation }
+            { relevantMap === "none" ? noMapSelected : mapInformation }
         </div>
     )
 }

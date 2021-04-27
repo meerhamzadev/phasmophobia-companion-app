@@ -1,4 +1,5 @@
 import React from 'react';
+import './PhotoGallery.css';
 
 // Map labels
 import asylumLabels from '../../../../../../../../images/maps/asylum/map_labels.jpg';
@@ -32,15 +33,13 @@ export default function PhotoGallery(props){
         'tanglewood': [tanglewoodLabels, tanglewoodEntrance]
     }
 
-    const relevantPhotos = photoReferences.filter((map) => {
-        return map === props.activeMap
-    });
-
-    console.log(relevantPhotos);
+    const relevantPhotos = props.activeMap === undefined
+        ? "No relevant photos to show"
+        : photoReferences[props.activeMap].map((photo) => { return <img className={"map-photo"} src={photo} /> })
 
     return(
         <div className={"photo-gallery"}>
-            test
+            {relevantPhotos}
         </div>
     )
 }
