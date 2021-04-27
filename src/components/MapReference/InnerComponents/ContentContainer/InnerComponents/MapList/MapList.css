@@ -25,5 +25,10 @@
 }
 
 .map-list-item-active {
+    color: white;
+    font-weight: bold;
+    transition: 0.1s ease-in-out;
     background-color: #3e8e41;
+    border-radius: 5px;
+    border-bottom: none;
 }

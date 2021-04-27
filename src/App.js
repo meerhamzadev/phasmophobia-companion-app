@@ -195,7 +195,7 @@ export default function App() {
 
   return (
       <>
-      { mapReference ? <MapReference /> : null }
+      { mapReference ? <MapReference toggleAction={handleMapReference} /> : null }
       <div className="App">
           <Header />
 

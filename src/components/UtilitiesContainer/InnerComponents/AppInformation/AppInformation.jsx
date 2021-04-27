@@ -15,6 +15,8 @@ export default function AppInformation(){
 
                 This app has been made with a single goal in mind: <b>help the players out.</b>
                 <p/>
+                It is focused on fast release and usability in the medium the game is played: PC screens. It is not optimized for mobile usage, but any help in progressing in this field is welcomed.
+                <p/>
                 It has been developed with React.js and has an <b>open-source code</b> to which any developer can contribute.
                 <p/>
                 It will <b>never be monetized</b> or gather any user information other than interaction to see which features are used the most.

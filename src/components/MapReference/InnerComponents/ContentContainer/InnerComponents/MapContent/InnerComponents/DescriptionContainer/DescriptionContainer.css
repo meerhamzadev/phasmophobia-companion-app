@@ -6,3 +6,7 @@
 .map-info-title {
     font-weight: bold;
 }
+
+.info-row {
+    margin-bottom: 8px;
+}

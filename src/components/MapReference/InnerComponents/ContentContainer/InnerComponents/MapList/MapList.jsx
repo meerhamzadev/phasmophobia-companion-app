@@ -6,6 +6,7 @@ export default function MapList(props){
 
     const listItems = props.mapData.map((location) => {
         return <MapListItem
+            activeMap={props.activeMap}
             mapId={location.id}
             mapName={location.name}
             handleCurrentMap={props.handleCurrentMap}

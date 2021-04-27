@@ -6,10 +6,10 @@ import PhotoGallery from "./InnerComponents/PhotoGallery/PhotoGallery";
 import DescriptionContainer from "./InnerComponents/DescriptionContainer/DescriptionContainer";
 
 export default function MapInformation(props){
-    const noMapSelected = "Select a map on the left hand side to get information for it";
+    const noMapSelected = <div className={"map-information-null"}><span className={"no-info-text"}>Select a map on the left hand side to get information for it</span></div>
     const relevantMap = props.mapInfo[0];
 
-    const mapInformation = <>
+    const mapInformation = <div className={"map-information"}>
         <DescriptionContainer
             mapName={relevantMap.name}
             mapDescription={relevantMap.description}
@@ -17,11 +17,7 @@ export default function MapInformation(props){
             items={relevantMap.recommendedItems}
         />
         <PhotoGallery activeMap={relevantMap.id} />
-        </>
-
-    return(
-        <div className={"map-information"}>
-            { relevantMap === "none" ? noMapSelected : mapInformation }
         </div>
-    )
+
+    return relevantMap === "none" ? noMapSelected : mapInformation
 }
