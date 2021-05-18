@@ -3,7 +3,6 @@ import './GhostContainer.css'
 
 import GhostCard from "./InnerComponents/GhostCard/GhostCard";
 import EvidenceContainer from "../UtilitiesContainer/InnerComponents/EvidenceContainer/EvidenceContainer";
-import EvidenceTable from "../UtilitiesContainer/InnerComponents/EvidenceContainer/InnerComponents/EvidenceTable/EvidenceTable";
 
 export default function GhostContainer(props){
 

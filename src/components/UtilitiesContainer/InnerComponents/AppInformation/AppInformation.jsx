@@ -23,25 +23,25 @@ export default function AppInformation(){
             </div>
             <div className={"icon-container"}>
                 <div className={"icon"}>
-                    <a href={"https://forms.gle/Un9qxqTsjdw9xu67A"} target={"_blank"}>
+                    <a href={"https://forms.gle/Un9qxqTsjdw9xu67A"} target={"_blank"} rel={"noreferrer"}>
                         <img src={feedback} alt={"feedback"} className={"icon-image"} />
                         <span className={"icon-description"}>Give me feedback!</span>
                     </a>
                 </div>
                 <div className={"icon"}>
-                    <a href={"https://github.com/RCastilho91/phasmophobia-companion-app/projects/1"} target={"_blank"}>
+                    <a href={"https://github.com/RCastilho91/phasmophobia-companion-app/projects/1"} target={"_blank"} rel={"noreferrer"}>
                         <img src={roadmap} alt={"feedback"} className={"icon-image"} />
                         <span className={"icon-description"}>Check out the development roadmap!</span>
                     </a>
                 </div>
                 <div className={"icon"}>
-                    <a href={"https://github.com/RCastilho91/phasmophobia-companion-app"} target={"_blank"}>
+                    <a href={"https://github.com/RCastilho91/phasmophobia-companion-app"} target={"_blank"} rel={"noreferrer"}>
                         <img src={gitHub} alt={"feedback"} className={"icon-image"} />
                         <span className={"icon-description"}>Contribute to the project!</span>
                     </a>
                 </div>
                 <div className={"icon"}>
-                    <a href={"https://www.linkedin.com/in/rmcastilho/"} target={"_blank"}>
+                    <a href={"https://www.linkedin.com/in/rmcastilho/"} target={"_blank"} rel={"noreferrer"}>
                         <img src={linkedIn} alt={"feedback"} className={"icon-image"} />
                         <span className={"icon-description"}>Meet the project maker!</span>
                     </a>

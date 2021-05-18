@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import './UtilitiesContainer.css';
 
 import Utilities from "./InnerComponents/Utilities";
