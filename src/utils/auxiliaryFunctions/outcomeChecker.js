@@ -52,7 +52,7 @@ function fullOutput(positiveEvidence, negativeEvidence, ghostData){
 function messageBuilder(eliminatedGhosts, discoveredGhost, ghosts){
     let message = "You may be dealing with"
 
-    if(eliminatedGhosts === 12){
+    if(eliminatedGhosts === ghosts.length){
         message = "No ghosts fit this evidence combination"
     }
 
@@ -75,5 +75,3 @@ function commonValueCounter(ghostEvidence, currentEvidence){
 }
 
 module.exports = fullOutput
-
-//fullOutput([0,3], [2, 5, 1], ghostData.ghosts)
