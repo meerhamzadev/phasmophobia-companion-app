@@ -10,6 +10,7 @@ import highschoolLabels from '../../../../../../../../images/maps/highschool/map
 import prisonLabels from '../../../../../../../../images/maps/prison/map_labels.png';
 import ridgeviewLabels from '../../../../../../../../images/maps/ridgeview/map_labels.jpg';
 import tanglewoodLabels from '../../../../../../../../images/maps/tanglewood/map_labels.png';
+import willowLabels from '../../../../../../../../images/maps/willow/map_labels.jpg';
 
 // Map entrances
 import asylumEntrance from '../../../../../../../../images/maps/asylum/asylum-outside.jpg';
@@ -30,7 +31,8 @@ export default function PhotoGallery(props){
         'highschool': [highschoolLabels, highschoolEntrance],
         'prison': [prisonLabels, prisonEntrance],
         'ridgeview': [ridgeviewLabels, ridgeviewEntrance],
-        'tanglewood': [tanglewoodLabels, tanglewoodEntrance]
+        'tanglewood': [tanglewoodLabels, tanglewoodEntrance],
+        'willow': [willowLabels]
     }
 
     const relevantPhotos = props.activeMap === undefined
@@ -41,7 +43,8 @@ export default function PhotoGallery(props){
 
     return(
         <div className={"photo-gallery"}>
-            <a href={"https://phasmophobia.fandom.com/wiki/Main_Page"} target={"_blank"}>Labeled maps brought to you from the Phasmophobia fan-maintained Wiki</a>
+            <a href={"https://phasmophobia.fandom.com/wiki/Main_Page"} target={"_blank"}>Most labeled maps obtained from Phasmophobia fan-maintained Wiki</a> <br />
+            <a href={"https://www.twitch.tv/bigmeiklive"} target={"_blank"}> Willow map reference provided by BigMeikLIVE</a>
             {relevantPhotos}
         </div>
     )

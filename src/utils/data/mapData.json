@@ -63,6 +63,14 @@
       "recommendedTeamSize": "4",
       "recommendedItems": "Sanity Pills",
       "description": "This Asylum has been abandoned for years. Its only occupants are the paranormal."
+    },
+    {
+      "id": "willow",
+      "type": "Small",
+      "name": "Willow Street House",
+      "recommendedTeamSize": "2",
+      "recommendedItems": "Thermometer",
+      "description": "Smallest house of the game with no lockers to hide into."
     }
   ]
 }
