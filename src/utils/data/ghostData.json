@@ -3,7 +3,7 @@
     {
       "id": 0,
       "type": "Spirit",
-      "evidence": [1, 4, 5],
+      "evidence": [0, 5, 4],
       "description": "A Spirit is the most common Ghost you will come across however it is still very powerful and dangerous. They are usually discovered at one of their hunting grounds after an unexplained death.",
       "strength": "None",
       "weakness": "Smudge Sticks will prevent it from hunting for 120 seconds rather than the usual 90 seconds."
@@ -11,7 +11,7 @@
     {
       "id": 1,
       "type": "Wraith",
-      "evidence": [1, 2, 5],
+      "evidence": [0, 5, 6],
       "description": "A Wraith is one of the most dangerous Ghosts you will find. It is also the only known ghost that has the ability of flight and has sometimes been known to travel through walls.",
       "strength": "Wraiths almost never touch the ground, meaning it can't be tracked by footsteps",
       "weakness": "Wraiths have a toxic reaction to Salt."
@@ -19,7 +19,7 @@
     {
       "id": 2,
       "type": "Banshee",
-      "evidence": [0, 1, 2],
+      "evidence": [1, 3, 6],
       "description": "A Banshee is a natural hunter and will attack anything. It has been known to stalk its prey one at a time until making its kill.",
       "strength": "A Banshee will focus on one player at a time.",
       "weakness": "Banshees fear the Crucifix and will be less aggressive near one."
@@ -27,7 +27,7 @@
     {
       "id": 3,
       "type": "Demon",
-      "evidence": [2, 4, 5],
+      "evidence": [1, 4, 2],
       "description": "A Demon is one of the worst Ghosts you can encounter. It has been known to attack without a reason.",
       "strength": "Demons will attack more often than any other Ghost.",
       "weakness": "Asking a Demon successful questions on the Ouija Board won't lower the user's sanity."
@@ -35,7 +35,7 @@
     {
       "id": 4,
       "type": "Jinn",
-      "evidence": [0, 3, 5],
+      "evidence": [0, 1, 2],
       "description": "A Jinn is a territorial Ghost that will attack when threatened. It also has been known to travel at significant speed.",
       "strength": "A Jinn will travel at a faster speed if its victim is far away.",
       "weakness": "Turning off the location's power source will prevent the Jinn from using its ability."
@@ -43,7 +43,7 @@
     {
       "id": 5,
       "type": "Mare",
-      "evidence": [2, 3, 5],
+      "evidence": [5, 3, 4],
       "description": "A Mare is the source of all nightmares, making it most powerful in the dark.",
       "strength": "A Mare will have an increased chance to attack in the dark.",
       "weakness": "Turning the lights on around the Mare will lower its chance to attack."
@@ -51,7 +51,7 @@
     {
       "id": 6,
       "type": "Oni",
-      "evidence": [0, 4, 5],
+      "evidence": [0, 2, 6],
       "description": "Onis are a cousin to the Demon and possess extreme strength. There have been rumors that they become more active around their prey.",
       "strength": "Onis are more active when people are nearby and have been seen moving objects at great speed",
       "weakness": "Being more active will make the Oni easier to find and identify"
@@ -59,7 +59,7 @@
     {
       "id": 7,
       "type": "Phantom",
-      "evidence": [0, 2, 3],
+      "evidence": [5, 1, 6],
       "description": "A Phantom is a Ghost that can possess the living, most commonly summoned by a Ouija Board. It also induces fear into those around it.",
       "strength": "Looking at a Phantom will considerably drop your Sanity.",
       "weakness": "Taking a photo of the Phantom will make it temporarily disappear."
@@ -67,7 +67,7 @@
     {
       "id": 8,
       "type": "Poltergeist",
-      "evidence": [1, 3, 5],
+      "evidence": [5, 1, 4],
       "description": "One of the most famous Ghosts, a Poltergeist, also known as a noisy ghost can manipulate objects around it to spread fear into its victims.",
       "strength": "A Poltergeist can throw huge amounts of objects at once.",
       "weakness": "A Poltergeist is almost ineffective in an empty room."
@@ -75,7 +75,7 @@
     {
       "id": 9,
       "type": "Revenant",
-      "evidence": [0, 1, 4],
+      "evidence": [3, 4, 2],
       "description": "A Revenant is a slow but violent Ghost that will attack indiscriminately. It has been rumored to travel at a significantly high speed when hunting.",
       "strength": "A Revenant will travel at a significantly faster speed when hunting a victim.",
       "weakness": "Hiding from the Revenant will cause it to move very slowly."
@@ -83,7 +83,7 @@
     {
       "id": 10,
       "type": "Shade",
-      "evidence": [0, 3, 4],
+      "evidence": [0, 4, 2],
       "description": "A Shade is known to be a Shy Ghost. There is evidence that a Shade will stop all paranormal activity if there are multiple people nearby.",
       "strength": "Being shy means the Ghost will be harder to find.",
       "weakness": "The Ghost will not enter hunting mode if there is multiple people nearby."
@@ -91,7 +91,7 @@
     {
       "id": 11,
       "type": "Yurei",
-      "evidence": [2, 3, 4],
+      "evidence": [3, 2, 6],
       "description": "A Yurei is a Ghost that has returned to the physical world, usually for the purpose of revenge or hatred.",
       "strength": "Yurei have been known to have a stronger effect on people's Sanity.",
       "weakness": "Smudging the Yurei's room will cause it to not wander around the location for a long time."
@@ -99,7 +99,7 @@
     {
       "id": 12,
       "type": "Yokai",
-      "evidence": [3, 4, 5],
+      "evidence": [5, 3, 6],
       "description": "A Yokai is a common type of ghost that is attracted to human voices. They can usually be found haunting family homes.",
       "strength": "Talking near a Yokai will anger it and increase its chance of attacking.",
       "weakness": "When hunting, a Yokai can only hear voices close to it."
@@ -107,10 +107,26 @@
     {
       "id": 13,
       "type": "Hantu",
-      "evidence": [1, 3, 4],
+      "evidence": [1, 3, 2],
       "description": "A Hantu is a rare ghost that can be found in hot climates, known to attack often during cold weather.",
       "strength": "Lower temperatures can cause the Hantu to move at faster speeds.",
       "weakness": "A Hantu will move slower in warmer areas."
+    },
+    {
+      "id": 14,
+      "type": "Goryo",
+      "evidence": [0, 1, 6],
+      "description": "Using a video camera is the only way to view a Goryo, when it passes through a DOTS projector.",
+      "strength": "A Goryo will usually only show itself on camera if there are no people nearby.",
+      "weakness": "They are rarely seen far from their place of death."
+    },
+    {
+      "id": 15,
+      "type": "Myling",
+      "evidence": [0, 1, 4],
+      "description": "A Myling is a very vocal and active ghost. They are rumoured to be quiet when hunting their prey.",
+      "strength": "A Myling is known to be quieter when hunting.",
+      "weakness": "Mylings more frequently make paranormal sounds."
     }
   ],
   "evidences": [
@@ -143,6 +159,11 @@
       "evidenceID": 5,
       "evidenceName": "box",
       "evidenceLabel": "Spirit Box"
+    },
+    {
+      "evidenceID": 6,
+      "evidenceName": "dots",
+      "evidenceLabel": "D.O.T.S Projector"
     }
   ],
   "equipmentInformation": [

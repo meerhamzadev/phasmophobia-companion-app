@@ -8,6 +8,7 @@ import freezing from '../../../../../images/evidence-icons/PNGs/freezing-tempera
 import orb from '../../../../../images/evidence-icons/PNGs/ghost-orbs.png';
 import writing from '../../../../../images/evidence-icons/PNGs/ghost-writing.png';
 import box from '../../../../../images/evidence-icons/PNGs/spirit-box.png';
+import dots from '../../../../../images/evidence-icons/PNGs/dots.png';
 
 // Positive icons
 import emfPositive from '../../../../../images/evidence-icons/PNGs/emf-pos.png';
@@ -16,6 +17,7 @@ import freezingPositive from '../../../../../images/evidence-icons/PNGs/freezing
 import orbPositive from '../../../../../images/evidence-icons/PNGs/ghost-orbs-pos.png';
 import writingPositive from '../../../../../images/evidence-icons/PNGs/ghost-writing-pos.png';
 import boxPositive from '../../../../../images/evidence-icons/PNGs/spirit-box-pos.png';
+import dotsPositive from '../../../../../images/evidence-icons/PNGs/dots-pos.png';
 
 // Negative icons
 import emfNegative from '../../../../../images/evidence-icons/PNGs/emf-neg.png';
@@ -24,6 +26,7 @@ import freezingNegative from '../../../../../images/evidence-icons/PNGs/freezing
 import orbNegative from '../../../../../images/evidence-icons/PNGs/ghost-orbs-neg.png';
 import writingNegative from '../../../../../images/evidence-icons/PNGs/ghost-writing-neg.png';
 import boxNegative from '../../../../../images/evidence-icons/PNGs/spirit-box-neg.png';
+import dotsNegative from '../../../../../images/evidence-icons/PNGs/dots-neg.png';
 
 export default function EvidenceRow(props){
     const evidenceIcons = [
@@ -32,7 +35,8 @@ export default function EvidenceRow(props){
         {freezing},
         {orb},
         {writing},
-        {box}
+        {box},
+        {dots}
     ];
     const positiveIcons = [
         {emfPositive},
@@ -40,7 +44,8 @@ export default function EvidenceRow(props){
         {freezingPositive},
         {orbPositive},
         {writingPositive},
-        {boxPositive}
+        {boxPositive},
+        {dotsPositive}
     ];
     const negativeIcons = [
         {emfNegative},
@@ -48,12 +53,13 @@ export default function EvidenceRow(props){
         {freezingNegative},
         {orbNegative},
         {writingNegative},
-        {boxNegative}
+        {boxNegative},
+        {dotsNegative}
     ];
 
-    const evidenceNames = ["emf", "fingerprints", "freezing", "orb", "writing", "box"];
-    const positiveEvidenceNames = ["emfPositive", "fingerprintsPositive", "freezingPositive", "orbPositive", "writingPositive", "boxPositive"];
-    const negativeEvidenceNames = ["emfNegative", "fingerprintsNegative", "freezingNegative", "orbNegative", "writingNegative", "boxNegative"];
+    const evidenceNames = ["emf", "fingerprints", "freezing", "orb", "writing", "box", "dots"];
+    const positiveEvidenceNames = ["emfPositive", "fingerprintsPositive", "freezingPositive", "orbPositive", "writingPositive", "boxPositive", "dotsPositive"];
+    const negativeEvidenceNames = ["emfNegative", "fingerprintsNegative", "freezingNegative", "orbNegative", "writingNegative", "boxNegative", "dotsNegative"];
 
     const targetIcons = props.evidence.map((evidence) => {
         let name, icon
