@@ -39,8 +39,9 @@
 }
 
 .map-reference-link {
-  padding: 35px 0;
+  padding: 10px 0;
   font-weight: bold;
   cursor: pointer;
   color: cyan;
+  display: block;
 }

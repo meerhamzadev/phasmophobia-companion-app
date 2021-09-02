@@ -1,0 +1,23 @@
+.objectives-reference {
+    margin: 15px 0 10px 0;
+}
+
+.ghost-name-reference, .objectives-reference-container {
+    display: block;
+}
+
+.objectives-reference-container {
+    margin-top: 5px;
+}
+
+.ghost-name-reference {
+    color: #1bd4d4;
+    font-weight: bolder;
+    font-size: 110%;
+}
+
+.objective-reference {
+    color: #27c258;
+    display: block;
+    margin-top: 4px;
+}

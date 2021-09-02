@@ -8,6 +8,7 @@ import Header from "./components/Header/Header";
 import GhostContainer from "./components/GhostContainer/GhostContainer";
 import UtilitiesContainer from './components/UtilitiesContainer/UtilitiesContainer';
 import ToolboxToggle from "./components/UtilitiesContainer/ToolboxToggle";
+import ObjectivesReference from "./components/ObjectivesReference/ObjectivesReference";
 
 // Data
 import ghostData from './utils/data/ghostData.json';
@@ -42,6 +43,9 @@ export default function App() {
     // Map reference
     const [mapReference, setMapReference] = useState(false);
 
+    // Session reference
+    const [sessionReference, setSessionReference] = useState(false);
+
     // Whiteboard Data
     const [whiteboardData, setWhiteboardData] = useState({
         'ghostName': '',
@@ -65,6 +69,10 @@ export default function App() {
 
     const handleUtility = (event) => {
         setCurrentUtility(event.target.value);
+    }
+
+    const handleSessionInformation = () => {
+        setSessionReference(!sessionReference)
     }
 
     const handleToolbox = () => {
@@ -200,6 +208,10 @@ export default function App() {
           <Header />
 
           <a className={"map-reference-link"} onClick={handleMapReference}>Click here to see the map reference</a>
+
+          {
+              sessionReference ? <ObjectivesReference whiteboardData={whiteboardData} handleSessionInformation={handleSessionInformation} /> : <a className={"map-reference-link"} onClick={handleSessionInformation}>See the set objectives here</a>
+          }
 
           {   toolbox
             ? <UtilitiesContainer
