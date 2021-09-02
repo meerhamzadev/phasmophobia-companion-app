@@ -9,6 +9,7 @@
     margin: 0 auto;
     display: inline-block;
     border-collapse: collapse;
+    padding-bottom: 15px;
 }
 
 .evidence-row {

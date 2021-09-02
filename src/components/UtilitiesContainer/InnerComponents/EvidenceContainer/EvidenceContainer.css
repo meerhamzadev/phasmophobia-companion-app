@@ -9,6 +9,8 @@
 
 .evidence-label {
     width: 180px;
+    padding-bottom: 5px;
+    color: #000000;
 }
 
 .positive-switch-container,
