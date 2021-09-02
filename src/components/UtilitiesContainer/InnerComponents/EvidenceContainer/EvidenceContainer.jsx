@@ -9,6 +9,7 @@ export default function EvidenceContainer(props){
         <div className={"evidence-container"}>
             <EvidenceTable
                 evidence={props.evidence}
+                evidenceProbability={props.evidenceProbability}
                 allOptionsUsed={props.allOptionsUsed}
                 positiveEvidence={props.positiveEvidence}
                 negativeEvidence={props.negativeEvidence}

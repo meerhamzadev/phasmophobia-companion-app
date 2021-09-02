@@ -16,6 +16,7 @@ import googleId from "./utils/google-analytics-sensitive/gaConfiguration";
 
 // Auxiliary functions
 import fullOutput from './utils/auxiliaryFunctions/outcomeChecker';
+import evidenceProbabilityCalculator from './utils/auxiliaryFunctions/probabilityCalculator';
 
 // Styling
 import './App.css';
@@ -26,9 +27,22 @@ export default function App() {
         return ghost.id
     })
 
+    const allEvidenceIDs = ghostData.evidences.map((evidence) => {
+        return evidence.evidenceID
+    })
+
+    let initialEvidenceProbability = {}
+
+    for(let i = 0; i < allEvidenceIDs.length; i++){
+        initialEvidenceProbability[i] = 100 / allEvidenceIDs.length
+    }
+
     // Evidence handlers
     const [positiveEvidence, setPositiveEvidence] = useState([]);
     const [negativeEvidence, setNegativeEvidence] = useState([]);
+    const [evidenceProbability, setEvidenceProbability] = useState(
+        evidenceProbabilityCalculator(allEvidenceIDs, 0, 0, allGhostIDs)
+    );
 
     // Possible outputs
     const [detectedGhost, setDetectedGhost] = useState('');
@@ -61,7 +75,7 @@ export default function App() {
 
         stateUpdater()
 
-    }, [positiveEvidence, negativeEvidence]);
+    }, [positiveEvidence, negativeEvidence, evidenceProbability]);
 
     const handleMapReference = () => {
         setMapReference(!mapReference);
@@ -194,6 +208,9 @@ export default function App() {
         setPossibleGhosts(result.possibleGhosts);
         setNegativeGhosts(result.eliminatedGhosts);
         setMessageToUser(result.message);
+        setEvidenceProbability(
+            evidenceProbabilityCalculator(allEvidenceIDs, positiveEvidence, negativeEvidence, possibleGhosts)
+        );
     }
 
     const resetEvidence = () => {
@@ -228,6 +245,7 @@ export default function App() {
         <GhostContainer
             ghosts={ghostData.ghosts}
             evidence={ghostData.evidences}
+            evidenceProbability={evidenceProbability}
             positiveEvidence={positiveEvidence}
             negativeEvidence={negativeEvidence}
             resetEvidence={resetEvidence}

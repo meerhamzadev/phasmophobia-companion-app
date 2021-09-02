@@ -78,6 +78,7 @@ export default function GhostContainer(props){
         <div className={"possibility-container"}>
             <EvidenceContainer
                 evidence={props.evidence}
+                evidenceProbability={props.evidenceProbability}
                 allOptionsUsed={props.allOptionsUsed}
                 positiveEvidence={props.positiveEvidence}
                 negativeEvidence={props.negativeEvidence}
